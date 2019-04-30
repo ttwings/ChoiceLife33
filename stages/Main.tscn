@@ -1,20 +1,19 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://stages/Main.gd" type="Script" id=1]
-[ext_resource path="res://uis/ObjectRect.tscn" type="PackedScene" id=2]
-[ext_resource path="res://uis/TimeLine.tscn" type="PackedScene" id=3]
-[ext_resource path="res://stages/MessageManager.gd" type="Script" id=4]
-[ext_resource path="res://assets/graphics/ui/ui_p.png" type="Texture" id=5]
-[ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=6]
-[ext_resource path="res://assets/graphics/tiles/TileTerrain.tres" type="TileSet" id=7]
-[ext_resource path="res://assets/graphics/tiles/map1.png" type="Texture" id=8]
+[ext_resource path="res://assets/graphics/tiles/TileTerrain.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/graphics/tiles/map1.png" type="Texture" id=3]
+[ext_resource path="res://TilesetFurniture.tres" type="TileSet" id=4]
+[ext_resource path="res://TilesetGoods.tres" type="TileSet" id=5]
+[ext_resource path="res://uis/ObjectRect.tscn" type="PackedScene" id=6]
+[ext_resource path="res://uis/TimeLine.tscn" type="PackedScene" id=7]
+[ext_resource path="res://stages/MessageManager.gd" type="Script" id=8]
+[ext_resource path="res://assets/graphics/ui/ui_p.png" type="Texture" id=9]
+[ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=10]
 
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 6 )
-
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=1]
 0/name = "map1.png 0"
-0/texture = ExtResource( 8 )
+0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 800, 64, 64 )
@@ -33,7 +32,7 @@ font_data = ExtResource( 6 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "map1.png 1"
-1/texture = ExtResource( 8 )
+1/texture = ExtResource( 3 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 288, 416, 32, 32 )
@@ -43,7 +42,7 @@ font_data = ExtResource( 6 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "map1.png 2"
-2/texture = ExtResource( 8 )
+2/texture = ExtResource( 3 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 32, 384, 32, 64 )
@@ -62,7 +61,7 @@ font_data = ExtResource( 6 )
 2/shapes = [  ]
 2/z_index = 0
 3/name = "map1.png 3"
-3/texture = ExtResource( 8 )
+3/texture = ExtResource( 3 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 448, 32, 64 )
@@ -78,7 +77,7 @@ font_data = ExtResource( 6 )
 3/shapes = [  ]
 3/z_index = 0
 4/name = "map1.png 4"
-4/texture = ExtResource( 8 )
+4/texture = ExtResource( 3 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 64, 384, 32, 32 )
@@ -97,7 +96,7 @@ font_data = ExtResource( 6 )
 4/shapes = [  ]
 4/z_index = 0
 5/name = "map1.png 5"
-5/texture = ExtResource( 8 )
+5/texture = ExtResource( 3 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 64, 384, 32, 64 )
@@ -116,7 +115,7 @@ font_data = ExtResource( 6 )
 5/shapes = [  ]
 5/z_index = 0
 6/name = "map1.png 6"
-6/texture = ExtResource( 8 )
+6/texture = ExtResource( 3 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 256, 384, 32, 32 )
@@ -132,7 +131,7 @@ font_data = ExtResource( 6 )
 6/shapes = [  ]
 6/z_index = 0
 7/name = "map1.png 7"
-7/texture = ExtResource( 8 )
+7/texture = ExtResource( 3 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 384, 32, 64 )
@@ -142,7 +141,7 @@ font_data = ExtResource( 6 )
 7/shapes = [  ]
 7/z_index = 0
 8/name = "map1.png 8"
-8/texture = ExtResource( 8 )
+8/texture = ExtResource( 3 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 448, 32, 64 )
@@ -152,7 +151,7 @@ font_data = ExtResource( 6 )
 8/shapes = [  ]
 8/z_index = 0
 9/name = "map1.png 9"
-9/texture = ExtResource( 8 )
+9/texture = ExtResource( 3 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 32, 448, 32, 64 )
@@ -161,13 +160,63 @@ font_data = ExtResource( 6 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shapes = [  ]
 9/z_index = 0
+10/name = "map1.png 10"
+10/texture = ExtResource( 3 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 128, 384, 32, 64 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shapes = [  ]
+10/z_index = 0
+11/name = "map1.png 11"
+11/texture = ExtResource( 3 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 192, 64, 32, 32 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shapes = [  ]
+11/z_index = 0
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 10 )
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="ObjectRect" parent="." instance=ExtResource( 2 )]
+[node name="Map" type="Node2D" parent="."]
+
+[node name="floor" type="TileMap" parent="Map"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131087, 8, 65536, 131088, 8, 0, 196620, 8, 65536, 196621, 8, 0, 196624, 8, 65536, 262154, 19, 0, 262155, 19, 0, 262156, 19, 0, 262157, 19, 0, 262158, 19, 0, 262159, 19, 0, 262160, 8, 0, 262161, 19, 0, 262162, 19, 0, 262163, 19, 0, 262164, 19, 0, 262165, 19, 0, 262166, 19, 0, 262167, 19, 0, 262168, 19, 0, 262169, 19, 0, 262170, 19, 0, 262171, 19, 0, 262172, 19, 0, 327690, 19, 0, 327691, 19, 0, 327692, 19, 0, 327693, 19, 0, 327694, 19, 0, 327695, 19, 0, 327697, 19, 0, 327698, 19, 0, 327699, 19, 0, 327700, 19, 0, 327701, 19, 0, 327702, 19, 0, 327703, 19, 0, 327704, 19, 0, 327705, 19, 0, 327706, 19, 0, 327707, 19, 0, 327708, 19, 0, 393226, 19, 0, 393227, 19, 0, 393228, 19, 0, 393229, 19, 0, 393230, 19, 0, 393231, 19, 0, 393233, 19, 0, 393234, 19, 0, 393235, 19, 0, 393236, 19, 0, 393237, 19, 0, 393238, 19, 0, 393239, 19, 0, 393240, 19, 0, 393241, 19, 0, 393242, 19, 0, 393243, 19, 0, 393244, 19, 0, 458762, 19, 0, 458763, 19, 0, 458764, 19, 0, 458765, 19, 0, 458766, 19, 0, 458767, 19, 0, 458769, 19, 0, 458770, 19, 0, 458771, 19, 0, 458772, 19, 0, 458773, 19, 0, 458774, 19, 0, 458775, 19, 0, 458776, 19, 0, 458777, 19, 0, 458778, 19, 0, 458779, 19, 0, 458780, 19, 0, 524298, 19, 0, 524299, 19, 0, 524300, 19, 0, 524301, 19, 0, 524302, 19, 0, 524303, 19, 0, 524304, 19, 0, 524305, 19, 0, 524306, 19, 0, 524307, 19, 0, 524308, 19, 0, 524309, 19, 0, 524310, 19, 0, 524311, 19, 0, 524312, 19, 0, 524313, 19, 0, 524314, 19, 0, 524315, 19, 0, 524316, 19, 0, 589831, 8, 65536, 589834, 19, 0, 589835, 19, 0, 589836, 19, 0, 589837, 19, 0, 589838, 19, 0, 589839, 19, 0, 589840, 19, 0, 589841, 19, 0, 589842, 19, 0, 589843, 19, 0, 589844, 19, 0, 589845, 19, 0, 589846, 19, 0, 589847, 19, 0, 589848, 19, 0, 589849, 19, 0, 589850, 19, 0, 589851, 19, 0, 589852, 19, 0, 655367, 8, 0, 655370, 19, 0, 655371, 19, 0, 655372, 19, 0, 655373, 19, 0, 655374, 19, 0, 655375, 19, 0, 655376, 19, 0, 655377, 19, 0, 655378, 19, 0, 655379, 19, 0, 655380, 19, 0, 655381, 19, 0, 655382, 19, 0, 655383, 19, 0, 655384, 19, 0, 655385, 19, 0, 655386, 19, 0, 655387, 19, 0, 655388, 19, 0, 720903, 8, 65536, 720906, 19, 0, 720907, 19, 0, 720908, 19, 0, 720909, 19, 0, 720910, 19, 0, 720911, 19, 0, 720912, 19, 0, 720913, 19, 0, 720914, 19, 0, 720915, 19, 0, 720916, 19, 0, 720917, 19, 0, 720918, 19, 0, 720919, 19, 0, 720920, 19, 0, 720921, 19, 0, 720922, 19, 0, 720923, 19, 0, 720924, 19, 0, 786441, 8, 65536, 786442, 19, 0, 786443, 19, 0, 786444, 19, 0, 786445, 19, 0, 786446, 19, 0, 786447, 19, 0, 786448, 19, 0, 786449, 19, 0, 786450, 19, 0, 786451, 19, 0, 786452, 19, 0, 786453, 19, 0, 786454, 19, 0, 786455, 19, 0, 786456, 19, 0, 786457, 19, 0, 786458, 19, 0, 786459, 19, 0, 786460, 19, 0, 851977, 8, 65536, 851978, 19, 0, 851979, 19, 0, 851980, 19, 0, 851981, 19, 0, 851982, 19, 0, 851983, 19, 0, 851984, 19, 0, 851985, 19, 0, 851986, 19, 0, 851987, 19, 0, 851988, 19, 0, 851989, 19, 0, 851990, 19, 0, 851991, 19, 0, 851992, 19, 0, 851993, 19, 0, 851994, 19, 0, 851995, 19, 0, 851996, 19, 0, 917514, 19, 0, 917515, 19, 0, 917516, 19, 0, 917517, 19, 0, 917518, 19, 0, 917519, 19, 0, 917520, 19, 0, 917521, 19, 0, 917522, 19, 0, 917523, 19, 0, 917524, 19, 0, 917525, 19, 0, 917526, 19, 0, 917527, 19, 0, 917528, 19, 0, 917529, 19, 0, 917530, 19, 0, 917531, 19, 0, 917532, 19, 0, 983050, 19, 0, 983051, 19, 0, 983052, 19, 0, 983053, 19, 0, 983054, 19, 0, 983055, 19, 0, 983056, 19, 0, 983057, 19, 0, 983058, 19, 0, 983059, 19, 0, 983060, 19, 0, 983061, 19, 0, 983062, 19, 0, 983063, 19, 0, 983064, 19, 0, 983065, 19, 0, 983066, 19, 0, 983067, 19, 0, 983068, 19, 0, 1048590, 8, 0, 1048596, 19, 0, 1048597, 19, 0, 1048598, 19, 0, 1114132, 19, 0, 1114133, 19, 0, 1114134, 19, 0 )
+
+[node name="wall" type="TileMap" parent="Map"]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131081, 10, 0, 131082, 10, 0, 131083, 10, 0, 131084, 10, 0, 131085, 10, 0, 131086, 10, 0, 131087, 10, 0, 131088, 10, 0, 131089, 10, 0, 131090, 10, 0, 131091, 10, 0, 131092, 10, 0, 131093, 10, 0, 131094, 10, 0, 131095, 10, 0, 131096, 10, 0, 131097, 10, 0, 131098, 10, 0, 131099, 10, 0, 131100, 10, 0, 131101, 10, 0, 196617, 10, 0, 196624, 10, 0, 196637, 10, 0, 262153, 10, 0, 262160, 10, 0, 262173, 10, 0, 327689, 10, 0, 327696, 10, 0, 327709, 10, 0, 393225, 10, 0, 393232, 10, 0, 393245, 10, 0, 458761, 10, 0, 458781, 10, 0, 524297, 10, 0, 524317, 10, 0, 589833, 10, 0, 589853, 10, 0, 655369, 10, 0, 655389, 10, 0, 720905, 10, 0, 720925, 10, 0, 786441, 10, 0, 786461, 10, 0, 851977, 10, 0, 851997, 10, 0, 917513, 10, 0, 917533, 10, 0, 983049, 10, 0, 983069, 10, 0, 1048585, 10, 0, 1048586, 10, 0, 1048587, 10, 0, 1048588, 10, 0, 1048589, 10, 0, 1048590, 10, 0, 1048591, 10, 0, 1048592, 10, 0, 1048593, 10, 0, 1048594, 10, 0, 1048595, 10, 0, 1048599, 10, 0, 1048600, 10, 0, 1048601, 10, 0, 1048602, 10, 0, 1048603, 10, 0, 1048604, 10, 0, 1048605, 10, 0 )
+
+[node name="furniture" type="TileMap" parent="Map"]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 327698, 25, 0, 327702, 25, 0, 327706, 25, 0, 393226, 78, 0, 393230, 79, 0, 458763, 80, 0, 458764, 80, 0, 458765, 80, 0, 589835, 25, 0, 589839, 25, 0, 589846, 25, 0, 589850, 25, 0, 786457, 81, 0, 851979, 25, 0, 851983, 25, 0, 917529, 82, 0, 983065, 82, 0 )
+
+[node name="obj" type="TileMap" parent="Map"]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 327697, 48, 0, 327698, 24, 65541, 327699, 24, 65543, 327702, 24, 65543, 327703, 24, 4, 327704, 48, 0, 327706, 24, 65543, 327708, 48, 0, 589834, 48, 0, 589835, 24, 0, 589836, 24, 65543, 589838, 48, 0, 589839, 24, 65541, 589840, 24, 65543, 589846, 24, 65543, 589848, 48, 0, 589850, 24, 65543, 589851, 24, 5, 589852, 48, 0, 851978, 48, 0, 851980, 24, 65543, 851982, 48, 0, 851984, 24, 65543 )
+
+[node name="ObjectRect" parent="." instance=ExtResource( 6 )]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -177,7 +226,7 @@ margin_top = -177.0
 margin_right = 146.0
 margin_bottom = 177.0
 
-[node name="TimeLine" parent="." instance=ExtResource( 3 )]
+[node name="TimeLine" parent="." instance=ExtResource( 7 )]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = 387.393
@@ -190,7 +239,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-script = ExtResource( 4 )
+script = ExtResource( 8 )
 
 [node name="MessageVision" type="NinePatchRect" parent="MessageManager"]
 anchor_top = 1.0
@@ -199,7 +248,7 @@ margin_left = -631.499
 margin_top = 174.697
 margin_right = -8.4989
 margin_bottom = 353.697
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 region_rect = Rect2( 715, 83, 0, 0 )
 patch_margin_left = 8
 patch_margin_top = 8
@@ -213,7 +262,7 @@ margin_left = 4.6759
 margin_top = 14.6483
 margin_right = -11.3241
 margin_bottom = -1.35175
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "测试测试"
 text = "测试测试"
@@ -227,7 +276,7 @@ margin_left = -640.0
 margin_top = -167.0
 margin_right = -374.0
 margin_bottom = 114.0
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
 patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
@@ -251,20 +300,6 @@ margin_left = 551.206
 margin_top = 255.693
 margin_right = 876.206
 margin_bottom = 397.693
-
-[node name="Map" type="Node2D" parent="."]
-
-[node name="floor" type="TileMap" parent="Map"]
-tile_set = ExtResource( 7 )
-cell_size = Vector2( 32, 32 )
-format = 1
-tile_data = PoolIntArray( 131087, 8, 65536, 131088, 8, 0, 196620, 8, 0, 196621, 8, 0, 196624, 8, 0, 262155, 8, 0, 262160, 8, 0, 327698, 8, 65536, 327699, 8, 0, 327700, 8, 65536, 393236, 8, 65536, 458770, 8, 65536, 524307, 8, 0, 589831, 8, 65536, 589840, 8, 0, 655367, 8, 0, 655371, 8, 65536, 655376, 8, 65536, 720903, 8, 65536, 720908, 8, 0, 786441, 8, 65536, 851977, 8, 0, 917514, 8, 65536, 1048590, 8, 0 )
-
-[node name="wall" type="TileMap" parent="Map"]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 32, 32 )
-format = 1
-tile_data = PoolIntArray( 1310726, 7, 0, 1310727, 7, 0, 1310728, 7, 0, 1310729, 7, 0, 1310730, 7, 0, 1310731, 7, 0, 1310732, 7, 0, 1310733, 7, 0, 1310734, 7, 0, 1310735, 7, 0, 1310736, 7, 0, 1310737, 7, 0, 1310738, 7, 0, 1310740, 8, 0, 1310741, 8, 0, 1310742, 8, 0, 1310743, 8, 0, 1310744, 8, 0, 1310745, 8, 0, 1310746, 8, 0, 1310747, 8, 0, 1310748, 8, 0, 1376262, 7, 0, 1376263, 3, 65536, 1376264, 3, 65536, 1376265, 3, 65536, 1376266, 3, 65536, 1376267, 3, 65536, 1376268, 3, 65536, 1376269, 3, 65536, 1376270, 3, 65536, 1376271, 3, 65536, 1376272, 3, 65536, 1376273, 3, 65536, 1376274, 7, 0, 1376276, 8, 0, 1376284, 8, 0, 1441798, 7, 0, 1441810, 7, 0, 1441812, 8, 0, 1441820, 8, 0, 1507334, 7, 0, 1507346, 7, 0, 1507348, 8, 0, 1507356, 8, 0, 1572870, 7, 0, 1572882, 7, 0, 1572884, 8, 0, 1572892, 8, 0, 1638406, 7, 0, 1638418, 7, 0, 1638420, 8, 0, 1638428, 8, 0, 1703942, 7, 0, 1703954, 7, 0, 1703956, 8, 0, 1703964, 8, 0, 1769478, 7, 0, 1769479, 7, 0, 1769480, 7, 0, 1769481, 7, 0, 1769482, 7, 0, 1769483, 7, 0, 1769484, 7, 0, 1769486, 7, 0, 1769487, 7, 0, 1769488, 7, 0, 1769489, 7, 0, 1769490, 7, 0, 1769492, 8, 0, 1769493, 8, 0, 1769494, 8, 0, 1769495, 8, 0, 1769498, 8, 0, 1769499, 8, 0, 1769500, 8, 0, 1966086, 9, 0, 1966087, 9, 0, 1966088, 9, 0, 1966089, 9, 0, 1966090, 9, 0, 1966091, 9, 0, 1966092, 9, 0, 1966093, 9, 0, 1966094, 9, 0, 1966095, 9, 0, 1966096, 9, 0, 1966097, 9, 0, 1966098, 9, 0, 1966099, 9, 0, 2031622, 9, 0, 2031635, 9, 0, 2097158, 9, 0, 2097171, 9, 0, 2162694, 9, 0, 2162707, 9, 0, 2228230, 9, 0, 2228243, 9, 0, 2293766, 9, 0, 2293779, 9, 0, 2359302, 9, 0, 2359303, 9, 0, 2359304, 9, 0, 2359305, 9, 0, 2359306, 9, 0, 2359307, 9, 0, 2359310, 9, 0, 2359311, 9, 0, 2359312, 9, 0, 2359313, 9, 0, 2359314, 9, 0, 2359315, 9, 0 )
 
 [node name="RoomControl" type="Control" parent="."]
 anchor_right = 1.0

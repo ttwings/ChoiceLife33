@@ -87,6 +87,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ChoiceLife33"
+run/main_scene="res://stages/Main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
