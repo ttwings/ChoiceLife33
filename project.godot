@@ -1,0 +1,128 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Item",
+"class": "Armor",
+"language": "GDScript",
+"path": "res://inherit/Armor.gd"
+}, {
+"base": "GameObject",
+"class": "Char",
+"language": "GDScript",
+"path": "res://inherit/Char.gd"
+}, {
+"base": "GameObject",
+"class": "Equip",
+"language": "GDScript",
+"path": "res://inherit/Equip.gd"
+}, {
+"base": "Item",
+"class": "Food",
+"language": "GDScript",
+"path": "res://inherit/Food.gd"
+}, {
+"base": "Node",
+"class": "GameObject",
+"language": "GDScript",
+"path": "res://inherit/GameObject.gd"
+}, {
+"base": "GameObject",
+"class": "Item",
+"language": "GDScript",
+"path": "res://inherit/Item.gd"
+}, {
+"base": "Combined_item",
+"class": "Money",
+"language": "GDScript",
+"path": "res://inherit/item/Money.gd"
+}, {
+"base": "Char",
+"class": "Npc",
+"language": "GDScript",
+"path": "res://inherit/Npc.gd"
+}, {
+"base": "GameObject",
+"class": "Room",
+"language": "GDScript",
+"path": "res://inherit/Room.gd"
+}, {
+"base": "Reference",
+"class": "Skill",
+"language": "GDScript",
+"path": "res://inherit/skill/Skill.gd"
+}, {
+"base": "Char",
+"class": "User",
+"language": "GDScript",
+"path": "res://inherit/User.gd"
+}, {
+"base": "GameObject",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://inherit/Weapon.gd"
+} ]
+_global_script_class_icons={
+"Armor": "",
+"Char": "",
+"Equip": "",
+"Food": "",
+"GameObject": "",
+"Item": "",
+"Money": "",
+"Npc": "",
+"Room": "",
+"Skill": "",
+"User": "",
+"Weapon": ""
+}
+
+[application]
+
+config/name="ChoiceLife33"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Global.gd"
+Signals_manager="*res://Signals_manager.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="2d"
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

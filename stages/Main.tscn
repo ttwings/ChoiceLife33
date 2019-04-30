@@ -1,0 +1,288 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://stages/Main.gd" type="Script" id=1]
+[ext_resource path="res://uis/ObjectRect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://uis/TimeLine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://stages/MessageManager.gd" type="Script" id=4]
+[ext_resource path="res://assets/graphics/ui/ui_p.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/graphics/tiles/TileTerrain.tres" type="TileSet" id=7]
+[ext_resource path="res://assets/graphics/tiles/map1.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "map1.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 800, 64, 64 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "map1.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 288, 416, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "map1.png 2"
+2/texture = ExtResource( 8 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 384, 32, 64 )
+2/tile_mode = 1
+2/autotile/bitmask_mode = 0
+2/autotile/bitmask_flags = [ Vector2( 0, 0 ), 325, Vector2( 0, 1 ), 5 ]
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 32, 32 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [  ]
+2/z_index = 0
+3/name = "map1.png 3"
+3/texture = ExtResource( 8 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 448, 32, 64 )
+3/tile_mode = 2
+3/autotile/icon_coordinate = Vector2( 0, 0 )
+3/autotile/tile_size = Vector2( 32, 32 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [  ]
+3/z_index = 0
+4/name = "map1.png 4"
+4/texture = ExtResource( 8 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 384, 32, 32 )
+4/tile_mode = 1
+4/autotile/bitmask_mode = 0
+4/autotile/bitmask_flags = [  ]
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 32, 32 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [  ]
+4/z_index = 0
+5/name = "map1.png 5"
+5/texture = ExtResource( 8 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 64, 384, 32, 64 )
+5/tile_mode = 1
+5/autotile/bitmask_mode = 0
+5/autotile/bitmask_flags = [  ]
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 32, 32 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [  ]
+5/z_index = 0
+6/name = "map1.png 6"
+6/texture = ExtResource( 8 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 256, 384, 32, 32 )
+6/tile_mode = 2
+6/autotile/icon_coordinate = Vector2( 0, 0 )
+6/autotile/tile_size = Vector2( 32, 32 )
+6/autotile/spacing = 0
+6/autotile/occluder_map = [  ]
+6/autotile/navpoly_map = [  ]
+6/autotile/z_index_map = [  ]
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shapes = [  ]
+6/z_index = 0
+7/name = "map1.png 7"
+7/texture = ExtResource( 8 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 384, 32, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shapes = [  ]
+7/z_index = 0
+8/name = "map1.png 8"
+8/texture = ExtResource( 8 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 448, 32, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shapes = [  ]
+8/z_index = 0
+9/name = "map1.png 9"
+9/texture = ExtResource( 8 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 32, 448, 32, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shapes = [  ]
+9/z_index = 0
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ObjectRect" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -146.0
+margin_top = -177.0
+margin_right = 146.0
+margin_bottom = 177.0
+
+[node name="TimeLine" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 387.393
+margin_top = 10.883
+margin_right = 1027.39
+margin_bottom = 10.883
+
+[node name="MessageManager" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 4 )
+
+[node name="MessageVision" type="NinePatchRect" parent="MessageManager"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -631.499
+margin_top = 174.697
+margin_right = -8.4989
+margin_bottom = 353.697
+texture = ExtResource( 5 )
+region_rect = Rect2( 715, 83, 0, 0 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MessageManager/MessageVision"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.6759
+margin_top = 14.6483
+margin_right = -11.3241
+margin_bottom = -1.35175
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "测试测试"
+text = "测试测试"
+
+[node name="Say" type="NinePatchRect" parent="MessageManager"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -640.0
+margin_top = -167.0
+margin_right = -374.0
+margin_bottom = 114.0
+texture = ExtResource( 5 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MessageManager/Say"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+
+[node name="Notify_fail" type="AcceptDialog" parent="MessageManager"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 551.206
+margin_top = 255.693
+margin_right = 876.206
+margin_bottom = 397.693
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="floor" type="TileMap" parent="Map"]
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131087, 8, 65536, 131088, 8, 0, 196620, 8, 0, 196621, 8, 0, 196624, 8, 0, 262155, 8, 0, 262160, 8, 0, 327698, 8, 65536, 327699, 8, 0, 327700, 8, 65536, 393236, 8, 65536, 458770, 8, 65536, 524307, 8, 0, 589831, 8, 65536, 589840, 8, 0, 655367, 8, 0, 655371, 8, 65536, 655376, 8, 65536, 720903, 8, 65536, 720908, 8, 0, 786441, 8, 65536, 851977, 8, 0, 917514, 8, 65536, 1048590, 8, 0 )
+
+[node name="wall" type="TileMap" parent="Map"]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1310726, 7, 0, 1310727, 7, 0, 1310728, 7, 0, 1310729, 7, 0, 1310730, 7, 0, 1310731, 7, 0, 1310732, 7, 0, 1310733, 7, 0, 1310734, 7, 0, 1310735, 7, 0, 1310736, 7, 0, 1310737, 7, 0, 1310738, 7, 0, 1310740, 8, 0, 1310741, 8, 0, 1310742, 8, 0, 1310743, 8, 0, 1310744, 8, 0, 1310745, 8, 0, 1310746, 8, 0, 1310747, 8, 0, 1310748, 8, 0, 1376262, 7, 0, 1376263, 3, 65536, 1376264, 3, 65536, 1376265, 3, 65536, 1376266, 3, 65536, 1376267, 3, 65536, 1376268, 3, 65536, 1376269, 3, 65536, 1376270, 3, 65536, 1376271, 3, 65536, 1376272, 3, 65536, 1376273, 3, 65536, 1376274, 7, 0, 1376276, 8, 0, 1376284, 8, 0, 1441798, 7, 0, 1441810, 7, 0, 1441812, 8, 0, 1441820, 8, 0, 1507334, 7, 0, 1507346, 7, 0, 1507348, 8, 0, 1507356, 8, 0, 1572870, 7, 0, 1572882, 7, 0, 1572884, 8, 0, 1572892, 8, 0, 1638406, 7, 0, 1638418, 7, 0, 1638420, 8, 0, 1638428, 8, 0, 1703942, 7, 0, 1703954, 7, 0, 1703956, 8, 0, 1703964, 8, 0, 1769478, 7, 0, 1769479, 7, 0, 1769480, 7, 0, 1769481, 7, 0, 1769482, 7, 0, 1769483, 7, 0, 1769484, 7, 0, 1769486, 7, 0, 1769487, 7, 0, 1769488, 7, 0, 1769489, 7, 0, 1769490, 7, 0, 1769492, 8, 0, 1769493, 8, 0, 1769494, 8, 0, 1769495, 8, 0, 1769498, 8, 0, 1769499, 8, 0, 1769500, 8, 0, 1966086, 9, 0, 1966087, 9, 0, 1966088, 9, 0, 1966089, 9, 0, 1966090, 9, 0, 1966091, 9, 0, 1966092, 9, 0, 1966093, 9, 0, 1966094, 9, 0, 1966095, 9, 0, 1966096, 9, 0, 1966097, 9, 0, 1966098, 9, 0, 1966099, 9, 0, 2031622, 9, 0, 2031635, 9, 0, 2097158, 9, 0, 2097171, 9, 0, 2162694, 9, 0, 2162707, 9, 0, 2228230, 9, 0, 2228243, 9, 0, 2293766, 9, 0, 2293779, 9, 0, 2359302, 9, 0, 2359303, 9, 0, 2359304, 9, 0, 2359305, 9, 0, 2359306, 9, 0, 2359307, 9, 0, 2359310, 9, 0, 2359311, 9, 0, 2359312, 9, 0, 2359313, 9, 0, 2359314, 9, 0, 2359315, 9, 0 )
+
+[node name="RoomControl" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1024.0
+
+[node name="Panel" type="Panel" parent="RoomControl"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -256.0
+
+[node name="TimeWeather" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -272.0
+margin_bottom = -685.0
+
+[node name="Panel" type="Panel" parent="TimeWeather"]
+anchor_right = 1.0
+anchor_bottom = 1.0
