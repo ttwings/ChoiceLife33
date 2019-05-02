@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[node name="EventChoice" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -100.0
+margin_right = 300.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 600, 200 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 1 )
+text = "请选择"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer"]
+margin_top = 21.0
+margin_right = 600.0
+margin_bottom = 25.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer"]
+margin_top = 29.0
+margin_right = 600.0
+margin_bottom = 159.0
+rect_min_size = Vector2( 0, 130 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "孩子准备上私塾,有俩个选择,未考入功名的年轻秀才和一群孩子在私塾学习和辞官回乡的当代大儒.家中指导"
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer"]
+margin_top = 163.0
+margin_right = 600.0
+margin_bottom = 167.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 171.0
+margin_right = 600.0
+margin_bottom = 194.0
+custom_constants/separation = 32
+
+[node name="ChoiceTiny" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+margin_right = 284.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "秀才(200文/月)"
+
+[node name="ChoiceHuge" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+margin_left = 316.0
+margin_right = 600.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 3 )
+text = "大儒(20贯)"

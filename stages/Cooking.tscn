@@ -1,0 +1,266 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://stages/Cooking.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="Cooking" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -318.0
+margin_top = 32.0
+margin_right = 319.0
+margin_bottom = -56.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+margin_right = 637.0
+margin_bottom = 632.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 637.0
+margin_bottom = 632.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_right = 637.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 0, 48 )
+custom_fonts/font = SubResource( 1 )
+text = "厨艺"
+align = 1
+valign = 1
+
+[node name="HSeparator4" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 637.0
+margin_bottom = 56.0
+
+[node name="Goal" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_top = 60.0
+margin_right = 637.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 0, 48 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "制作出麻婆豆腐."
+text = "制作出麻婆豆腐."
+
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+margin_top = 112.0
+margin_right = 637.0
+margin_bottom = 116.0
+
+[node name="ActionsMessage" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_top = 120.0
+margin_right = 637.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 0, 64 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+margin_top = 188.0
+margin_right = 637.0
+margin_bottom = 192.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 196.0
+margin_right = 637.0
+margin_bottom = 412.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 44.0
+margin_bottom = 216.0
+
+[node name="Action0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 44.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "咸鲜"
+
+[node name="Action1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 44.0
+margin_right = 44.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "酸爽"
+
+[node name="Action2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 88.0
+margin_right = 44.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "甘甜"
+
+[node name="Action3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 132.0
+margin_right = 44.0
+margin_bottom = 172.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "辛辣"
+
+[node name="Action4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 176.0
+margin_right = 44.0
+margin_bottom = 216.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "苦涩"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 48.0
+margin_right = 589.0
+margin_bottom = 216.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 593.0
+margin_right = 637.0
+margin_bottom = 216.0
+
+[node name="Action4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_right = 44.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "煮涮"
+
+[node name="Action5" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 44.0
+margin_right = 44.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "蒸焖"
+
+[node name="Action6" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 88.0
+margin_right = 44.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "烙烤"
+
+[node name="Action7" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 132.0
+margin_right = 44.0
+margin_bottom = 172.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "炖熬"
+
+[node name="Action8" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 176.0
+margin_right = 44.0
+margin_bottom = 216.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "炸炒"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+margin_top = 416.0
+margin_right = 637.0
+margin_bottom = 420.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 424.0
+margin_right = 637.0
+margin_bottom = 464.0
+custom_constants/separation = 32
+alignment = 1
+
+[node name="material0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 144.0
+margin_right = 188.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "谷面"
+
+[node name="material1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 220.0
+margin_right = 264.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "果蔬"
+
+[node name="material2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 296.0
+margin_right = 340.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "蛋奶"
+
+[node name="material3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 372.0
+margin_right = 416.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "肉禽"
+
+[node name="material4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 448.0
+margin_right = 492.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "水产"
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+margin_top = 468.0
+margin_right = 637.0
+margin_bottom = 472.0
+
+[node name="complete" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_top = 476.0
+margin_right = 637.0
+margin_bottom = 516.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "出锅"
+
+[node name="description" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_top = 520.0
+margin_right = 637.0
+margin_bottom = 584.0
+rect_min_size = Vector2( 0, 64 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+
+[node name="rank" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+margin_top = 588.0
+margin_right = 637.0
+margin_bottom = 588.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+
+[node name="next" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_top = 592.0
+margin_right = 637.0
+margin_bottom = 632.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = SubResource( 3 )
+text = "下一道菜"
