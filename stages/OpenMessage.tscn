@@ -1,19 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://stages/OpenMessage.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [node name="OpenMessage" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -50,10 +52,10 @@ bbcode_text = "33岁的你,并不喜欢四书五经那一套,各种本事都学�
 注意:小郡县,人口少,房租少,工资少,事情少
 
 大都市,人口多,房租高,工资高,事情多
-
 初始资金:300000文(300贯)
-
-目标:三等.一年之内,稳定下来.并赚取钱财."
+目标:三等.一年之内,稳定下来.并赚取钱财.
+([color=red]别看啦,都是设想[/color])
+([color=red]选哪个都一样,做不来..[/color])"
 text = "33岁的你,并不喜欢四书五经那一套,各种本事都学了点,就是未考入功名,各种工作都做过,跑堂,帮厨,账房等等,收入刚好养家糊口.
 
 年龄渐渐变大,终于在三十的时候成家,现在孩子已经三岁,,明年准备上私塾.父母年老多病,每月都需要大量汤药.看着家里的开支渐渐入不敷出,你开始不断的怀疑小时候的执拗,人三十而立,四十不惑,你觉得,现在的你,离而立还有一段距离.
@@ -62,10 +64,10 @@ text = "33岁的你,并不喜欢四书五经那一套,各种本事都学了点,�
 注意:小郡县,人口少,房租少,工资少,事情少
 
 大都市,人口多,房租高,工资高,事情多
-
 初始资金:300000文(300贯)
-
-目标:三等.一年之内,稳定下来.并赚取钱财."
+目标:三等.一年之内,稳定下来.并赚取钱财.
+(别看啦,都是设想)
+(选哪个都一样,做不来..)"
 
 [node name="HSeparator" type="HSeparator" parent="Panel"]
 anchor_top = 1.0
@@ -96,3 +98,5 @@ margin_right = 340.0
 margin_bottom = 23.0
 custom_fonts/font = SubResource( 3 )
 text = "大都市(长安城)"
+[connection signal="pressed" from="Panel/HBoxContainer/select_tiny" to="." method="_on_select_tiny_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/select_huge" to="." method="_on_select_huge_pressed"]

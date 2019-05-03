@@ -10,6 +10,7 @@ corner_radius_bottom_right = 16
 shadow_size = 4
 
 [sub_resource type="DynamicFont" id=2]
+size = 12
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )

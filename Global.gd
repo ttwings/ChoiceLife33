@@ -155,17 +155,31 @@ func get_chinese_number(n:int):
 # 配合上面转化		
 func swap_to_font(number):
 	match number:
-		"1":return "一"
-		"2":return "二"
-		"3":return "三"
-		"4":return "四"
-		"5":return "五"
-		"6":return "六"
-		"7":return "七"
-		"8":return "八"
-		"9":return "九"
-		"0":return "〇"
+		"1",1:return "一"
+		"2",2:return "二"
+		"3",3:return "三"
+		"4",4:return "四"
+		"5",5:return "五"
+		"6",6:return "六"
+		"7",7:return "七"
+		"8",8:return "八"
+		"9",9:return "九"
+		"0",0:return "〇"
 		_:return "X"	
+		
+func digit_to_char(number):
+	match number:
+		"1",1:return "一"
+		"2",2:return "二"
+		"3",3:return "三"
+		"4",4:return "四"
+		"5",5:return "五"
+		"6",6:return "六"
+		"7",7:return "七"
+		"8",8:return "八"
+		"9",9:return "九"
+		"0",0:return "〇"
+		_:return "X"			
 
 # 返回当前玩家
 func this_player():
