@@ -20,47 +20,47 @@
 [ext_resource path="res://stages/digit12.gd" type="Script" id=18]
 [ext_resource path="res://stages/digit13.gd" type="Script" id=19]
 
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=4]
 size = 32
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.181152, 0.209061, 0.828125, 1 )
 border_width_top = 1
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.392157, 0.403922, 0.407843, 1 )
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 2 )
+
 [sub_resource type="DynamicFont" id=7]
 size = 24
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=8]
-size = 24
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=11]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=10]
 size = 24
 font_data = ExtResource( 2 )
 
-[sub_resource type="Theme" id=10]
-default_font = SubResource( 9 )
+[sub_resource type="Theme" id=11]
+default_font = SubResource( 10 )
 
 [sub_resource type="DynamicFont" id=12]
 font_data = ExtResource( 2 )
@@ -83,7 +83,7 @@ margin_left = -71.7534
 margin_top = -120.386
 margin_right = 122.247
 margin_bottom = -55.3861
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "结账"
 
 [node name="Bill" type="RichTextLabel" parent="Panel"]
@@ -91,7 +91,7 @@ margin_left = 29.0
 margin_top = 81.0
 margin_right = 271.0
 margin_bottom = 559.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "账单
 "
@@ -103,7 +103,7 @@ margin_left = 1021.0
 margin_top = 93.0
 margin_right = 1263.0
 margin_bottom = 551.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "提示
 限定时间内，计算数字游戏
@@ -127,13 +127,13 @@ margin_left = 289.0
 margin_top = 57.4991
 margin_right = 993.0
 margin_bottom = 109.499
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 
 [node name="title" type="Label" parent="Panel"]
 anchor_right = 1.0
 margin_bottom = 14.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "柜台"
 align = 1
 valign = 1
@@ -143,8 +143,8 @@ margin_left = 286.0
 margin_top = 38.0
 margin_right = 995.0
 margin_bottom = 52.0
-custom_styles/fg = SubResource( 5 )
-custom_styles/bg = SubResource( 6 )
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
 max_value = 1000.0
 step = 1.0
 value = 1000.0
@@ -158,7 +158,7 @@ margin_left = -193.776
 margin_top = 25.1534
 margin_right = -95.7764
 margin_bottom = 50.1534
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 text = "评分：50"
 
 [node name="Sumvalue" type="Label" parent="Panel"]
@@ -166,7 +166,7 @@ margin_left = 850.141
 margin_top = 610.474
 margin_right = 890.141
 margin_bottom = 624.474
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 text = "货品总价："
 
 [node name="Sumdigit" type="Label" parent="Panel"]
@@ -174,7 +174,7 @@ margin_left = 850.141
 margin_top = 643.635
 margin_right = 970.141
 margin_bottom = 668.635
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 text = "计算总账："
 
 [node name="Nickname" type="Label" parent="Panel"]
@@ -182,7 +182,7 @@ margin_left = 1024.0
 margin_top = 54.0
 margin_right = 1275.0
 margin_bottom = 89.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 8 )
 align = 1
 
 [node name="Suanpan" type="Control" parent="."]
@@ -222,7 +222,7 @@ margin_top = 113.0
 margin_right = 942.515
 margin_bottom = 132.0
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit2" type="Node" parent="Suanpan"]
@@ -249,7 +249,7 @@ margin_top = 113.179
 margin_right = 893.764
 margin_bottom = 132.179
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit3" type="Node" parent="Suanpan"]
@@ -276,7 +276,7 @@ margin_top = 111.55
 margin_right = 843.238
 margin_bottom = 130.55
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit4" type="Node" parent="Suanpan"]
@@ -303,7 +303,7 @@ margin_top = 111.55
 margin_right = 792.836
 margin_bottom = 130.55
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit5" type="Node" parent="Suanpan"]
@@ -330,7 +330,7 @@ margin_top = 112.716
 margin_right = 743.849
 margin_bottom = 131.716
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit6" type="Node" parent="Suanpan"]
@@ -357,7 +357,7 @@ margin_top = 112.716
 margin_right = 693.696
 margin_bottom = 131.716
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit7" type="Node" parent="Suanpan"]
@@ -384,7 +384,7 @@ margin_top = 112.716
 margin_right = 645.566
 margin_bottom = 131.716
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit8" type="Node" parent="Suanpan"]
@@ -411,7 +411,7 @@ margin_top = 113.265
 margin_right = 593.924
 margin_bottom = 132.265
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit9" type="Node" parent="Suanpan"]
@@ -438,7 +438,7 @@ margin_top = 113.265
 margin_right = 543.339
 margin_bottom = 132.265
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit10" type="Node" parent="Suanpan"]
@@ -465,7 +465,7 @@ margin_top = 113.265
 margin_right = 493.611
 margin_bottom = 132.265
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit11" type="Node" parent="Suanpan"]
@@ -492,7 +492,7 @@ margin_top = 113.265
 margin_right = 444.741
 margin_bottom = 132.265
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit12" type="Node" parent="Suanpan"]
@@ -519,7 +519,7 @@ margin_top = 112.453
 margin_right = 395.735
 margin_bottom = 131.453
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="digit13" type="Node" parent="Suanpan"]
@@ -546,7 +546,7 @@ margin_top = 113.179
 margin_right = 344.857
 margin_bottom = 132.179
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 9 )
 text = "〇"
 
 [node name="GameOver" type="AcceptDialog" parent="."]
@@ -559,7 +559,7 @@ margin_top = -200.0
 margin_right = 200.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 400, 400 )
-theme = SubResource( 10 )
+theme = SubResource( 11 )
 window_title = "你被炒！"
 dialog_text = "算错太多次了。 你被炒鱿鱼了。"
 
@@ -573,7 +573,7 @@ margin_top = -200.0
 margin_right = 200.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 400, 400 )
-theme = SubResource( 10 )
+theme = SubResource( 11 )
 window_title = "时间到!"
 
 [node name="Button" type="Button" parent="."]

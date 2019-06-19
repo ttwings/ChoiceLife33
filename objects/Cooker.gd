@@ -6,6 +6,7 @@ extends Node
 var dishes = []
 func _ready() -> void:
 	dishes = Global.load_data("res://data/dishes.json")
+	print_debug(dishes)
 	
 var says = [
 	"[color=yellow]{name}[/color]好咯!",

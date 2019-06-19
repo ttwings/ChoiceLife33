@@ -95,6 +95,10 @@ config/icon="res://icon.png"
 Global="*res://Global.gd"
 Signals_manager="*res://Signals_manager.gd"
 
+[debug]
+
+gdscript/warnings/enable=false
+
 [display]
 
 window/size/width=1280

@@ -13,7 +13,7 @@ var stage_cooking = preload("res://stages/Cooking.tscn")
 var stage_checkout = preload("res://stages/Checkout.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	emit_signal("capation_change",[12345678])
+#	emit_signal("capation_change",[12345678])
 	player.dbase = load("res://data/user/l/lijia.gd").new().dbase
 	$ObjectRect.get_item_info(apple)
 	$ObjectRect.connet_action(apple,player)

@@ -204,16 +204,16 @@ outline_size = 1
 outline_color = Color( 0.843137, 0.952941, 0.0627451, 1 )
 font_data = ExtResource( 13 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 13 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 13 )
 
-[sub_resource type="StreamTexture" id=5]
+[sub_resource type="StreamTexture" id=7]
 load_path = "res://.import/actor (36).png-916266fba2f34eccb8fe9a8066471b13.stex"
 
-[sub_resource type="GDScript" id=6]
+[sub_resource type="GDScript" id=8]
 script/source = "extends Node2D
 
 # Declare member variables here. Examples:
@@ -366,7 +366,7 @@ margin_top = 24.0
 margin_right = 256.0
 margin_bottom = 224.0
 rect_min_size = Vector2( 0, 200 )
-custom_fonts/normal_font = SubResource( 8 )
+custom_fonts/normal_font = SubResource( 5 )
 bbcode_enabled = true
 bbcode_text = "选择一件你能做的事情,努力去做吧.争取提升自己的水平,赚到足够的金钱."
 text = "选择一件你能做的事情,努力去做吧.争取提升自己的水平,赚到足够的金钱."
@@ -375,14 +375,14 @@ text = "选择一件你能做的事情,努力去做吧.争取提升自己的水�
 margin_top = 231.0
 margin_right = 256.0
 margin_bottom = 254.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 text = "去厨房做菜"
 
 [node name="Checkout" type="Button" parent="RoomControl/Panel/VBoxContainer"]
 margin_top = 261.0
 margin_right = 256.0
 margin_bottom = 284.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 text = "去柜台算账"
 
 [node name="Pick" type="Button" parent="RoomControl/Panel/VBoxContainer"]
@@ -390,7 +390,7 @@ visible = false
 margin_top = 84.0
 margin_right = 256.0
 margin_bottom = 107.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 text = "到菜园种菜"
 
 [node name="TimeWeather" type="Control" parent="."]
@@ -497,7 +497,7 @@ position = Vector2( 400, 193 )
 script = ExtResource( 21 )
 
 [node name="Sprite" parent="TablePos/Cooker" index="0"]
-texture = SubResource( 5 )
+texture = SubResource( 7 )
 
 [node name="Say" parent="TablePos/Cooker" index="1"]
 margin_right = 176.0
@@ -509,7 +509,7 @@ text = "麻婆豆腐好咯!"
 
 [node name="Accountant " parent="TablePos" instance=ExtResource( 17 )]
 position = Vector2( 840, 464 )
-script = SubResource( 6 )
+script = SubResource( 8 )
 
 [node name="Sprite" parent="TablePos/Accountant " index="0"]
 texture = ExtResource( 22 )

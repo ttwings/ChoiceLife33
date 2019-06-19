@@ -20,6 +20,7 @@ var suanpan_4_2 = preload("res://assets/graphics/ui/suanpan_4-2.png")
 var suanpan_4_3 = preload("res://assets/graphics/ui/suanpan_4-3.png")
 var suanpan_4_4 = preload("res://assets/graphics/ui/suanpan_4-4.png")
 
+# 当算盘上面的按键按下之后的动作
 func _on_TextureButton50_pressed() -> void:
 	if digit1button5 == 0 :
 		digit1button5 = 5
@@ -32,7 +33,11 @@ func _on_TextureButton50_pressed() -> void:
 	pass # Replace with function body.
 
 var number = 0
+
+# 指的是当算盘下面的按键在按下时候的动作
+
 func _on_TextureButton14_pressed() -> void:
+#	print_debug(Input.get_mouse_button_mask())
 	number = (number + 1)%5
 	match number:
 		0:
@@ -53,6 +58,5 @@ func _on_TextureButton14_pressed() -> void:
 #		1:
 #			digit1button4 = 1
 #			$"TextureButton5-0".texture_normal = load("res://assets/graphics/ui/suanpan_4-1.png")
-	print_debug(get_sum())
 	update_label()
 	pass # Replace with function body.
