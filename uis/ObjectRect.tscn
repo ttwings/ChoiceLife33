@@ -216,5 +216,4 @@ margin_bottom = 30.0
 rect_min_size = Vector2( 20, 20 )
 custom_fonts/font = SubResource( 3 )
 text = "X"
-
 [connection signal="pressed" from="ObjectRectButton" to="." method="_on_CloseButton_pressed"]

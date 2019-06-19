@@ -19,7 +19,7 @@ var says = [
 
 
 func random_say():
-	randomize()
+#	randomize()
 	time = 200 + randi()%100
 	$Say/RichTextLabel.bbcode_text = says[randi()%says.size()]
 	$AnimationPlayer.play("say")
@@ -31,3 +31,9 @@ func _process(delta: float) -> void:
 	time = time - 1
 	if time <= 0:
 		random_say()
+		random_move()
+
+var moves = ["move_up","move_right","move_down","move_left"]
+		
+func random_move():
+	$AnimationPlayer.play(moves[randi()%moves.size()])		
