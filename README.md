@@ -10,8 +10,8 @@
 5. 个别截图
 
 * 主场景
-![Image text](doc\场景20190619194627.png)
+![Image](doc\场景20190619194627.png)
 * 厨房 做菜
-![Image text](doc\厨房20190619194707.png)
+![Image](doc\厨房20190619194707.png)
 * 柜台 算账
-![Image text](doc\柜台20190619194722.png)
+![Image](doc\柜台20190619194722.png)
