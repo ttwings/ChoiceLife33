@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.4" orientation="orthogonal" renderorder="left-down" width="16" height="16" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" name="tileA1_outside" tilewidth="16" tileheight="16" tilecount="768" columns="32">
+  <image source="../../../pic/timefantancy/graphics/00 tiles/autotile/tileA1_outside.png" trans="200302" width="512" height="384"/>
+  <terraintypes>
+   <terrain name="watergreengrass" tile="-1"/>
+  </terraintypes>
+  <tile id="0" terrain=",,,0"/>
+  <tile id="1" terrain=",,0,"/>
+  <tile id="2" terrain=",0,0,0"/>
+  <tile id="3" terrain="0,,0,0"/>
+  <tile id="32" terrain=",0,,"/>
+  <tile id="33" terrain="0,,,"/>
+  <tile id="34" terrain="0,0,,0"/>
+  <tile id="35" terrain="0,0,0,"/>
+  <tile id="65" terrain=",,0,0"/>
+  <tile id="66" terrain=",,0,0"/>
+  <tile id="96" terrain=",0,,0"/>
+  <tile id="97" terrain="0,0,0,0"/>
+  <tile id="98" terrain="0,0,0,0"/>
+  <tile id="99" terrain="0,,0,"/>
+  <tile id="128" terrain=",0,,0"/>
+  <tile id="129" terrain="0,0,0,0"/>
+  <tile id="130" terrain="0,0,0,0"/>
+  <tile id="131" terrain="0,,0,"/>
+  <tile id="161" terrain="0,0,,"/>
+  <tile id="162" terrain="0,0,,"/>
+ </tileset>
+ <tileset firstgid="769" source="../../rpg0721/core/assets/tileMaps/old3.tsx"/>
+</map>

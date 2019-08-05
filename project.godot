@@ -9,20 +9,70 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "EventEmitter",
+"class": "Achievement",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/achievement/Achievement.gd"
+}, {
+"base": "Module",
+"class": "AchievementModule",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/achievement/AchievementModule.gd"
+}, {
 "base": "Item",
 "class": "Armor",
 "language": "GDScript",
 "path": "res://inherit/Armor.gd"
+}, {
+"base": "GamePoint",
+"class": "AutoIncreasedGamePoint",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/AutoIncreasedGamePoint.gd"
+}, {
+"base": "EventEmitter",
+"class": "Buff",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/buff/Buff.gd"
+}, {
+"base": "Module",
+"class": "BuffModule",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/buff/BuffModule.gd"
+}, {
+"base": "Reference",
+"class": "BuiltinConditions",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/core/condition/BuiltinConditions.gd"
 }, {
 "base": "GameObject",
 "class": "Char",
 "language": "GDScript",
 "path": "res://inherit/Char.gd"
 }, {
+"base": "EventEmitter",
+"class": "Condition",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/core/condition/Condition.gd"
+}, {
+"base": "Module",
+"class": "DailyTask",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/DailyTask.gd"
+}, {
+"base": "Reference",
+"class": "DmgObj",
+"language": "GDScript",
+"path": "res://addons/TriggerSystem/BattleSystem/DmgObj.gd"
+}, {
 "base": "GameObject",
 "class": "Equip",
 "language": "GDScript",
 "path": "res://inherit/Equip.gd"
+}, {
+"base": "Reference",
+"class": "EventEmitter",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/core/EventEmitter.gd"
 }, {
 "base": "Item",
 "class": "Food",
@@ -34,10 +84,30 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://inherit/GameObject.gd"
 }, {
+"base": "Module",
+"class": "GamePoint",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/GamePoint.gd"
+}, {
+"base": "Reference",
+"class": "Handler",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/core/Handler.gd"
+}, {
 "base": "GameObject",
 "class": "Item",
 "language": "GDScript",
 "path": "res://inherit/Item.gd"
+}, {
+"base": "EventEmitter",
+"class": "Messenger",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/core/Messenger.gd"
+}, {
+"base": "EventEmitter",
+"class": "Module",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/core/Module.gd"
 }, {
 "base": "Combined_item",
 "class": "Money",
@@ -55,14 +125,54 @@ _global_script_classes=[ {
 "path": "res://inherit/Room.gd"
 }, {
 "base": "Reference",
+"class": "Serializer",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/core/Serializer.gd"
+}, {
+"base": "Node",
+"class": "SimpleGameFramework",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/core/SimpleGameFramework.gd"
+}, {
+"base": "Reference",
 "class": "Skill",
 "language": "GDScript",
 "path": "res://inherit/skill/Skill.gd"
+}, {
+"base": "Buff",
+"class": "StrengthBuff",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/buff/StrengthBuff.gd"
+}, {
+"base": "Buff",
+"class": "TimeOutBuff",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/buff/TimeOutBuff.gd"
+}, {
+"base": "Buff",
+"class": "TimerBuff",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/buff/TimerBuff.gd"
+}, {
+"base": "Module",
+"class": "TimerModule",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/modules/TimerModule.gd"
+}, {
+"base": "Reference",
+"class": "Trigger",
+"language": "GDScript",
+"path": "res://addons/TriggerSystem/Trigger.gd"
 }, {
 "base": "Char",
 "class": "User",
 "language": "GDScript",
 "path": "res://inherit/User.gd"
+}, {
+"base": "EventEmitter",
+"class": "ValueEvaluator",
+"language": "GDScript",
+"path": "res://addons/simple-game-framework/core/ValueEvaluator.gd"
 }, {
 "base": "GameObject",
 "class": "Weapon",
@@ -70,17 +180,39 @@ _global_script_classes=[ {
 "path": "res://inherit/Weapon.gd"
 } ]
 _global_script_class_icons={
+"Achievement": "",
+"AchievementModule": "",
 "Armor": "",
+"AutoIncreasedGamePoint": "",
+"Buff": "",
+"BuffModule": "",
+"BuiltinConditions": "",
 "Char": "",
+"Condition": "",
+"DailyTask": "",
+"DmgObj": "",
 "Equip": "",
+"EventEmitter": "",
 "Food": "",
 "GameObject": "",
+"GamePoint": "",
+"Handler": "",
 "Item": "",
+"Messenger": "",
+"Module": "",
 "Money": "",
 "Npc": "",
 "Room": "",
+"Serializer": "",
+"SimpleGameFramework": "",
 "Skill": "",
+"StrengthBuff": "",
+"TimeOutBuff": "",
+"TimerBuff": "",
+"TimerModule": "",
+"Trigger": "",
 "User": "",
+"ValueEvaluator": "",
 "Weapon": ""
 }
 
@@ -94,6 +226,7 @@ config/icon="res://icon.png"
 
 Global="*res://Global.gd"
 Signals_manager="*res://Signals_manager.gd"
+SimpleFrame="*res://SimpleFrame.gd"
 
 [debug]
 
@@ -104,6 +237,10 @@ gdscript/warnings/enable=false
 window/size/width=1280
 window/size/height=720
 window/stretch/mode="2d"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "TriggerSystem", "gdutils", "simple-game-framework", "vnen.tiled_importer" )
 
 [importer_defaults]
 
@@ -145,3 +282,7 @@ mouse_right={
 
 quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
+
+[tiled_importer]
+
+enable_json_format=true
