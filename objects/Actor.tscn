@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/graphics/characters/actor (16).png" type="Texture" id=2]
 [ext_resource path="res://uis/Say.tscn" type="PackedScene" id=3]
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=1]
 resource_name = "idle_down"
 length = 0.4
 loop = true
@@ -106,7 +106,7 @@ margin_bottom = -92.0
 rect_scale = Vector2( 1.5, 1.5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/idle_down = SubResource( 10 )
+anims/idle_down = SubResource( 1 )
 anims/idle_left = SubResource( 2 )
 anims/idle_right = SubResource( 3 )
 anims/idle_up = SubResource( 4 )

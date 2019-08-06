@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var SPEED = 64
+export(int) var SPEED = 64
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_down") :

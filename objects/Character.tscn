@@ -80,6 +80,7 @@ tracks/0/keys = {
 [node name="KinematicBody2D" type="KinematicBody2D"]
 position = Vector2( 0.936656, 0 )
 script = ExtResource( 1 )
+SPEED = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 24 )
@@ -89,7 +90,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 4
-frame = 11
+frame = 7
 region_rect = Rect2( -32, 128, 32, 64 )
 
 [node name="Say" parent="." instance=ExtResource( 3 )]
