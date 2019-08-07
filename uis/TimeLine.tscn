@@ -15,3 +15,6 @@ margin_bottom = 24.0
 custom_fonts/font = SubResource( 1 )
 text = "测试测试"
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchor_bottom = 1.0
+margin_right = 4.0

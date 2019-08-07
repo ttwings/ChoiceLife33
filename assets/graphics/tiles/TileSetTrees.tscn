@@ -12,7 +12,7 @@
 [node name="Apple001" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 288, 0, 96, 128 )
+region_rect = Rect2( 610.125, 291.394, 0, 0 )
 
 [node name="Apple002" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -1153,4 +1153,3 @@ region_rect = Rect2( 256, 704, 288, 320 )
 texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( 544, 704, 256, 320 )
-
