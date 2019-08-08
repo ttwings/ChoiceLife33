@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/graphics/tiles/AppleTree_allSeasons.png" type="Texture" id=1]
 [ext_resource path="res://assets/graphics/tiles/trees-brown.png" type="Texture" id=2]
@@ -7,50 +7,79 @@
 [ext_resource path="res://assets/graphics/tiles/trees-pale.png" type="Texture" id=5]
 [ext_resource path="res://assets/graphics/tiles/trees-orange.png" type="Texture" id=6]
 
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.5156
+
 [node name="TileSetTrees" type="Node2D"]
 
 [node name="Apple001" type="Sprite" parent="."]
+position = Vector2( 610.368, 223.89 )
 texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -46, -105 )
 region_enabled = true
-region_rect = Rect2( 610.125, 291.394, 0, 0 )
+region_rect = Rect2( 288, 0, 96, 128 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Apple001"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Apple001/StaticBody2D"]
+position = Vector2( 1.13208, -1.88676 )
+shape = SubResource( 1 )
 
 [node name="Apple002" type="Sprite" parent="."]
+position = Vector2( 474.771, 186.372 )
 texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -46, -105 )
 region_enabled = true
 region_rect = Rect2( 192, 0, 96, 128 )
 
 [node name="Apple003" type="Sprite" parent="."]
+position = Vector2( 357.418, 232.091 )
 texture = ExtResource( 1 )
+offset = Vector2( -0.177612, -43.6727 )
 region_enabled = true
 region_rect = Rect2( 384, 0, 96, 128 )
 
 [node name="Apple004" type="Sprite" parent="."]
+position = Vector2( 243.672, 242.15 )
 texture = ExtResource( 1 )
+offset = Vector2( 2.02502, -43.1805 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 96, 128 )
 
 [node name="Apple005" type="Sprite" parent="."]
+position = Vector2( 145.401, 232.864 )
 texture = ExtResource( 1 )
+offset = Vector2( -1.2478, -40.0102 )
 region_enabled = true
 region_rect = Rect2( 96, 0, 96, 128 )
 
 [node name="Apple006" type="Sprite" parent="."]
+position = Vector2( 147.948, 404.422 )
 texture = ExtResource( 1 )
+offset = Vector2( 2.05003, -40.1416 )
 region_enabled = true
 region_rect = Rect2( 0, 256, 96, 128 )
 
 [node name="Apple007" type="Sprite" parent="."]
+position = Vector2( 264.077, 379.764 )
 texture = ExtResource( 1 )
+offset = Vector2( 0.854156, -9.63962 )
 region_enabled = true
 region_rect = Rect2( 192, 320, 96, 64 )
 
 [node name="Apple008" type="Sprite" parent="."]
+position = Vector2( 366.105, 382.336 )
 texture = ExtResource( 1 )
+offset = Vector2( -1.82452, -12.2118 )
 region_enabled = true
 region_rect = Rect2( 288, 320, 96, 64 )
 
 [node name="Apple009" type="Sprite" parent="."]
+position = Vector2( 494.711, 378.906 )
 texture = ExtResource( 1 )
+offset = Vector2( 7.87851, -16.5743 )
 region_enabled = true
 region_rect = Rect2( 384, 320, 96, 64 )
 

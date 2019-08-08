@@ -4,11 +4,14 @@ onready var player = $Sprite
 onready var animation_player = $AnimationPlayer
 onready var camera = $Camera2D
 
-var current_animation = "start"
+
 var speed = 200
 var velocity = Vector2(0,0)
 var is_moving = false
+var current_animation = "start"
+var current_direction = "right"
 var new_animation
+var new_direction
 
 func _ready():
 	camera.position = player.position
@@ -19,18 +22,22 @@ func get_input():
 	new_animation = current_animation
 	if Input.is_action_pressed("left"):
 		velocity.x += -1
+		new_direction = "left"
 		new_animation = "walk_left"
 		is_moving = true
 	if Input.is_action_pressed("right"):
 		velocity.x += 1
+		new_direction = "right"
 		new_animation = "walk_right"
 		is_moving = true
 	if Input.is_action_pressed("up"):
 		velocity.y += -1
+		new_direction = "up"
 		new_animation = "walk_up"
 		is_moving = true		
 	if Input.is_action_pressed("down"):
 		velocity.y += 1
+		new_direction = "down"
 		new_animation = "walk_down"
 		is_moving = true
 	# velocity
