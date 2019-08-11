@@ -5,15 +5,26 @@ onready var animation_player = $AnimationPlayer
 onready var camera = $Camera2D
 
 
+signal hit(dmg,obj)
+
 var speed = 200
 var velocity = Vector2(0,0)
 var is_moving = false
 var current_animation = "start"
 var current_direction = "right"
 var new_animation
-var new_direction
+var new_direction = ""
+
+
+enum STATES {WALK,IDLE,ATTACK,SKILL,HURT,DEAD}
+var current_state
+var new_state
+
+var  dmg_obj
 
 func _ready():
+	dmg_obj = DmgObj.new()
+	
 	camera.position = player.position
 
 func get_input():
@@ -25,6 +36,7 @@ func get_input():
 		new_direction = "left"
 		new_animation = "walk_left"
 		is_moving = true
+		
 	if Input.is_action_pressed("right"):
 		velocity.x += 1
 		new_direction = "right"
@@ -43,14 +55,20 @@ func get_input():
 	# velocity
 	if velocity.length() > 0 :
 		velocity = velocity.normalized() * speed
+		
 	# update
+	update_direction(new_direction)
 	update_animation(is_moving,new_animation)
 
 func _physics_process(delta: float) -> void:
 	get_input()
 	velocity = move_and_slide(velocity)
+	$Attack_Area2D.position = velocity.normalized() * 16
 #		player.position += velocity.normalized() * speed * delta
 	update_camera_position()
+
+func update_direction(new_direction):
+	current_direction = new_direction
 
 	
 func update_animation(is_moving,new_animation):
@@ -62,6 +80,38 @@ func update_animation(is_moving,new_animation):
 		animation_player.stop()
 		current_animation = 'start'			
 		
+func _input(event: InputEvent) -> void:
+#	hit(5)
+	pass
+
+var max_hp = 100
+var current_hp = 100
+var hurt = 5
+
+func hit(damage):
+	animation_player.play("slash_" + current_direction)
+	print_debug(current_direction)
+
+func _on_attack(damage):
+	current_hp -= damage
+	
+	if current_hp <= 0 :
+		current_hp = 0
+		current_state = STATES.DEAD
+		animation_player.play("hurt")
+	print_debug(current_hp/max_hp * 100)
+	$HP_TextureProgress.value = (current_hp * 100/max_hp)
 		
 func update_camera_position():
 	camera.position = player.position		
+	
+	
+		
+
+func _on_Attack_Area2D_body_entered(body: PhysicsBody2D) -> void:
+	if body and body.has_method("on_attack") :
+		body.on_attack(5,self)
+		var jump_name = preload("res://objects/jumps/JumpName.tscn").instance()
+		add_child(jump_name)
+		jump_name.start("罗汉拳",Vector2(-24,-54),Color.red)
+	pass # Replace with function body.

@@ -1,15 +1,16 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/graphics/tiles/TileTerrain.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/graphics/tiles/TilesetTrees.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/graphics/tiles/TilesetFurniture.tres" type="TileSet" id=3]
-[ext_resource path="res://objects/LPC_Player_temp.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/graphics/tiles/others/Tile_Region_32x32.png" type="Texture" id=5]
-[ext_resource path="res://assets/graphics/tiles/others/TileCollision_32x32.png" type="Texture" id=6]
+[ext_resource path="res://objects/LPC/LPC_Player_temp.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/LPC/LPC_Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/graphics/tiles/others/Tile_Region_32x32.png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/tiles/others/TileCollision_32x32.png" type="Texture" id=7]
 
-[sub_resource type="TileSet" id=18]
+[sub_resource type="TileSet" id=1]
 0/name = "Tile_Region_32x32.png 0"
-0/texture = ExtResource( 5 )
+0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 256, 512 )
@@ -25,81 +26,81 @@
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 15.7382, 0, 15.7382, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 0, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 32, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 0, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 0, 0, 16.0393 )
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 15.6356, 0, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 0, 32, 32, 16.1739, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 0, 16.0393, 32, 32, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 7.22726, 8.9381, 24.9929, 8.9381, 24.8583, 22.8006, 7.09267, 22.9352 )
 
-[sub_resource type="ConvexPolygonShape2D" id=12]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 13.854, 7.72681, 18.2954, 7.72681, 24.0827, 13.5141, 24.2173, 18.3593, 18.2954, 23.8773, 13.7194, 23.7428, 7.93212, 17.8209, 8.2013, 13.6487 )
 
-[sub_resource type="ConvexPolygonShape2D" id=13]
+[sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 15.8409, 0, 15.9755 )
 
-[sub_resource type="ConvexPolygonShape2D" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 23.5124, 2.24062, 32, 0, 32, 32, 0, 32, 3.59338, 18.6603, 8.97689, 10.1813, 14.7642, 6.00908, 19.4748, 3.5865 )
 
-[sub_resource type="ConvexPolygonShape2D" id=20]
+[sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 0, 0, 9.278, 1.70227, 16.142, 4.79779, 20.3142, 8.02789, 26.1015, 15.0265, 29.6008, 22.9672, 30.8121, 26.7356, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
+[sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 32, 32, 26.4733, 31.5021, 15.1679, 26.9261, 7.22725, 18.9854, 3.59338, 13.0636, 1.70915, 7.41089, 0, 0, 32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=22]
+[sub_resource type="ConvexPolygonShape2D" id=18]
 points = PoolVector2Array( 0, 0, 31.8888, 0.27774, 30.1391, 8.75677, 29.0624, 11.5831, 23.006, 20.7351, 19.1029, 24.6382, 11.1622, 29.8871, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=15]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 16.3404, 0, 32, 0, 32, 32, 16.2058, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=16]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 0, 16.1101, 32, 16.2446, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=23]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 10.4574, 1.09214, 20.9552, 0.553787, 26.2042, 4.45684, 29.4343, 8.09071, 31.3185, 10.9171, 31.1839, 21.5495, 27.6846, 25.8563, 24.1853, 28.9518, 21.359, 31.2398, 10.3228, 31.509, 1.57456, 23.8375, 0, 12.6667, 3.45879, 6.07189 )
 
-[sub_resource type="ConvexPolygonShape2D" id=24]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 8.33589, 2.30343, 13.4502, 6.20648, 15.1999, 11.0516, 14.7961, 20.8766, 13.854, 24.2413, 8.33589, 28.8173, 5.37495, 31.3744, 0, 32, 0, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=25]
+[sub_resource type="ConvexPolygonShape2D" id=23]
 points = PoolVector2Array( 32, 0, 31.1132, 4.12037, 28.9598, 7.88883, 27.6139, 10.3114, 24.7875, 12.4648, 20.2115, 14.7528, 11.5979, 14.2145, 7.42569, 12.734, 3.65723, 9.90765, 0.696289, 5.73543, 0.0233612, 0.0827332 )
 
-[sub_resource type="ConvexPolygonShape2D" id=26]
+[sub_resource type="ConvexPolygonShape2D" id=24]
 points = PoolVector2Array( 18.0901, 7.52836, 20.5126, 4.70201, 25.4924, 1.20273, 32, 0, 32, 32, 26.4345, 31.2158, 23.4736, 29.6008, 19.7051, 26.6398, 18.6284, 25.4286, 16.8788, 20.8526, 17.148, 10.3547 )
 
-[sub_resource type="ConvexPolygonShape2D" id=27]
+[sub_resource type="ConvexPolygonShape2D" id=25]
 points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337, 27.6777, 22.1984, 30.2349, 25.9669, 31.5808, 32, 0, 32, 1.02933, 27.5147, 3.45192, 22.7368, 5.60532, 19.5067 )
 
-[sub_resource type="TileSet" id=17]
+[sub_resource type="TileSet" id=26]
 0/name = "TileCollision_32x32.png 0"
-0/texture = ExtResource( 6 )
+0/texture = ExtResource( 7 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 32 )
@@ -110,12 +111,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
 1/name = "TileCollision_32x32.png 1"
-1/texture = ExtResource( 6 )
+1/texture = ExtResource( 7 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 32, 0, 32, 32 )
@@ -126,12 +127,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 2 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
 2/name = "TileCollision_32x32.png 2"
-2/texture = ExtResource( 6 )
+2/texture = ExtResource( 7 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 64, 0, 32, 32 )
@@ -142,12 +143,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 13 ),
+"shape": SubResource( 14 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
 3/name = "TileCollision_32x32.png 3"
-3/texture = ExtResource( 6 )
+3/texture = ExtResource( 7 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 96, 0, 32, 32 )
@@ -158,12 +159,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 15 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
 4/name = "TileCollision_32x32.png 4"
-4/texture = ExtResource( 6 )
+4/texture = ExtResource( 7 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 128, 0, 32, 32 )
@@ -174,12 +175,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 16 ),
+"shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
 5/name = "TileCollision_32x32.png 5"
-5/texture = ExtResource( 6 )
+5/texture = ExtResource( 7 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 32, 32, 32 )
@@ -190,12 +191,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 23 ),
+"shape": SubResource( 21 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
 6/name = "TileCollision_32x32.png 6"
-6/texture = ExtResource( 6 )
+6/texture = ExtResource( 7 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 32, 32, 32, 32 )
@@ -206,12 +207,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 24 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
 7/name = "TileCollision_32x32.png 7"
-7/texture = ExtResource( 6 )
+7/texture = ExtResource( 7 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 64, 32, 32, 32 )
@@ -222,12 +223,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 25 ),
+"shape": SubResource( 23 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/z_index = 0
 8/name = "TileCollision_32x32.png 8"
-8/texture = ExtResource( 6 )
+8/texture = ExtResource( 7 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 96, 32, 32, 32 )
@@ -238,12 +239,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 26 ),
+"shape": SubResource( 24 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 8/z_index = 0
 9/name = "TileCollision_32x32.png 9"
-9/texture = ExtResource( 6 )
+9/texture = ExtResource( 7 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 128, 32, 32, 32 )
@@ -254,12 +255,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 27 ),
+"shape": SubResource( 25 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 9/z_index = 0
 10/name = "TileCollision_32x32.png 10"
-10/texture = ExtResource( 6 )
+10/texture = ExtResource( 7 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 64, 32, 32 )
@@ -270,12 +271,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 10/z_index = 0
 11/name = "TileCollision_32x32.png 11"
-11/texture = ExtResource( 6 )
+11/texture = ExtResource( 7 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 32, 64, 32, 32 )
@@ -286,12 +287,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 11/z_index = 0
 12/name = "TileCollision_32x32.png 12"
-12/texture = ExtResource( 6 )
+12/texture = ExtResource( 7 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 64, 64, 32, 32 )
@@ -302,12 +303,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 12/z_index = 0
 13/name = "TileCollision_32x32.png 13"
-13/texture = ExtResource( 6 )
+13/texture = ExtResource( 7 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 96, 64, 32, 32 )
@@ -318,12 +319,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 13/z_index = 0
 14/name = "TileCollision_32x32.png 14"
-14/texture = ExtResource( 6 )
+14/texture = ExtResource( 7 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 128, 64, 32, 32 )
@@ -334,12 +335,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 14/z_index = 0
 15/name = "TileCollision_32x32.png 15"
-15/texture = ExtResource( 6 )
+15/texture = ExtResource( 7 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 160, 64, 32, 32 )
@@ -350,12 +351,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 15/z_index = 0
 16/name = "TileCollision_32x32.png 16"
-16/texture = ExtResource( 6 )
+16/texture = ExtResource( 7 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 192, 64, 32, 32 )
@@ -366,12 +367,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 16/z_index = 0
 17/name = "TileCollision_32x32.png 17"
-17/texture = ExtResource( 6 )
+17/texture = ExtResource( 7 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 224, 64, 32, 32 )
@@ -382,12 +383,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 10 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 17/z_index = 0
 18/name = "TileCollision_32x32.png 18"
-18/texture = ExtResource( 6 )
+18/texture = ExtResource( 7 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 0, 96, 32, 32 )
@@ -398,12 +399,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 11 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 18/z_index = 0
 19/name = "TileCollision_32x32.png 19"
-19/texture = ExtResource( 6 )
+19/texture = ExtResource( 7 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 32, 96, 32, 32 )
@@ -414,12 +415,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 12 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 19/z_index = 0
 20/name = "TileCollision_32x32.png 20"
-20/texture = ExtResource( 6 )
+20/texture = ExtResource( 7 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 128, 32, 32 )
@@ -430,12 +431,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 19 ),
+"shape": SubResource( 15 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 20/z_index = 0
 21/name = "TileCollision_32x32.png 21"
-21/texture = ExtResource( 6 )
+21/texture = ExtResource( 7 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 32, 128, 32, 32 )
@@ -446,12 +447,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 20 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 21/z_index = 0
 22/name = "TileCollision_32x32.png 22"
-22/texture = ExtResource( 6 )
+22/texture = ExtResource( 7 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 0, 160, 32, 32 )
@@ -462,12 +463,12 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 22/z_index = 0
 23/name = "TileCollision_32x32.png 23"
-23/texture = ExtResource( 6 )
+23/texture = ExtResource( 7 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 32, 160, 32, 32 )
@@ -478,7 +479,7 @@ points = PoolVector2Array( 10.7197, 16.2766, 21.3521, 16.4112, 24.5822, 18.8337,
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 22 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 23/z_index = 0
@@ -510,15 +511,18 @@ tile_data = PoolIntArray( 851977, 0, 0, 983046, 1, 0 )
 [node name="LPC_Player" parent="trees" instance=ExtResource( 4 )]
 position = Vector2( 471.662, 412.514 )
 
+[node name="LPC_Enemy" parent="trees" instance=ExtResource( 5 )]
+position = Vector2( 640, 416 )
+
 [node name="region" type="TileMap" parent="."]
 visible = false
-tile_set = SubResource( 18 )
+tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 196618, 0, 65537, 262153, 0, 65537, 262154, 0, 65537, 262155, 0, 65537, 327689, 0, 65537, 327690, 0, 65537, 327691, 0, 65537, 393220, 0, 7, 393221, 0, 7, 393222, 0, 7, 393223, 0, 7, 393235, 0, 65536, 393236, 0, 65536, 393237, 0, 65536, 458756, 0, 7, 458757, 0, 7, 458758, 0, 7, 458759, 0, 7, 458771, 0, 65536, 458772, 0, 65536, 458773, 0, 65536, 524292, 0, 7, 524293, 0, 7, 524294, 0, 7, 524295, 0, 7, 524307, 0, 65536, 524308, 0, 65536, 524309, 0, 65536, 589828, 0, 7, 589829, 0, 7, 589830, 0, 7, 589831, 0, 7 )
 
 [node name="collisions" type="TileMap" parent="."]
-tile_set = SubResource( 17 )
+tile_set = SubResource( 26 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 393226, 5, 0, 524302, 5, 0, 589840, 5, 0, 589844, 5, 0, 655371, 5, 0, 851976, 3, 0, 851977, 0, 0, 851978, 1, 0, 983045, 3, 0, 983046, 0, 0, 983047, 1, 0 )
