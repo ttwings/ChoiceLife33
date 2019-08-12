@@ -20,6 +20,3 @@ func _init(dict = null):
 	var keys = dict.keys()
 	for key in keys :
 		set(key,dict[key])
-
-func _ready():
-	pass # Replace with function body.

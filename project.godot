@@ -29,6 +29,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/simple-game-framework/modules/AutoIncreasedGamePoint.gd"
 }, {
+"base": "Node2D",
+"class": "Battle",
+"language": "GDScript",
+"path": "res://addons/TriggerSystem/BattleSystem/Battle.gd"
+}, {
+"base": "Node2D",
+"class": "BattleCharacter",
+"language": "GDScript",
+"path": "res://addons/TriggerSystem/BattleSystem/BattleCharacter.gd"
+}, {
 "base": "EventEmitter",
 "class": "Buff",
 "language": "GDScript",
@@ -142,7 +152,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Skill",
 "language": "GDScript",
-"path": "res://inherit/skill/Skill.gd"
+"path": "res://addons/TriggerSystem/BattleSystem/Skill.gd"
 }, {
 "base": "Buff",
 "class": "StrengthBuff",
@@ -189,6 +199,8 @@ _global_script_class_icons={
 "AchievementModule": "",
 "Armor": "",
 "AutoIncreasedGamePoint": "",
+"Battle": "",
+"BattleCharacter": "",
 "Buff": "",
 "BuffModule": "",
 "BuiltinConditions": "",
@@ -233,6 +245,10 @@ config/icon="res://icon.png"
 Global="*res://Global.gd"
 Signals_manager="*res://Signals_manager.gd"
 SimpleFrame="*res://SimpleFrame.gd"
+TriggerSystem="*res://addons/TriggerSystem/TriggerSystem.gd"
+DmgObjFactory="*res://addons/TriggerSystem/BattleSystem/DmgObjFactory.gd"
+HealObjFactory="*res://addons/TriggerSystem/BattleSystem/HealObjFactory.gd"
+BattleProcess="*res://addons/TriggerSystem/BattleSystem/BattleProcess.gd"
 
 [debug]
 
