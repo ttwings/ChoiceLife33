@@ -111,7 +111,7 @@ func update_camera_position():
 func _on_Attack_Area2D_body_entered(body: PhysicsBody2D) -> void:
 	if body and body.has_method("on_attack") :
 		body.on_attack(5,self)
-		var jump_name = preload("res://objects/jumps/JumpName.tscn").instance()
+		var jump_name = preload("res://addons/TriggerSystem/BattleSystem/jumps/JumpName.tscn").instance()
 		add_child(jump_name)
 		jump_name.start("罗汉拳",Vector2(-24,-54),Color.red)
 	pass # Replace with function body.

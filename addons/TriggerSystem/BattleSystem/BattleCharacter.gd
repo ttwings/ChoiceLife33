@@ -164,7 +164,7 @@ func skill_init():
 			TriggerSystem.appendTrigger(trigger)
 			
 # ---- 使用技能 ------
-func skill_use(skill):
+func skill_use(skill:Skill):
 	if skill.cd_timer > 0 || skill.cost > mp :
 		return
 	# 技能使用前
@@ -176,7 +176,16 @@ func skill_use(skill):
 	# --- 减少魔法值 ----
 	self.mp -= skill.cost
 	# ---- 技能进入冷却 ----
-	skill.cd_timer = skill_cd
+	skill.cd_timer = skill.cd
+	# ---- 触发技能效果 -----
+	emit_signal("jumpSkillName",skill.name_cn,position)
+	skill.use()
+	# ----- 发出使用技能后事件 ------
+	TriggerSystem.sendEvent("skill_after",skill_obj)
+	
+# ----- 使用物品 -----
+func item_init():
+	
 							
 		
 

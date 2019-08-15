@@ -2,6 +2,7 @@ extends GameObject
 
 class_name Item
 
+
 ########################################  F_MOVE #####################################
 var weight : int = 0
 var encumb : int = 0
