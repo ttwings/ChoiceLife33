@@ -39,20 +39,30 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/TriggerSystem/BattleSystem/BattleCharacter.gd"
 }, {
+"base": "BattleCharacter",
+"class": "BattleEnemy",
+"language": "GDScript",
+"path": "res://addons/TriggerSystem/BattleSystem/BattleEnemy.gd"
+}, {
+"base": "BattleCharacter",
+"class": "BattlePlayer",
+"language": "GDScript",
+"path": "res://addons/TriggerSystem/BattleSystem/BattlePlayer.gd"
+}, {
 "base": "EventEmitter",
 "class": "Buff",
 "language": "GDScript",
 "path": "res://addons/simple-game-framework/modules/buff/Buff.gd"
 }, {
-"base": "Reference",
-"class": "Buff1",
-"language": "GDScript",
-"path": "res://addons/TriggerSystem/BattleSystem/Buffer.gd"
-}, {
 "base": "Module",
 "class": "BuffModule",
 "language": "GDScript",
 "path": "res://addons/simple-game-framework/modules/buff/BuffModule.gd"
+}, {
+"base": "Reference",
+"class": "Buffer",
+"language": "GDScript",
+"path": "res://addons/TriggerSystem/BattleSystem/Buffer.gd"
 }, {
 "base": "Reference",
 "class": "BuiltinConditions",
@@ -206,9 +216,11 @@ _global_script_class_icons={
 "AutoIncreasedGamePoint": "",
 "Battle": "",
 "BattleCharacter": "",
+"BattleEnemy": "",
+"BattlePlayer": "",
 "Buff": "",
-"Buff1": "",
 "BuffModule": "",
+"Buffer": "",
 "BuiltinConditions": "",
 "Char": "",
 "Condition": "",
@@ -255,6 +267,7 @@ TriggerSystem="*res://addons/TriggerSystem/TriggerSystem.gd"
 DmgObjFactory="*res://addons/TriggerSystem/BattleSystem/DmgObjFactory.gd"
 HealObjFactory="*res://addons/TriggerSystem/BattleSystem/HealObjFactory.gd"
 BattleProcess="*res://addons/TriggerSystem/BattleSystem/BattleProcess.gd"
+gdutils="*res://addons/gdutils/__init__.gd"
 
 [debug]
 

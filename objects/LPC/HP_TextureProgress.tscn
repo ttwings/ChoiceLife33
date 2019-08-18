@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://objects/HP_progress_over.png" type="Texture" id=1]
-[ext_resource path="res://objects/HP_progress_pro.png" type="Texture" id=2]
+[ext_resource path="res://objects/LPC/HP_progress_over.png" type="Texture" id=1]
+[ext_resource path="res://objects/LPC/HP_progress_pro.png" type="Texture" id=2]
+
 
 [node name="HP_TextureProgress" type="TextureProgress"]
 margin_left = -24.0

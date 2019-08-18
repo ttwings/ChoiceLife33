@@ -1,0 +1,17 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=2]
+
+[ext_resource path="res://objects/skills/animations/Ice/ice-017/ice-017_000.png" type="Texture" id=1]
+[ext_resource path="res://objects/skills/animations/Ice/ice-017/ice-017_001.png" type="Texture" id=2]
+[ext_resource path="res://objects/skills/animations/Ice/ice-017/ice-017_002.png" type="Texture" id=3]
+[ext_resource path="res://objects/skills/animations/Ice/ice-017/ice-017_003.png" type="Texture" id=4]
+[ext_resource path="res://objects/skills/animations/Ice/ice-017/ice-017_004.png" type="Texture" id=5]
+[ext_resource path="res://objects/skills/animations/Ice/ice-017/ice-017_005.png" type="Texture" id=6]
+[ext_resource path="res://objects/skills/animations/Ice/ice-017/ice-017_006.png" type="Texture" id=7]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]

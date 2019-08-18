@@ -126,8 +126,3 @@ offset = Vector2( -32, -54 )
 vframes = 21
 hframes = 13
 frame = 6
-
-[node name="Camera2D" type="Camera2D" parent="LPC_Player"]
-position = Vector2( -7.62939e-006, 24.274 )
-current = true
-zoom = Vector2( 0.5, 0.5 )

@@ -48,11 +48,54 @@ func get_attack_interval():
 	
 var attack_timer = 100
 # idle、attack、die
-var state = "" setget set_state
+var state = "idle" setget set_state
 var start_pos:Vector2
 
 # --- 引用 ------
 var tween:Tween
+
+# --------
+func _ready() -> void:
+	tween = $Tween
+	start_pos = position
+	
+func _process(delta: float) -> void:
+	$Label.text = state
+	match state :
+		"idle" :
+			attack_timer -= delta * speed
+			if attack_timer <= 0 :
+				attack()
+		"attack" :
+			pass
+		"die" :
+			pass
+	for buff in buff_list :
+		buff.life -= delta
+		if buff.life <= 0 :
+			buff_remove(buff)
+	for skill in skill_list :
+		if skill.cd_timer > 0 :
+			skill.cd_timer -= delta
+		if skill.cd_timer < 0 :
+			skill.cd_timer = skill.cd
+	for item in item_list :
+		if item.cd_timer > 0 :
+			item.cd_timer -= delta
+		if item.cd_timer < 0 :
+			item.cd_timer = item.cd		
+
+	 						
+func start(battle,oppent):
+	self.battle = battle
+	self.oppent = oppent
+	skill_init()
+	item_init()
+	calculate_property()
+	attack_timer = get_attack_interval()
+	start_pos = position
+	set_state("idle")	
+	
 # ---- setter -----
 func set_state(value):
 	state = value
@@ -184,10 +227,40 @@ func skill_use(skill:Skill):
 	TriggerSystem.sendEvent("skill_after",skill_obj)
 	
 # ----- 使用物品 -----
+# ----- 初始化物品 -----
 func item_init():
-	
+	for item in item_list :
+		item.start(self)
+		for trigger in item.trigger_list :
+			TriggerSystem.appendTrigger(trigger)
+
+# ------- 使用 ------------
+func item_use(item):
+	item = item as Item
+	if item.type == 0 :
+		return
+	if !item.can_battle_use	:
+		return
+	if item.cd_tiemr > 0 or item.cost > mp :
+		return
+	if item.is_consume and item.number <= 0 :
+		return
+	# use
+	self.mp -= item.cost
+	item.cd_timer = item.cd
+	emit_signal("jumpSkillName",item.name_cn,position)
+	item.use()
+	if item.is_consume :
+		item.number -= 1
+	if item.will_disapper :
+		item_remove(item)
 							
-		
+func item_remove(item):
+	for trigger in item.trigger_list :
+		TriggerSystem.removeTrigger(trigger)
+#	Global.team.item_remove(item)
+	emit_signal("item_remove",item)
+	calculate_property() 		
 
 func buff_append(buff):
 	# 判断是否有一样的buff
@@ -211,19 +284,15 @@ func buff_append(buff):
 	buff_list.append(buff)
 	buff.start(self)
 	# 重新计算属性
-				
-	
-	
-func _ready() -> void:
-	tween = $Tween
-	
-func start(battle,oppent):
-	self.battle = battle
-	self.oppent = oppent
-	skill_init()
-	item_init()
+
+func buff_remove(buff) :
+	if buff_list.has(buff) :
+		buff_list.erase(buff)
+		buff.end()
+		calculate_property()
+		emit_signal("buff_remove",buff)
+		
+func on_buff_property_change() :
 	calculate_property()
-	attack_timer = get_attack_interval()
-	start_pos = position
-	set_state("idle")
+
 

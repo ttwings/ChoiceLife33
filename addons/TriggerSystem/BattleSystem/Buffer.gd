@@ -1,6 +1,6 @@
 extends Reference
 
-class_name Buff1
+class_name Buffer
 
 signal property_change
 signal number_change
