@@ -39,7 +39,7 @@ static func damageProcess(dmgObj:DmgObj):
 			to.hp -= left
 	else :
 		to.hp -= dmgObj.dmg
-	 # 受到伤害
+# 受到伤害
 	to.beHit(dmgObj)
 	# 伤害之后的事件
 	TriggerSystem.sendEvent("damage_after",dmgObj)

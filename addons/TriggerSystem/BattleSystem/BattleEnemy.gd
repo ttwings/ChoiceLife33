@@ -19,5 +19,5 @@ func set_enemy(enemy) :
 	speed_base = enemy.speed
 	skill_list = enemy.skill_list
 #
-func _process(delta: float) -> void:
-	enemy.process(delta)
+#func _process(delta: float) -> void:
+#	enemy.process(delta)
