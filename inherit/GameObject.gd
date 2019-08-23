@@ -1,4 +1,4 @@
-extends Node
+#extends Node
 
 class_name GameObject
 # const color -----------------------------------
@@ -31,24 +31,11 @@ const HBBLU = "[color=#3b2e7e]"
 const HBMAG = "[color=#815463]"
 const HBCYN = "[color=#00e09e]"
 const HBWHT = "[color=#f0fcff]"
+
+signal tell_object(who,msg)
+
 var __DIR__ = dir()
 var __FILE__ = file_name()
-
-#signal message_veision(msg)
-#signal notify_fail(msg)
-#
-func notify_fail(msg):
-	Signals_manager.emit_signal("notify_fail",msg)
-	
-func message_vision(msg:String, ob):
-	Signals_manager.emit_signal("message_vision",msg,ob)	
-#
-#
-##var global = Global	
-#var main = preload("res://stages/Main.tscn").instance()
-#func connect_notify_fail(msg):
-#	print_debug("notify",msg)
-#	connect("notify_fail",main,"msg_notify_fail",[msg])
 
 func _init():
 	create()
@@ -56,16 +43,17 @@ func _init():
 
 ##################################################  dbase #################################	
 
-var dbase = {"objects" : {}}
-var tmp_dbase = {}
-var default_ob;
-
 func getuid(ob=self):
 	return ob.get_instance_id()
 	
 func setuid(uid):
 	set("uid",uid)		
-	
+
+var dbase = {"objects" : {}}  setget set_dbase,get_dbase
+var tmp_dbase = {}
+
+var default_ob;
+
 func query_default_object():
 	return default_ob
 
@@ -174,7 +162,7 @@ func strsrch(string1,string2):
 
 # 返回物品
 # todo
-func present(name:String,to=self):
+func present(name:String,to):
 	to.add("present",name)
 
 func is_character():
@@ -220,9 +208,6 @@ func evaluate(interrupt,fun,args=[],ob=self):
 		
 func keys(d:Dictionary):
 	return d.keys()
-	
-func map_delete(map:Dictionary,key):
-	map.erase(key)	
 
 # todo test
 func sprintf(string,arg1=null,arg2=null,arg3=null,arg4=null):
@@ -250,12 +235,27 @@ func command(cmd:String):
 func error(e):
 	print_debug(str(e))
 
-#func notify_fail(message:String):
-#	print_debug(message)
-#	return message
-#	pass	
+func notify_fail(message:String):
+	print_debug(message)
+	return message
+	pass	
+
+# 各类信息发送
+func message_vision(message:String,ob):
+	# TODO
+#	print_debug(ob.query("name") + message)
+	var msg = message
+	var str_n = ob.query("name")
+	msg = msg.replace("$N",str_n)
+	# emit_signal("message_ob_sended",msg,ob)
+	return msg
 
 func tell_object(who,msg:String):
+	emit_signal("tell_object",who,msg)
 	#  TODO
-	who.add("msg",msg)
+#	who.add("msg",msg)
 	print_debug(who.name(),msg)		
+
+func new_ob(path):
+	var ob = load(path + ".gd").new()
+	return ob

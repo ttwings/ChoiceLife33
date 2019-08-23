@@ -68,9 +68,9 @@ func reset():
         #         }
         #     }
         # }
-    }
+#    }
     set_temp("objects", ob);
-}
+#}
 
 func _init():
     self.reset();

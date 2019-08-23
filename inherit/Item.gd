@@ -2,12 +2,10 @@ extends GameObject
 
 class_name Item
 
-
 ########################################  F_MOVE #####################################
 var weight : int = 0
 var encumb : int = 0
 var max_encumb : int = 0
-
 func query_encumbrance():
 	return encumb
 func over_encumbranced():
@@ -118,12 +116,12 @@ func set_name_cn(value1:String,value2:String):
 	dbase.id = value2
 
 var my_id
-func set_name(name,id=""):
+func set_name(name,id):
 	set("name", name);
 	set("id", id);
 	my_id = id;
 
-func name(raw=1):
+func name(raw=true):
 	var st
 	var mask;
 	mask = query_temp("apply/name")
@@ -136,7 +134,7 @@ func name(raw=1):
 		else:
 			return file_name(this_object());
 
-func short(raw=1):
+func short(raw=true):
 	var party;
 	var guard
 	var degree
@@ -146,9 +144,9 @@ func short(raw=1):
 	var string
 	var str1
 	var mask;
-#
-#	if( !stringp(string = query("short")) ):
-#		string = name(raw) + "(" + capitalize(query("id")) + ")";
+	string = query("short")
+	if !stringp(string) :
+		string = name(raw) + "(" + query("id") + ")";
 
 	return string
 	pass

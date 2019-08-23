@@ -19,7 +19,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/simple-game-framework/modules/achievement/AchievementModule.gd"
 }, {
-"base": "Item",
+"base": "GameObject",
 "class": "Armor",
 "language": "GDScript",
 "path": "res://inherit/Armor.gd"
@@ -99,12 +99,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/simple-game-framework/core/EventEmitter.gd"
 }, {
-"base": "Item",
+"base": "GameObject",
 "class": "Food",
 "language": "GDScript",
 "path": "res://inherit/Food.gd"
 }, {
-"base": "Node",
+"base": "Reference",
 "class": "GameObject",
 "language": "GDScript",
 "path": "res://inherit/GameObject.gd"
@@ -167,7 +167,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Skill",
 "language": "GDScript",
-"path": "res://addons/TriggerSystem/BattleSystem/Skill.gd"
+"path": "res://inherit/skill/Skill.gd"
 }, {
 "base": "Buff",
 "class": "StrengthBuff",

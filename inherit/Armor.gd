@@ -2,7 +2,7 @@
 
 #include <armor.h>
 # Standard inheritable armor objects.
-extends Item
+extends GameObject
 
 class_name Armor
 
