@@ -39,6 +39,12 @@ tracks/1/keys = {
 [node name="Battle" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 166.157, 113.289 )
+anchor_mode = 0
+current = true
+zoom = Vector2( 0.75, 0.75 )
+
 [node name="TileMap" type="TileMap" parent="."]
 visible = false
 tile_set = ExtResource( 2 )
@@ -86,6 +92,16 @@ margin_top = 16.0
 margin_right = 1264.0
 margin_bottom = 576.0
 
+[node name="SkillPanel" type="Panel" parent="ui"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 179.0
+margin_top = 546.0
+margin_right = 1101.0
+margin_bottom = 586.0
+rect_min_size = Vector2( 500, 40 )
+
 [node name="characters" type="Node2D" parent="."]
 position = Vector2( 0, 64 )
 
@@ -115,36 +131,35 @@ percent_visible = false
 [node name="SkillAnimations" type="Node2D" parent="."]
 
 [node name="AnimatedSprite1" type="AnimatedSprite" parent="SkillAnimations"]
+visible = false
 position = Vector2( 317.136, 320.878 )
 frames = ExtResource( 7 )
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="SkillAnimations"]
 visible = false
 position = Vector2( 320, 160 )
 frames = ExtResource( 7 )
-frame = 2
+frame = 5
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="SkillAnimations"]
 visible = false
 position = Vector2( 320, 224 )
 frames = ExtResource( 7 )
-frame = 4
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="SkillAnimations"]
 visible = false
 position = Vector2( 320, 257 )
 frames = ExtResource( 7 )
-frame = 4
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="SkillAnimations"]
 visible = false
 position = Vector2( 356.423, 438.109 )
 frames = ExtResource( 7 )
-frame = 4
 playing = true
 centered = false
 offset = Vector2( -20.4231, -117.609 )
@@ -153,7 +168,7 @@ offset = Vector2( -20.4231, -117.609 )
 visible = false
 position = Vector2( 544, 320 )
 frames = ExtResource( 7 )
-frame = 6
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SkillAnimations"]

@@ -1,15 +1,15 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=1]
-[ext_resource path="res://PanelAttribute.gd" type="Script" id=2]
-[ext_resource path="res://Bar_qi.gd" type="Script" id=3]
-[ext_resource path="res://Bar_tili.gd" type="Script" id=4]
-[ext_resource path="res://Bar_jing.gd" type="Script" id=5]
-[ext_resource path="res://ui_neili_outer.png" type="Texture" id=6]
-[ext_resource path="res://ui_neili_inner.png" type="Texture" id=7]
-[ext_resource path="res://Bar_neili.gd" type="Script" id=8]
-[ext_resource path="res://Bar_food.gd" type="Script" id=9]
-[ext_resource path="res://Bar_water.gd" type="Script" id=10]
+[ext_resource path="res://uis/CharacterStage/PanelAttribute.gd" type="Script" id=2]
+[ext_resource path="res://uis/CharacterStage/Bar_qi.gd" type="Script" id=3]
+[ext_resource path="res://uis/CharacterStage/Bar_tili.gd" type="Script" id=4]
+[ext_resource path="res://uis/CharacterStage/Bar_jing.gd" type="Script" id=5]
+[ext_resource path="res://uis/CharacterStage/ui_neili_outer.png" type="Texture" id=6]
+[ext_resource path="res://uis/CharacterStage/ui_neili_inner.png" type="Texture" id=7]
+[ext_resource path="res://uis/CharacterStage/Bar_neili.gd" type="Script" id=8]
+[ext_resource path="res://uis/CharacterStage/Bar_food.gd" type="Script" id=9]
+[ext_resource path="res://uis/CharacterStage/Bar_water.gd" type="Script" id=10]
 [ext_resource path="res://assets/fonts/font_normal.tres" type="DynamicFont" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -68,7 +68,6 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.898039, 0.490196, 0.984314, 1 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -112,7 +111,7 @@ margin_right = 380.0
 margin_bottom = 19.0
 custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
-value = 100.0
+value = 50.0
 percent_visible = false
 script = ExtResource( 3 )
 
@@ -155,6 +154,7 @@ percent_visible = false
 script = ExtResource( 5 )
 
 [node name="Neili" type="Label" parent="MarginContainer/PanelAttribute"]
+editor/display_folded = true
 margin_left = 342.0
 margin_top = 390.0
 margin_right = 406.0
@@ -184,6 +184,7 @@ align = 1
 valign = 1
 
 [node name="Food" type="Label" parent="MarginContainer/PanelAttribute"]
+editor/display_folded = true
 margin_left = 22.0
 margin_top = 390.0
 margin_right = 86.0
@@ -196,7 +197,7 @@ valign = 1
 margin_top = 32.0
 margin_right = 64.0
 margin_bottom = 96.0
-value = 10.0
+value = 25.0
 texture_under = ExtResource( 6 )
 texture_progress = ExtResource( 7 )
 fill_mode = 3
@@ -214,6 +215,7 @@ align = 1
 valign = 1
 
 [node name="Water" type="Label" parent="MarginContainer/PanelAttribute"]
+editor/display_folded = true
 margin_left = 100.0
 margin_top = 390.0
 margin_right = 164.0
@@ -235,7 +237,7 @@ valign = 1
 margin_top = 32.0
 margin_right = 64.0
 margin_bottom = 96.0
-value = 10.0
+value = 60.0
 texture_under = ExtResource( 6 )
 texture_progress = ExtResource( 7 )
 fill_mode = 3
@@ -245,10 +247,10 @@ script = ExtResource( 10 )
 
 [node name="Label_name" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 100.0
-margin_top = 0.340569
-margin_right = 140.0
-margin_bottom = 17.3406
+margin_left = 106.0
+margin_top = 6.34057
+margin_right = 146.0
+margin_bottom = 23.3406
 custom_fonts/font = ExtResource( 11 )
 text = "姓名"
 valign = 1
@@ -264,10 +266,10 @@ valign = 1
 
 [node name="Label_age" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 340.0
-margin_top = 0.681138
-margin_right = 380.0
-margin_bottom = 17.6811
+margin_left = 346.0
+margin_top = 6.68114
+margin_right = 386.0
+margin_bottom = 23.6811
 custom_fonts/font = ExtResource( 11 )
 text = "年龄"
 valign = 1
@@ -283,10 +285,10 @@ valign = 1
 
 [node name="Label_gender" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 100.0
-margin_top = 20.3406
-margin_right = 140.0
-margin_bottom = 37.3406
+margin_left = 106.0
+margin_top = 26.3406
+margin_right = 146.0
+margin_bottom = 43.3406
 custom_fonts/font = ExtResource( 11 )
 text = "性别"
 valign = 1
@@ -302,10 +304,10 @@ valign = 1
 
 [node name="Label_title" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 100.0
-margin_top = 40.0
-margin_right = 140.0
-margin_bottom = 57.0
+margin_left = 106.0
+margin_top = 46.0
+margin_right = 146.0
+margin_bottom = 63.0
 custom_fonts/font = ExtResource( 11 )
 text = "身份"
 valign = 1
@@ -321,8 +323,10 @@ valign = 1
 
 [node name="Label_str" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_right = 40.0
-margin_bottom = 17.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 46.0
+margin_bottom = 23.0
 custom_fonts/font = ExtResource( 11 )
 text = "膂力"
 valign = 1
@@ -338,9 +342,10 @@ valign = 1
 
 [node name="Label_int" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 20.0
-margin_right = 40.0
-margin_bottom = 37.0
+margin_left = 6.0
+margin_top = 26.0
+margin_right = 46.0
+margin_bottom = 43.0
 custom_fonts/font = ExtResource( 11 )
 text = "悟性"
 valign = 1
@@ -356,9 +361,10 @@ valign = 1
 
 [node name="Label_dex" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 40.0
-margin_right = 40.0
-margin_bottom = 57.0
+margin_left = 6.0
+margin_top = 46.0
+margin_right = 46.0
+margin_bottom = 63.0
 custom_fonts/font = ExtResource( 11 )
 text = "身法"
 valign = 1
@@ -374,9 +380,10 @@ valign = 1
 
 [node name="Label_sta" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 80.0
-margin_right = 40.0
-margin_bottom = 97.0
+margin_left = 6.0
+margin_top = 86.0
+margin_right = 46.0
+margin_bottom = 103.0
 custom_fonts/font = ExtResource( 11 )
 text = "耐力"
 valign = 1
@@ -392,9 +399,10 @@ valign = 1
 
 [node name="Label_spi" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 100.0
-margin_right = 40.0
-margin_bottom = 117.0
+margin_left = 6.0
+margin_top = 106.0
+margin_right = 46.0
+margin_bottom = 123.0
 custom_fonts/font = ExtResource( 11 )
 text = "灵性"
 valign = 1
@@ -413,9 +421,10 @@ valign = 1
 
 [node name="Label_kar" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 120.0
-margin_right = 40.0
-margin_bottom = 137.0
+margin_left = 6.0
+margin_top = 126.0
+margin_right = 46.0
+margin_bottom = 143.0
 custom_fonts/font = ExtResource( 11 )
 text = "福缘"
 valign = 1
@@ -434,9 +443,10 @@ valign = 1
 
 [node name="Label_per" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 157.0
-margin_right = 40.0
-margin_bottom = 174.0
+margin_left = 6.0
+margin_top = 163.0
+margin_right = 46.0
+margin_bottom = 180.0
 custom_fonts/font = ExtResource( 11 )
 text = "容貌"
 valign = 1
@@ -455,9 +465,10 @@ valign = 1
 
 [node name="Label_cps" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 180.0
-margin_right = 40.0
-margin_bottom = 197.0
+margin_left = 6.0
+margin_top = 186.0
+margin_right = 46.0
+margin_bottom = 203.0
 custom_fonts/font = ExtResource( 11 )
 text = "定力"
 valign = 1
@@ -476,9 +487,10 @@ valign = 1
 
 [node name="Label_cor" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 200.0
-margin_right = 40.0
-margin_bottom = 217.0
+margin_left = 6.0
+margin_top = 206.0
+margin_right = 46.0
+margin_bottom = 223.0
 custom_fonts/font = ExtResource( 11 )
 text = "胆识"
 valign = 1
@@ -497,10 +509,10 @@ valign = 1
 
 [node name="Label_qi" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 100.0
-margin_top = 80.0
-margin_right = 140.0
-margin_bottom = 97.0
+margin_left = 106.0
+margin_top = 86.0
+margin_right = 146.0
+margin_bottom = 103.0
 custom_fonts/font = ExtResource( 11 )
 text = "气血"
 valign = 1
@@ -519,10 +531,10 @@ valign = 1
 
 [node name="Label_max_qi" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 100.0
-margin_top = 100.341
-margin_right = 164.0
-margin_bottom = 117.341
+margin_left = 106.0
+margin_top = 106.341
+margin_right = 170.0
+margin_bottom = 123.341
 custom_fonts/font = ExtResource( 11 )
 text = "最大气血"
 valign = 1
@@ -541,10 +553,10 @@ valign = 1
 
 [node name="Label_eff_qi" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 100.0
-margin_top = 120.341
-margin_right = 164.0
-margin_bottom = 137.341
+margin_left = 106.0
+margin_top = 126.341
+margin_right = 170.0
+margin_bottom = 143.341
 custom_fonts/font = ExtResource( 11 )
 text = "当前气血"
 valign = 1
@@ -563,10 +575,10 @@ valign = 1
 
 [node name="Label_jing" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 240.0
-margin_top = 80.6812
-margin_right = 280.0
-margin_bottom = 97.6812
+margin_left = 246.0
+margin_top = 86.6812
+margin_right = 286.0
+margin_bottom = 103.681
 custom_fonts/font = ExtResource( 11 )
 text = "精神"
 valign = 1
@@ -585,10 +597,10 @@ valign = 1
 
 [node name="Label_max_jing" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 240.0
-margin_top = 101.022
-margin_right = 304.0
-margin_bottom = 118.022
+margin_left = 246.0
+margin_top = 107.022
+margin_right = 310.0
+margin_bottom = 124.022
 custom_fonts/font = ExtResource( 11 )
 text = "最大精神"
 valign = 1
@@ -607,10 +619,10 @@ valign = 1
 
 [node name="Label_eff_jing" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 240.0
-margin_top = 121.022
-margin_right = 304.0
-margin_bottom = 138.022
+margin_left = 246.0
+margin_top = 127.022
+margin_right = 310.0
+margin_bottom = 144.022
 custom_fonts/font = ExtResource( 11 )
 text = "当前精神"
 valign = 1
@@ -629,10 +641,10 @@ valign = 1
 
 [node name="Label_neili" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 240.0
-margin_top = 150.0
-margin_right = 280.0
-margin_bottom = 167.0
+margin_left = 246.0
+margin_top = 156.0
+margin_right = 286.0
+margin_bottom = 173.0
 custom_fonts/font = ExtResource( 11 )
 text = "内力"
 valign = 1
@@ -651,10 +663,10 @@ valign = 1
 
 [node name="Label_max_neili" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 240.0
-margin_top = 170.341
-margin_right = 304.0
-margin_bottom = 187.341
+margin_left = 246.0
+margin_top = 176.341
+margin_right = 310.0
+margin_bottom = 193.341
 custom_fonts/font = ExtResource( 11 )
 text = "最大内力"
 valign = 1
@@ -673,10 +685,10 @@ valign = 1
 
 [node name="Label_eff_neili" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 240.0
-margin_top = 190.341
-margin_right = 304.0
-margin_bottom = 207.341
+margin_left = 246.0
+margin_top = 196.341
+margin_right = 310.0
+margin_bottom = 213.341
 custom_fonts/font = ExtResource( 11 )
 text = "当前内力"
 valign = 1
@@ -694,10 +706,10 @@ valign = 1
 
 [node name="Label_tili" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 100.0
-margin_top = 150.0
-margin_right = 140.0
-margin_bottom = 167.0
+margin_left = 106.0
+margin_top = 156.0
+margin_right = 146.0
+margin_bottom = 173.0
 custom_fonts/font = ExtResource( 11 )
 text = "体力"
 valign = 1
@@ -716,10 +728,10 @@ valign = 1
 
 [node name="Label_max_tili" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 100.0
-margin_top = 170.341
-margin_right = 164.0
-margin_bottom = 187.341
+margin_left = 106.0
+margin_top = 176.341
+margin_right = 170.0
+margin_bottom = 193.341
 custom_fonts/font = ExtResource( 11 )
 text = "最大体力"
 valign = 1
@@ -738,10 +750,10 @@ valign = 1
 
 [node name="Label_eff_tili" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 100.0
-margin_top = 190.341
-margin_right = 164.0
-margin_bottom = 207.341
+margin_left = 106.0
+margin_top = 196.341
+margin_right = 170.0
+margin_bottom = 213.341
 custom_fonts/font = ExtResource( 11 )
 text = "当前体力"
 valign = 1
@@ -759,9 +771,10 @@ valign = 1
 
 [node name="Label_food" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 240.0
-margin_right = 304.0
-margin_bottom = 17.0
+margin_left = 246.0
+margin_top = 6.0
+margin_right = 310.0
+margin_bottom = 23.0
 custom_fonts/font = ExtResource( 11 )
 text = "食物"
 valign = 1
@@ -780,10 +793,10 @@ valign = 1
 
 [node name="Label_water" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_left = 240.0
-margin_top = 20.6811
-margin_right = 304.0
-margin_bottom = 37.6811
+margin_left = 246.0
+margin_top = 26.6811
+margin_right = 310.0
+margin_bottom = 43.6811
 custom_fonts/font = ExtResource( 11 )
 text = "饮水"
 valign = 1
@@ -802,9 +815,10 @@ valign = 1
 
 [node name="Label_behavior_exp" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 230.0
-margin_right = 64.0
-margin_bottom = 247.0
+margin_left = 6.0
+margin_top = 236.0
+margin_right = 70.0
+margin_bottom = 253.0
 custom_fonts/font = ExtResource( 11 )
 text = "阅历"
 valign = 1
@@ -823,9 +837,10 @@ valign = 1
 
 [node name="Label_quest_exp" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 250.341
-margin_right = 64.0
-margin_bottom = 267.341
+margin_left = 6.0
+margin_top = 256.341
+margin_right = 70.0
+margin_bottom = 273.341
 custom_fonts/font = ExtResource( 11 )
 text = "经验"
 valign = 1
@@ -844,9 +859,10 @@ valign = 1
 
 [node name="Label_potential" type="Label" parent="MarginContainer/PanelAttribute"]
 editor/display_folded = true
-margin_top = 269.659
-margin_right = 64.0
-margin_bottom = 286.659
+margin_left = 6.0
+margin_top = 275.659
+margin_right = 70.0
+margin_bottom = 292.659
 custom_fonts/font = ExtResource( 11 )
 text = "潜能"
 valign = 1
@@ -864,6 +880,7 @@ text = "99"
 valign = 1
 
 [node name="Label_id" type="Label" parent="MarginContainer/PanelAttribute"]
+editor/display_folded = true
 margin_left = 326.0
 margin_top = 534.0
 margin_right = 390.0

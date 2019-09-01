@@ -77,12 +77,17 @@ func onJumpName(name,position):
 func onJumpMiss(position):
 	var jumpName = tscn_JumpName.instance()
 	jumpNumberPlace.add_child(jumpName)
-	jumpName.start("闪避",position)	
+	jumpName.start("失误",position)	
 	
 func onJumpPerry(position):
 	var jumpName = tscn_JumpName.instance()
 	jumpNumberPlace.add_child(jumpName)
 	jumpName.start("招架",position)		
+	
+func onJumpDodge(position):
+	var jumpName = tscn_JumpName.instance()
+	jumpNumberPlace.add_child(jumpName)
+	jumpName.start("躲闪",position)	
 	
 func onDie(character):
 	player.set_process(false)
