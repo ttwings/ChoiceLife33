@@ -37,8 +37,15 @@ var number = 0
 # 指的是当算盘下面的按键在按下时候的动作
 
 func _on_TextureButton14_pressed() -> void:
+	print($TextureButton4.button_mask)
+	if $TextureButton4.button_mask == BUTTON_MASK_RIGHT:
+		number = 0
+		print("mouse_right " + str(number))
+	else :
 #	print_debug(Input.get_mouse_button_mask())
-	number = (number + 1)%5
+		number = (number + 1)%5
+		print("mouse_left " + str(number))
+		
 	match number:
 		0:
 			digit1button4 = 0

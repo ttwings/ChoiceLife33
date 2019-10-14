@@ -199,7 +199,6 @@ margin_bottom = 212.756
 texture = ExtResource( 4 )
 
 [node name="digit1" type="Node" parent="Suanpan"]
-editor/display_folded = true
 script = ExtResource( 5 )
 
 [node name="TextureButton5" type="TextureButton" parent="Suanpan/digit1"]
@@ -214,6 +213,7 @@ margin_left = 914.748
 margin_top = 298.983
 margin_right = 966.748
 margin_bottom = 538.983
+button_mask = 3
 texture_normal = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="Suanpan/digit1"]

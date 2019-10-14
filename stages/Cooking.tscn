@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/graphics/ui/pot.png" type="Texture" id=3]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 2 )
 
@@ -17,14 +17,14 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
 [sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=7]
-font_data = ExtResource( 2 )
-
-[sub_resource type="Theme" id=8]
-default_font = SubResource( 7 )
+[sub_resource type="Theme" id=7]
+default_font = SubResource( 6 )
 
 [node name="Cooking" type="Control"]
 anchor_right = 1.0
@@ -52,7 +52,7 @@ margin_bottom = 672.0
 margin_right = 637.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 0, 48 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 1 )
 text = "厨房"
 align = 1
 valign = 1
@@ -332,7 +332,7 @@ margin_left = -304.0
 margin_top = -56.0
 margin_right = -32.0
 margin_bottom = -16.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 text = "返回大厅"
 
 [node name="Complete" type="AcceptDialog" parent="."]
@@ -345,6 +345,6 @@ margin_top = -100.0
 margin_right = 200.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 400, 200 )
-theme = SubResource( 8 )
+theme = SubResource( 7 )
 window_title = "全部完成！"
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
