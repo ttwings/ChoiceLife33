@@ -1,7 +1,36 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://addons/TriggerSystem/BattleSystem/BattleCharacter.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/characters/character001.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=3]
+resource_name = "SETUP"
+
+[sub_resource type="Animation" id=4]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.145098, 0.764706, 0.721569, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.121569, 0.137255, 0.478431, 1 )
 
 [node name="BattleCharacter" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,9 +42,34 @@ texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 18, 463, 23, 47 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/SETUP = SubResource( 3 )
+anims/attack = SubResource( 4 )
+
 [node name="Label" type="Label" parent="."]
 margin_left = -18.0049
 margin_top = -42.8688
 margin_right = 21.9951
 margin_bottom = -28.8688
 text = "state"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_top = 30.0
+margin_right = 110.0
+margin_bottom = 34.0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+value = 50.0
+rounded = true
+percent_visible = false
+
+[node name="Label_max_value" type="Label" parent="ProgressBar"]
+margin_left = 70.0
+margin_top = 4.0
+margin_right = 110.0
+margin_bottom = 18.0
+
+[node name="Label_value" type="Label" parent="ProgressBar"]
+margin_top = 4.0
+margin_right = 40.0
+margin_bottom = 18.0
