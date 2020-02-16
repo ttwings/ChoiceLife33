@@ -11,3 +11,4 @@ func create():
 	set("value", 50);
 	set("food_remaining", 4);
 	set("food_supply", 1);
+

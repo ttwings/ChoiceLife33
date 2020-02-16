@@ -11,8 +11,8 @@ func create():
 	set("value", 100);
 	set("max_liquid", 15);
 	set("liquid", {
-        "type": "alcohol",
-        "name": "老白干",
-        "remaining": 15,
-        "drunk_supply": 15,
-    });
+		"type": "alcohol",
+		"name": "老白干",
+		"remaining": 15,
+		"drunk_supply": 15,
+	});

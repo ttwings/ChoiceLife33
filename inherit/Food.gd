@@ -2,10 +2,26 @@ extends Item
 
 class_name Food
 
+signal hit
+
+func _ready():
+	$Label.text = name()
+	$Panel/RichTextLabel.bbcode_text = str(query("long"))
+	connect("notify_fail",self,"on_notify_fail")
+
+func _input(event):
+	if event.is_action("mouse_left") :
+		emit_signal("hit")
+#		$Panel.show()
+		$AnimationPlayer.play("do_eat")
+
+func on_notify_fail(msg):
+	print_debug(msg)
 
 func do_eat(character):
 #	if( !living(this_player()) || this_player().query_temp("noliving") )
 #		return 1;
+
 	if character.query("jing")<0 || character.query("qi")<0 :
 		return notify_fail("你太累了，实在没力气吃什么了。\n");
 #	if( !this_object().id(arg) ) return 0;
@@ -62,3 +78,15 @@ func decay():
 			
 #	remove_call_out("decay");
 #	call_out("decay", 150);
+
+
+func _on_Area2D_mouse_entered():
+	$Label.show()
+	print_debug("label show")
+	pass # Replace with function body.
+
+
+
+func _on_Area2D_mouse_exited():
+	$Label.hide()
+	pass # Replace with function body.

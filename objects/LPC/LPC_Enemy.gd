@@ -37,9 +37,11 @@ func _physics_process(delta: float) -> void:
 #			velocity = position.direction_to(path[0]) * speed
 		else :
 			is_moving = false
+#			print_debug("moving false")
 			path.remove(0)
 	else:
 		is_moving = false
+		print_debug("moving false")
 		set_physics_process(false)	
 #	move_and_slide(velocity)			
 
@@ -47,12 +49,6 @@ onready var animation_player = $AnimationPlayer
 var current_animation
 var new_animation
 var is_moving = false
-
-#
-#func _ready():
-#	$AnimationPlayer.play("walk_down")
-#	pass
-
 
 func on_attack(damage,obj):
 	hp_current -= damage
@@ -107,5 +103,6 @@ func update_animation(is_moving,new_animation):
 		animation_player.play(new_animation)
 		current_animation = new_animation
 	elif ! is_moving and current_animation != "start" :
+		animation_player.play("start")
 		animation_player.stop()
 		current_animation = 'start'				
