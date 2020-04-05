@@ -104,7 +104,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://inherit/Food.gd"
 }, {
-"base": "Node",
+"base": "Node2D",
 "class": "GameObject",
 "language": "GDScript",
 "path": "res://inherit/GameObject.gd"

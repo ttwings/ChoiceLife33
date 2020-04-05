@@ -1,0 +1,25 @@
+[gd_scene format=2]
+
+[node name="ActionCard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 260.0
+margin_bottom = 370.0
+rect_pivot_offset = Vector2( -3.83441, -2.36742 )
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 90.0
+margin_top = 330.0
+margin_right = 180.0
+margin_bottom = 360.0
+text = "use"
+
+[node name="LabelActionName" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 20.0
+margin_bottom = 14.0
+text = "Action"

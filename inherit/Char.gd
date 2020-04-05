@@ -1300,7 +1300,7 @@ func create():
 
 # Use this function to identify if an object is a character.
 func is_character() :
-	return 1;
+	return true;
 
 # setup: used to configure attributes that aren't known by this_object()
 # at create() time such as living_name (and so can't be done in create()).
@@ -1580,7 +1580,6 @@ func query_skill_prepared(skill:String,raw:int = 0):
 func query_skill(skill:String, raw:int = 0):
 	if( !raw ) :
 		var s;
-
 		s = query_temp("apply/" + skill);
 		if( mapp(skills) ) :
 			s += skills[skill] / 2;
@@ -1845,7 +1844,7 @@ func this_player():
 	pass
 	
 func call_out(arg1,arg2,agr3):
-	pass	
+	pass
 
 func chinese_number(i:int):
 #	CHINESE_D.chinese_number(i)

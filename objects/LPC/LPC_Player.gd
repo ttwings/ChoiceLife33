@@ -53,7 +53,6 @@ func get_input():
 		velocity.y += 1
 		new_direction = "down"
 		new_animation = "walk_down"
-		$Particles2D.texture = $Sprite.texture
 		is_moving = true
 	# velocity
 	if velocity.length() > 0 :
@@ -68,8 +67,8 @@ func add_ghost():
 	var ghost = preload("res://objects/Ghost.tscn").instance()
 	ghost.add_child($Sprite.duplicate())
 	ghost.set("position",get("position"))
-	ghost.alfa_factor = 0.2
-	ghost.live_time = 0.5
+	ghost.alfa_factor = 1
+	ghost.live_time = 0.2
 	ghost.color = Color(0.5,0,0.9)
 	get_parent().add_child(ghost)
 	get_parent().move_child(ghost,get_position_in_parent())	

@@ -43,8 +43,10 @@ var item_list = []
 
 # 攻击间隔
 
+var attack_interval = 150
+
 func get_attack_interval():
-	return 100
+	return attack_interval
 	
 var attack_timer = 100
 # idle、attack、die
@@ -63,9 +65,16 @@ func _process(delta: float) -> void:
 	$Label.text = state
 	match state :
 		"idle" :
-			attack_timer -= delta * speed
-			if attack_timer <= 0 :
+			$ProgressBar.max_value = attack_interval
+			$ProgressBar/Label_max_value.text = str(attack_interval)
+			$ProgressBar.value += 1.5
+			$ProgressBar/Label_value.text = str($ProgressBar.value)
+			if $ProgressBar.value == $ProgressBar.max_value :
+				$ProgressBar.value = 0
 				attack()
+#			attack_timer -= delta * speed
+#			if attack_timer <= 0 :
+#				attack()
 		"attack" :
 			pass
 		"die" :

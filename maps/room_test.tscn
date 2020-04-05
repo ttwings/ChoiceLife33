@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://maps/room_test.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/tiles/TileTerrain.tres" type="TileSet" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://objects/LPC/LPC_Player_temp.tscn" type="PackedScene" id=7]
 [ext_resource path="res://objects/LPC/LPC_Enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/graphics/tiles/others/Tile_Region_32x32.png" type="Texture" id=9]
+[ext_resource path="res://apple.tscn" type="PackedScene" id=10]
+[ext_resource path="res://clone/food/apple.tscn" type="PackedScene" id=11]
+[ext_resource path="res://clone/food/baijiu.tscn" type="PackedScene" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -549,7 +552,7 @@ tile_data = PoolIntArray( 851977, 0, 0, 983046, 1, 0 )
 position = Vector2( 471.662, 412.514 )
 
 [node name="LPC_Enemy" parent="trees" instance=ExtResource( 8 )]
-position = Vector2( 640, 416 )
+position = Vector2( 656, 336 )
 
 [node name="region" type="TileMap" parent="."]
 visible = false
@@ -563,3 +566,12 @@ position = Vector2( 48, 240 )
 
 [node name="end" type="Position2D" parent="."]
 position = Vector2( 656, 336 )
+
+[node name="apple2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 409.994, 371.323 )
+
+[node name="apple" parent="." instance=ExtResource( 10 )]
+position = Vector2( 561.251, 528.356 )
+
+[node name="baijiu" parent="." instance=ExtResource( 12 )]
+position = Vector2( 411.438, 307.448 )
