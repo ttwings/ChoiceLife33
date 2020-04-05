@@ -15,6 +15,10 @@ font_data = ExtResource( 2 )
 [node name="OpenMessage" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1.10803
+margin_top = -3.3241
+margin_right = -1.10803
+margin_bottom = -3.3241
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

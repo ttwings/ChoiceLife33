@@ -261,7 +261,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Global.gd"
-Signals_manager="*res://Signals_manager.gd"
 SimpleFrame="*res://SimpleFrame.gd"
 TriggerSystem="*res://addons/TriggerSystem/TriggerSystem.gd"
 DmgObjFactory="*res://addons/TriggerSystem/BattleSystem/DmgObjFactory.gd"
@@ -347,6 +346,8 @@ inv_grab={
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=1
+quality/intended_usage/framebuffer_allocation.mobile=1
 quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
 

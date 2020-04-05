@@ -482,5 +482,3 @@ frame = 187
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.5, 0.5 )
-
-[node name="Particles2D" type="Particles2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://stages/Main.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/tiles/TileTerrain.tres" type="TileSet" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://assets/graphics/tiles/TilesetFurniture.tres" type="TileSet" id=9]
 [ext_resource path="res://assets/graphics/tiles/TilesetGoods.tres" type="TileSet" id=10]
 [ext_resource path="res://uis/ObjectRect.tscn" type="PackedScene" id=11]
-[ext_resource path="res://stages/MessageManager.gd" type="Script" id=12]
 [ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=13]
 [ext_resource path="res://stages/LabelCapital.gd" type="Script" id=14]
 [ext_resource path="res://uis/TimeLine.tscn" type="PackedScene" id=15]
@@ -22,7 +21,6 @@
 [ext_resource path="res://assets/graphics/characters/actor (24).png" type="Texture" id=20]
 [ext_resource path="res://objects/Cooker.gd" type="Script" id=21]
 [ext_resource path="res://assets/graphics/characters/actor (54).png" type="Texture" id=22]
-
 
 [sub_resource type="TileSet" id=1]
 0/name = "map1.png 0"
@@ -84,6 +82,7 @@
 3/autotile/spacing = 0
 3/autotile/occluder_map = [  ]
 3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
 3/autotile/z_index_map = [  ]
 3/occluder_offset = Vector2( 0, 0 )
 3/navigation_offset = Vector2( 0, 0 )
@@ -138,6 +137,7 @@
 6/autotile/spacing = 0
 6/autotile/occluder_map = [  ]
 6/autotile/navpoly_map = [  ]
+6/autotile/priority_map = [  ]
 6/autotile/z_index_map = [  ]
 6/occluder_offset = Vector2( 0, 0 )
 6/navigation_offset = Vector2( 0, 0 )
@@ -241,6 +241,9 @@ func check_out(value:int):
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Map" type="Node2D" parent="."]
 
@@ -306,7 +309,6 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-script = ExtResource( 12 )
 
 [node name="MessageVision" type="Panel" parent="MessageManager"]
 anchor_top = 1.0
@@ -335,6 +337,7 @@ margin_left = 551.206
 margin_top = 255.693
 margin_right = 876.206
 margin_bottom = 397.693
+window_title = "提示！"
 
 [node name="RoomControl" type="Control" parent="."]
 anchor_right = 1.0
@@ -395,7 +398,6 @@ custom_fonts/font = SubResource( 6 )
 text = "到菜园种菜"
 
 [node name="TimeWeather" type="Control" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -272.0
@@ -411,7 +413,6 @@ margin_left = 512.0
 margin_right = 512.0
 
 [node name="TablePos" type="Node" parent="."]
-editor/display_folded = true
 script = ExtResource( 16 )
 
 [node name="Position1" type="Position2D" parent="TablePos"]
@@ -454,14 +455,12 @@ position = Vector2( 563.37, 448 )
 position = Vector2( 336, 320 )
 
 [node name="Actor2" parent="TablePos" instance=ExtResource( 17 )]
-editor/display_folded = true
 position = Vector2( 336, 448 )
 
 [node name="Sprite" parent="TablePos/Actor2" index="0"]
 texture = ExtResource( 18 )
 
 [node name="Actor3" parent="TablePos" instance=ExtResource( 17 )]
-editor/display_folded = true
 position = Vector2( 464, 320 )
 
 [node name="Sprite" parent="TablePos/Actor3" index="0"]

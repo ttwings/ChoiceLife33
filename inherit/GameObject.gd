@@ -34,14 +34,14 @@ const HBWHT = "[color=#f0fcff]"
 var __DIR__ = dir()
 var __FILE__ = file_name()
 
-#signal message_veision(msg)
-#signal notify_fail(msg)
+signal message_veision(msg)
+signal notify_fail(msg)
 #
 func notify_fail(msg):
-	Signals_manager.emit_signal("notify_fail",msg)
-	
+	emit_signal("notify_fail",msg)
+
 func message_vision(msg:String, ob):
-	Signals_manager.emit_signal("message_vision",msg,ob)	
+	emit_signal("message_vision",msg,ob)	
 #
 #
 ##var global = Global	

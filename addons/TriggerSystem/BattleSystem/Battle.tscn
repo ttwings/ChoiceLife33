@@ -106,7 +106,6 @@ rect_min_size = Vector2( 500, 40 )
 position = Vector2( 0, 64 )
 
 [node name="Player" parent="characters" instance=ExtResource( 4 )]
-editor/display_folded = true
 position = Vector2( 1014.5, 314.043 )
 script = ExtResource( 5 )
 
@@ -134,34 +133,34 @@ percent_visible = false
 visible = false
 position = Vector2( 317.136, 320.878 )
 frames = ExtResource( 7 )
-frame = 5
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="SkillAnimations"]
 visible = false
 position = Vector2( 320, 160 )
 frames = ExtResource( 7 )
+frame = 2
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="SkillAnimations"]
 visible = false
 position = Vector2( 320, 224 )
 frames = ExtResource( 7 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="SkillAnimations"]
 visible = false
 position = Vector2( 320, 257 )
 frames = ExtResource( 7 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="SkillAnimations"]
 visible = false
 position = Vector2( 356.423, 438.109 )
 frames = ExtResource( 7 )
-frame = 2
+frame = 4
 playing = true
 centered = false
 offset = Vector2( -20.4231, -117.609 )
@@ -170,7 +169,7 @@ offset = Vector2( -20.4231, -117.609 )
 visible = false
 position = Vector2( 544, 320 )
 frames = ExtResource( 7 )
-frame = 4
+frame = 6
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SkillAnimations"]
