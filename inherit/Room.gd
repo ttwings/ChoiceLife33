@@ -4,16 +4,22 @@ class_name Room
 
 var doors = {};
 
+func name_cn(ob=self):
+	return ob.query("name")
+
 func query_max_encumbrance():
 	return 100000000000
 
 func make_inventory(file:String):
 	var ob;
 
-	ob = new_ob(file);
+#	ob = new_ob(file);
+	ob = load(file)
 	ob.move(this_object());
-	ob.set("startroom", base_name(this_object()));
+#	ob.set("startroom", base_name(this_object()));
+	ob.set("startroom", name_cn(this_object()));
 	return ob;
+
 
 func reset():
 	var ob_list
@@ -34,14 +40,14 @@ func reset():
 	if( !mapp(ob_list) ) :
 		return;
 	ob = query_temp("objects")
-	if( !mapp(ob) ):
-		ob = allocate_mapping(sizeof(ob_list));
+#	if( !mapp(ob) ):
+#		ob = allocate_mapping(sizeof(ob_list));
 	list = keys(ob_list);
 	# for(i=0; i<sizeof(list); i++) {
-	for i in sizeof(list) :
+#	for i in sizeof(list) :
 		# Allocate an array if we have multiple same object specified.
-		if(	undefinedp(ob[list[i]]) && intp(ob_list[list[i]]) && ob_list[list[i]] > 1 ):
-			ob[list[i]] = allocate(ob_list[list[i]]);
+#		if(	undefinedp(ob[list[i]]) && intp(ob_list[list[i]]) && ob_list[list[i]] > 1 ):
+#			ob[list[i]] = allocate(ob_list[list[i]]);
 
 
 		#  todo    
@@ -65,12 +71,12 @@ func reset():
 		#         &&	ob[list[i]][j]->is_character() ) {
 		#             if( !ob[list[i]][j]->return_home(this_object()) )
 		#                 add("no_clean_up", 1);
-		#         }
-		#     }
-		# }
-	}
+#		#         }
+#			}
+#		}
+#	}
 	set_temp("objects", ob);
-}
+#}
 
 func _init():
 	self.reset();

@@ -3,6 +3,8 @@ extends GameObject
 class_name Char
 #pragma save_binary
 
+signal move
+
 #include <action.h>
 #include <ansi.h>
 #include <command.h>

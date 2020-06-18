@@ -36,28 +36,12 @@ var __FILE__ = file_name()
 
 signal message_veision(msg)
 signal notify_fail(msg)
-<<<<<<< HEAD
-#
-func notify_fail(msg):
-	emit_signal("notify_fail",msg)
-
-func message_vision(msg:String, ob):
-	emit_signal("message_vision",msg,ob)	
-#
-#
-##var global = Global	
-#var main = preload("res://stages/Main.tscn").instance()
-#func connect_notify_fail(msg):
-#	print_debug("notify",msg)
-#	connect("notify_fail",main,"msg_notify_fail",[msg])
-=======
 
 func notify_fail(msg):
 	emit_signal("notify_fail",msg)
 	
 func message_vision(msg:String, ob):
 	emit_signal("message_vision",msg,ob)	
->>>>>>> 382270a97b40040a6cfa11399147bfaf4baa5045
 
 func _init():
 	create()

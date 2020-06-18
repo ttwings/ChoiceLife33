@@ -44,6 +44,9 @@ margin_bottom = 14.0
 custom_fonts/font = SubResource( 1 )
 text = "背景介绍"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 anchor_right = 1.0
