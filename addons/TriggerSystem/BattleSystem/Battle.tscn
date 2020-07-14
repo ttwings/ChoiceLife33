@@ -106,7 +106,6 @@ rect_min_size = Vector2( 500, 40 )
 position = Vector2( 0, 64 )
 
 [node name="Player" parent="characters" instance=ExtResource( 4 )]
-editor/display_folded = true
 position = Vector2( 1014.5, 314.043 )
 script = ExtResource( 5 )
 

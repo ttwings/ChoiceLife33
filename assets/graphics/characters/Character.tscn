@@ -1,0 +1,220 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://animations/move_down.tres" type="Animation" id=1]
+[ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/characters/Character.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle_down"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle_left"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 4 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle_right"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 7, 7 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle_up"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "move_left"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "move_right"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "move_up"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "idle_down"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "idle_left"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "idle_right"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "idle_up"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "move_down"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "move_left"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "move_right"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "move_up"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=24]
+states/idle_down/node = SubResource( 8 )
+states/idle_down/position = Vector2( 227, 46 )
+states/idle_left/node = SubResource( 9 )
+states/idle_left/position = Vector2( 206, 124 )
+states/idle_right/node = SubResource( 10 )
+states/idle_right/position = Vector2( 152, 347 )
+states/idle_up/node = SubResource( 11 )
+states/idle_up/position = Vector2( 158, 243 )
+states/move_down/node = SubResource( 12 )
+states/move_down/position = Vector2( 411, 52 )
+states/move_left/node = SubResource( 13 )
+states/move_left/position = Vector2( 408, 116 )
+states/move_right/node = SubResource( 14 )
+states/move_right/position = Vector2( 431, 337 )
+states/move_up/node = SubResource( 15 )
+states/move_up/position = Vector2( 379, 227 )
+transitions = [ "idle_down", "move_down", SubResource( 16 ), "idle_left", "move_left", SubResource( 17 ), "idle_up", "move_up", SubResource( 18 ), "idle_right", "move_right", SubResource( 19 ), "move_right", "idle_right", SubResource( 20 ), "move_up", "idle_up", SubResource( 21 ), "move_left", "idle_left", SubResource( 22 ), "move_down", "idle_down", SubResource( 23 ) ]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=25]
+
+[node name="Character" type="Node2D"]
+script = ExtResource( 3 )
+path = "res://assets/graphics/characters/chara03.png"
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+vframes = 4
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/idle_down = SubResource( 1 )
+anims/idle_left = SubResource( 2 )
+anims/idle_right = SubResource( 3 )
+anims/idle_up = SubResource( 4 )
+anims/move_down = ExtResource( 1 )
+anims/move_left = SubResource( 5 )
+anims/move_right = SubResource( 6 )
+anims/move_up = SubResource( 7 )
+
+[node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
+tree_root = SubResource( 24 )
+anim_player = NodePath("..")
+active = true
+parameters/playback = SubResource( 25 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Tween" type="Tween" parent="."]

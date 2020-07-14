@@ -31,9 +31,9 @@ func _process(delta: float) -> void:
 	time = time - 1
 	if time <= 0:
 		random_say()
-		random_move()
+#		random_move()
 
 var moves = ["move_up","move_right","move_down","move_left"]
 		
-func random_move():
-	$AnimationPlayer.play(moves[randi()%moves.size()])		
+#func random_move():
+#	$AnimationPlayer.play(moves[randi()%moves.size()])		

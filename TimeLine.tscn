@@ -4,49 +4,65 @@
 
 [node name="TimeLine" type="Control"]
 anchor_right = 1.0
-anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
-margin_left = 139.812
-margin_top = 42.3803
-margin_right = -140.188
-margin_bottom = 53.3803
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1231.47
+margin_top = 74.3085
+margin_right = 1271.47
+margin_bottom = 88.3085
+text = "001"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="player_rect" type="ColorRect" parent="."]
-anchor_right = 1.0
-margin_left = 139.812
-margin_top = 26.3803
-margin_right = -1124.19
-margin_bottom = 42.3803
-color = Color( 0.937255, 0.901961, 0.0666667, 1 )
+[node name="Label2" type="Label" parent="."]
+margin_left = 1189.76
+margin_top = 73.6491
+margin_right = 1229.76
+margin_bottom = 87.6491
+text = "turn:"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="player_rect"]
-margin_left = 4.0
-margin_top = -22.0
-margin_right = 57.0
-margin_bottom = -2.0
+[node name="PlayerPanel" type="Panel" parent="."]
+visible = false
+margin_left = 471.499
+margin_top = 306.0
+margin_right = 848.499
+margin_bottom = 403.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="enemy_rect" type="ColorRect" parent="."]
-anchor_right = 1.0
-margin_left = 139.812
-margin_top = 53.3803
-margin_right = -1124.19
-margin_bottom = 69.3803
-color = Color( 0.886275, 0.184314, 0.0901961, 1 )
+[node name="Button" type="Button" parent="PlayerPanel"]
+margin_left = 21.0527
+margin_top = 28.4211
+margin_right = 33.0527
+margin_bottom = 48.4211
+text = "move"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MessageBox" type="RichTextLabel" parent="."]
+margin_left = 27.3458
+margin_top = 530.235
+margin_right = 438.346
+margin_bottom = 675.235
+text = "test"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="PlayerPanel/Button" to="." method="_on_Button_pressed"]

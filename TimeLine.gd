@@ -1,47 +1,51 @@
 extends Control
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-const MAX_TURN = 1000.00
-var player_start = 0
-var enemy_start = 1000
-var player_now = player_start
-var enemy_now = enemy_start
-
-onready var player_rect = $player_rect
-onready var enemy_rect = $enemy_rect
-
-onready var px = player_rect.rect_position.x
-onready var px_max = px + MAX_TURN
 # Called when the node enters the scene tree for the first time.
+onready var timer = $Timer
+onready var processbar = $ProcessBar
+onready var player_panel = $PlayerPanel
+onready var message_box = $MessageBox
+
+var actor0 = {"name":"actor0","act":10,"side":"player"}
+var actor1 = {"name":"actor1","act":10,"side":"enemy"}
+var actor2 = {"name":"actor2","act":10,"side":"enemy"}
+var actor3 = {"name":"actor3","act":10,"side":"enemy"}
+var actors = [actor0,actor1,actor2,actor3]
+var index = 0
+var index_max = actors.size()
+
+var is_turning = false
+
 func _ready():
-	add_rect()
+	timer.wait_time = 1
+	timer.start()
+	is_turning = true
 	pass # Replace with function body.
 
 func _process(delta):
-	if player_now > MAX_TURN :
-		player_now = player_start
-	player_now = player_now + 4
-	player_rect.rect_position.x = px + player_now
-	$player_rect/Label.text = str(player_now)
-#	player_rect.rect_position.x = player_rect.rect_position.x + rand_range(0.2,3.0)
-#	if player_rect.rect_position.x > px_max :
-#		player_rect.rect_position.x = px
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	turning()
+	
+func turning():
+	if is_turning :
+		processbar.value += 1
 
-func add_rect():
-	var rect = $player_rect.duplicate()
-	rect.rect_position.x = 100
-	add_child(rect)
+func actor_turn():
+	print_debug(actors[index].name)
+	message_box.bbcode_text += actors[index].name + "\n"
+	if actors[index].side == "player" :
+		player_panel.show()
 
 
-func actor_runing(actor):
-	if actor.turn_now > MAX_TURN :
-		actor.turn_now = actor.turn_start
-	actor.turn_now = actor.turn_now + 4
-	player_rect.rect_position.x = px + player_now
-	$player_rect/Label.text = str(player_now)
+func _on_Timer_timeout():
+	index = (index + 1)%index_max
+	is_turning = false
+	timer.paused = true
+	actor_turn()
+	pass # Replace with function body.
+
+
+func _on_Button_pressed():
+	timer.paused = false
+	player_panel.hide()
+	pass # Replace with function body.

@@ -2,21 +2,36 @@ extends Item
 
 class_name Food
 
+
+# 点击, 吃, 变质
 signal hit
+signal do_eat()
+signal decay()
+signal do_test
+
+onready var label = $Label
+onready var animal = $AnimationPlayer
+onready var area = $Area2D
 
 func _ready():
-	$Label.text = name()
+	label.text = "name"
 	$Panel/RichTextLabel.bbcode_text = str(query("long"))
 	connect("notify_fail",self,"on_notify_fail")
+	connect("do_eat",self,"do_eat")
+	connect("decay",self,"decay")
+	connect("do_test",self,"_on_do_test")
 
 func _input(event):
 	if event.is_action("mouse_left") :
-		emit_signal("hit")
+		emit_signal("do_test",1,2,3)
 #		$Panel.show()
-		$AnimationPlayer.play("do_eat")
+		animal.play("do_eat")
 
 func on_notify_fail(msg):
 	print_debug(msg)
+
+func _on_do_test(v1,v2,v3):
+	print_debug("test",v1,v2,v3)
 
 func do_eat(character):
 #	if( !living(this_player()) || this_player().query_temp("noliving") )

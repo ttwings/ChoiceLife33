@@ -94,7 +94,7 @@ func _process(delta: float) -> void:
 		if item.cd_timer < 0 :
 			item.cd_timer = item.cd		
 
-	 						
+
 func start(battle,oppent):
 	self.battle = battle
 	self.oppent = oppent

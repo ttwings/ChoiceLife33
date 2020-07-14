@@ -267,7 +267,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Global.gd"
-Signals_manager="*res://Signals_manager.gd"
 SimpleFrame="*res://SimpleFrame.gd"
 TriggerSystem="*res://addons/TriggerSystem/TriggerSystem.gd"
 DmgObjFactory="*res://addons/TriggerSystem/BattleSystem/DmgObjFactory.gd"
@@ -288,7 +287,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "TriggerSystem" )
+enabled=PoolStringArray( "TriggerSystem", "gdutils" )
 
 [importer_defaults]
 
@@ -353,6 +352,8 @@ inv_grab={
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=1
+quality/intended_usage/framebuffer_allocation.mobile=1
 quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
 
