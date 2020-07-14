@@ -5,11 +5,11 @@
 [ext_resource path="res://assets/graphics/tiles/Outside Objects.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=4]
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
 region = Rect2( 768, 224, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 3 )
 region = Rect2( 768, 224, 32, 32 )
 
@@ -17,10 +17,10 @@ region = Rect2( 768, 224, 32, 32 )
 script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="0"]
-texture = SubResource( 2 )
+texture = SubResource( 1 )
 
 [node name="TextureRect" parent="." index="1"]
-texture = SubResource( 1 )
+texture = SubResource( 2 )
 
 [node name="RichTextLabel" parent="Panel" index="0"]
 theme = ExtResource( 4 )

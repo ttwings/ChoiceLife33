@@ -198,4 +198,40 @@ func this_player():
 ##			call_func(c)
 #			call_funcs.erase(c)	
 
+################################
+var books
+var db
+#var foods = []
+#func _ready():
+#	db = load_cdb()
+#	foods = load_db_sheet(db,"foods")
+#	print(query(db_json,0,0))
+#	print(foods)
+#	pass # Replace with function body.
+
+func load_cdb():
+	var db
+	var file = File.new()
+	file.open("res://gamedata/data.cdb",File.READ)
+	db = parse_json(file.get_as_text())
+	file.close()
+	return db
+	
+
+func load_db_sheet(db,sheet_name:String):
+	var sheet_json = {}
+	for sheet in db["sheets"]:
+		if sheet["name"] == sheet_name :
+#			sheet_json = sheet
+			for entry in sheet["lines"]:
+				var new_entry = entry.duplicate()
+#				sheet_json.push_back(new_entry)
+#				new_entry.erase("id")
+				sheet_json[entry["id"]] = new_entry
+	return sheet_json	
+	
+func save_db_sheet(db,sheet_name,sheet_data):
+	for sheet in db["sheets"]:
+		if sheet["name"] == sheet_name:
+			sheet["name"] = sheet_data.duplicate()	
 

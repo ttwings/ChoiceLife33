@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TimeLine.gd" type="Script" id=1]
+
+[node name="TimeLine" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_left = 139.812
+margin_top = 42.3803
+margin_right = -140.188
+margin_bottom = 53.3803
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player_rect" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_left = 139.812
+margin_top = 26.3803
+margin_right = -1124.19
+margin_bottom = 42.3803
+color = Color( 0.937255, 0.901961, 0.0666667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="player_rect"]
+margin_left = 4.0
+margin_top = -22.0
+margin_right = 57.0
+margin_bottom = -2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="enemy_rect" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_left = 139.812
+margin_top = 53.3803
+margin_right = -1124.19
+margin_bottom = 69.3803
+color = Color( 0.886275, 0.184314, 0.0901961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
