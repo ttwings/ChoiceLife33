@@ -482,11 +482,11 @@ centered = false
 offset = Vector2( -32, -54 )
 vframes = 21
 hframes = 13
-frame = 32
+frame = 261
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.75, 0.75 )
+zoom = Vector2( 0.5, 0.5 )
 
 [node name="Label" type="Label" parent="."]
 margin_right = 40.0

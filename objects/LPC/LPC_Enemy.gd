@@ -61,7 +61,7 @@ func on_attack(damage,obj):
 	$HP_TextureProgress.value = hp_current * 100/hp_max
 	velocity = (self.position - obj.position ).normalized() * damage * 10
 
-	play_animation("blast001")
+	play_animation("ice_018")
 #	$Label.text = str(self.position)
 	
 func play_animation(name):

@@ -7,6 +7,7 @@ var foods
 var herbs
 var user_class
 var player
+var castleDB
 # 全局房间字典，key为房间路径，v为实例
 
 var all_current_rooms = {}
@@ -88,8 +89,16 @@ func load_data(path:String):
 
 	var data_str = load_data.get_as_text()
 	var p = JSON.parse(data_str)
+	castleDB = p
 	return p.result
-	
+
+func get_sheet(sheet_name:String,dbase):
+	var sheet_json = {}
+	var sheet = dbase["sheets"][sheet_name]
+	if sheet:
+		for line in sheet["lines"]:
+			sheet_json[line["id"]] = line
+	return sheet_json	
 
 func dir_contents(path):
 	var dir = Directory.new()
