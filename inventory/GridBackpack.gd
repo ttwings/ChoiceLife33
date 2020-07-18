@@ -40,9 +40,11 @@ func grab_item(pos):
 	set_grid_space(g_pos.x, g_pos.y, item_size.x, item_size.y, false)
 	
 	items.remove(items.find(item))
+#	与draw() 配合绘制
 	update()
 	return item	
-		
+
+# 通过绘制红色圆排查错误，注意需要 update 配合刷新。		
 func _draw():
 	for x in range(grid_width):
 		for y in range(grid_height):
