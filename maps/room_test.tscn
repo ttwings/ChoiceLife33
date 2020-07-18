@@ -86,3 +86,6 @@ position = Vector2( 409.994, 371.323 )
 
 [node name="baijiu" parent="." instance=ExtResource( 12 )]
 position = Vector2( 411.438, 307.448 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 800, 720 )

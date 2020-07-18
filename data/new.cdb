@@ -1,0 +1,88 @@
+{
+	"sheets": [
+		{
+			"name": "room001",
+			"columns": [
+				{
+					"name": "id",
+					"typeStr": "0"
+				},
+				{
+					"name": "width",
+					"typeStr": "3"
+				},
+				{
+					"name": "height",
+					"typeStr": "3"
+				},
+				{
+					"name": "props",
+					"typeStr": "16"
+				},
+				{
+					"name": "tileProps",
+					"typeStr": "8"
+				},
+				{
+					"name": "layers",
+					"typeStr": "8"
+				}
+			],
+			"lines": [
+				{
+					"id": "room1",
+					"width": 16,
+					"height": 16,
+					"tileProps": [],
+					"layers": [],
+					"props": {
+						"tileSize": 16,
+						"layers": []
+					}
+				}
+			],
+			"separators": [],
+			"props": {
+				"level": {
+					"tileSets": {}
+				}
+			}
+		},
+		{
+			"name": "room001@tileProps",
+			"props": {
+				"hide": true
+			},
+			"separators": [],
+			"lines": [],
+			"columns": []
+		},
+		{
+			"name": "room001@layers",
+			"props": {
+				"hide": true
+			},
+			"separators": [],
+			"lines": [],
+			"columns": [
+				{
+					"name": "name",
+					"typeStr": "1"
+				},
+				{
+					"name": "data",
+					"typeStr": "15"
+				}
+			]
+		},
+		{
+			"name": "tile",
+			"columns": [],
+			"lines": [],
+			"separators": [],
+			"props": {}
+		}
+	],
+	"customTypes": [],
+	"compress": false
+}

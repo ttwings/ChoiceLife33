@@ -4,6 +4,7 @@ extends Node2D
 onready var enemy = $trees/LPC_Enemy
 
 func _ready():
+	
 #	enemy.instance()
 #	$trees.add_child(enemy)
 #	enemy.pos = $start.position
@@ -14,3 +15,4 @@ func _ready():
 
 #func _process(delta: float) -> void:
 #	enemy._process(delta)
+

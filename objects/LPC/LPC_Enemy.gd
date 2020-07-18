@@ -28,9 +28,9 @@ func update_path():
 		set_physics_process(false)	
 		
 func _physics_process(delta: float) -> void:
-	if path.size() > 1 :
+	if path.size() > 0 :
 		var d = position.distance_to(path[0])
-		if d > 2 :
+		if d > 16 :
 			position = position.linear_interpolate(path[0],(speed * delta)/d)
 			is_moving = true
 			update_direction(path[0])
