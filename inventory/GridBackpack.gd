@@ -35,14 +35,22 @@ func grab_item(pos):
 		return
 		
 	var item_pos = item.rect_global_position + Vector2(cell_size / 2, cell_size / 2)
-	var g_pos = pos_to_grid_coord(pos)
+	var g_pos = pos_to_grid_coord(item_pos)
 	var item_size = get_grid_size(item)
 	set_grid_space(g_pos.x, g_pos.y, item_size.x, item_size.y, false)
 	
 	items.remove(items.find(item))
+#	与draw() 配合绘制
+	update()
 	return item	
-		
-		
+
+# 通过绘制红色圆排查错误，注意需要 update 配合刷新。		
+func _draw():
+	for x in range(grid_width):
+		for y in range(grid_height):
+			if grid[x][y] :
+				draw_circle(Vector2(x*32+16,y*32+16),8,Color.red)
+	pass		
 		
 		
 func get_item_under(pos):

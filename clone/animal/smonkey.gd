@@ -1,7 +1,7 @@
 # /d/shenlong/npc/smonkey.c
 # Last Modified by winder on Aug. 1 2002
 
-extends Npc;
+extends Char;
 
 func create():
 
@@ -87,13 +87,8 @@ func destroy_it(obj):
 
 
 func _init():
-
 	me = this_player();
-
-	::init();
-
 	if (interactive(me) && living(me)):
-	
 		command("look " + me.query("id"));
 		message_vision("小猴子神秘地对$N眨了眨眼睛，“吱，吱，吱”叫了几声！\n", me);
 	

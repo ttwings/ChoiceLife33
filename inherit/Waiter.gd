@@ -79,10 +79,10 @@ func init():
 	if (this_player().query("id") == environment().query("owner")):
 			add_action("do_stock", "stock");
 			add_action("do_unstock", "unstock");
-			add_action("do_jiezhang", ({ "reckoning", "jiezhang"));
+			add_action("do_jiezhang", ["reckoning", "jiezhang"])
 			add_action("do_modify", "modify");
-			add_action("do_invite", ({ "invite", "vip" ));
-			add_action("do_ban", ({ "ban", "unwelcome", ));
+			add_action("do_invite", ["invite", "vip" ])
+			add_action("do_ban", ["ban", "unwelcome", ])
 	
 	add_action("do_order","order");
 	add_action("do_list", "list");
@@ -99,7 +99,7 @@ func unconcious():
 
 func restore():
 	var file;
-	if (stringp(file = this_object().query_save_file()) && file_size(file + __SAVE_EXTENSION__) > 0):
-			return restore_object(file);
+	# if (stringp(file = this_object().query_save_file()) && file_size(file + __SAVE_EXTENSION__) > 0):
+	# 		return restore_object(file);
 	return 0;
 

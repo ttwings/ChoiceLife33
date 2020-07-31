@@ -4,7 +4,7 @@ extends "res://addons/godot-behavior-tree-plugin/decorator.gd"
 
 # Decorator Node - Always returns OK if not running or errored
 
-func tick(tick: Tick) -> int:
+func tick(tick: Tick) :
 	
 	# 0..1 children
 	for child in get_children():

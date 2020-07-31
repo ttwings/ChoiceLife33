@@ -3,7 +3,7 @@ extends "res://addons/godot-behavior-tree-plugin/decorator.gd"
 
 
 # Decorator Node - Inverter returns OK on FAILED, FAILED on OK, does not change running responses
-func tick(tick: Tick) -> int:
+func tick(tick: Tick) :
 	
 	# 0..1 children
 	for c in get_children():

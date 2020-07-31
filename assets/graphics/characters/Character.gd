@@ -9,15 +9,29 @@ export(String) var path
 onready var sprite = $Sprite
 onready var animal = $AnimationPlayer
 onready var tween = $Tween
+onready var label = $Label
 
+var turn :=0
 
 var next_pos
 var step_size = Vector2(32,32)
 var direction = Vector2(0,1) 
-var directions = {	"down":Vector2(0,1),
-					"up":Vector2(0,-1),
-					"left":Vector2(-1,0),
-					"right":Vector2(1,0)}
+var directions = {	"down":Vector2.DOWN,
+					"up":Vector2.UP,
+					"left":Vector2.LEFT,
+					"right":Vector2.RIGHT,
+					"left_up":Vector2.LEFT+Vector2.UP,
+					"left_down":Vector2.LEFT+Vector2.DOWN,
+					"right_up":Vector2.RIGHT+Vector2.UP,
+					"right_down":Vector2.RIGHT+Vector2.DOWN}
+					
+var input_keys = {
+	'down':Vector2.DOWN,
+	'up':Vector2.UP,
+	'left':Vector2.LEFT,
+	'right':Vector2.RIGHT
+}					
+					
 var state = "idle"
 var dir = "up" # down
 var is_idle = true # 空闲时才能接收指令。 与动画播放相对。
@@ -26,39 +40,31 @@ func _ready():
 	sprite.texture = load(path)
 	pass # Replace with function body.
 
-#func _process(delta):
-#	if Input.action_press("ui_down") :
-#		animal.play("move_down")
-#		move(direction)
+func _process(delta):
+	key_input()
+	label.text = str(turn)
+	pass
 
-func _input(event):
-	if is_idle and event.is_action_pressed("ui_down"):
-		dir = "down"
-		animal.play("move_" + dir)
-		move(directions[dir])	
-	if is_idle and event.is_action_pressed("ui_up"):
-		dir = "up"
-		animal.play("move_" + dir)
-		move(directions[dir])	
-	if is_idle and event.is_action_pressed("ui_left"):
-		dir = "left"
-		animal.play("move_" + dir)
-		move(directions[dir])	
-	if is_idle and event.is_action_pressed("ui_right"):
-		dir = "right"
-		animal.play("move_" + dir)
-		move(directions[dir])	
 
+func key_input():
+	if tween.is_active() :
+		return
+	for dir in input_keys:
+		if Input.is_action_pressed(dir):
+			move(dir)	
 
 #	pass
 func get_next_pos(direction:Vector2):
 	return self.position + direction*step_size
 
 
-func move(direction:Vector2):
+func move(dir:String):
+	turn = turn + 1
+	var direction = directions[dir]
 	tween.interpolate_property(self,"position",self.position,get_next_pos(direction),0.3,Tween.TRANS_LINEAR,Tween.EASE_IN)
 	tween.start()
-	is_idle = false
-	yield(tween,"tween_completed")
-	is_idle = true
-	print_debug(self.position,is_idle)
+	animal.play("move_" + dir)
+	
+func attack(dir:String):
+	turn + 2
+		
