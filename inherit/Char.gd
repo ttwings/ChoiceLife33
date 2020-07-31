@@ -1505,10 +1505,10 @@ func new_ob(path:String):
 
 ######################################### F_SKILL ########################
 
-var skills;
-var learned;
-var skill_map;
-var skill_prepare;
+var skills := {};
+var learned := {};
+var skill_map := {};
+var skill_prepare := {};
 
 func query_skills() :
 	return skills
