@@ -1,7 +1,7 @@
 # bee.c
 # Last Modified by winder on Aug. 1 2002
 
-extends Npc;
+extends Char;
 
 func create():
 
@@ -19,12 +19,9 @@ func create():
 
 	set("chat_chance", 2);
 	set("chat_msg", [
-						(
-							: this_object(), "random_move"
-							:),
 						"蜜蜂嗡嗡嗡飞过来，在你头上转了一圈，又飞走了。\n",
-						"蜜蜂飞到路边的一朵鲜艳的野花上，忙忙碌碌地采着蜜。\n",
-					]);
+						"蜜蜂飞到路边的一朵鲜艳的野花上，忙忙碌碌地采着蜜。\n"
+					])
 
 	setup();
 

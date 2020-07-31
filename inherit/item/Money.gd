@@ -1,10 +1,6 @@
-# /inherit/item/money.c
+extends Item
 
-# inherit COMBINED_ITEM;
-
-extends Combined_item
-
-class_name Money
+class_name Combined
 
 func value() :
 	return query_amount() * query("base_value")

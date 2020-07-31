@@ -36,6 +36,7 @@ var __FILE__ = file_name()
 
 signal message_veision(msg)
 signal notify_fail(msg)
+signal status_change()
 
 func notify_fail(msg):
 	emit_signal("notify_fail",msg)

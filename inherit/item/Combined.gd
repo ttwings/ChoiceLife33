@@ -11,7 +11,7 @@
 
 extends Item
 #############################  combined  #################################
-
+class_name Combined
 var amount;
 
 func query_amount() :
@@ -21,7 +21,8 @@ func destruct_me() :
 	destruct(this_object())
 
 func set_amount(v:int):
-	if( v < 0 ) error("combine:set_amount less than 1.\n");
+	if( v < 0 ) :
+		error("combine:set_amount less than 1.\n");
 # //	if( v==0 ) destruct(this_object()); 
 	if( v == 0 ) :
 		# ::move(VOID_OB);
@@ -30,7 +31,7 @@ func set_amount(v:int):
 		amount = v;
 		this_object().set_weight(v * int(query("base_weight")));
 
-func add_amount(int v) :
+func add_amount(v:int) :
 	set_amount(amount+v)
 
 func short():
@@ -39,7 +40,7 @@ func short():
 	else:
 		return .short();
 
-func move(mixed dest, int silent):
+func move(dest, silent):
 	var env
 	var inv;
 	var i

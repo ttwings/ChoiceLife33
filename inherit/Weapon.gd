@@ -268,7 +268,7 @@ func set_desc(w_lv:int,w_or:String,w_name:String):
 	var result
 
 	weapon = this_object();
-	me = this_player();
+	me = self;
 	w_liang = weapon.query("unit");
 	player_name=me.query("name");
 	make_time=me.query("weapon/time");
