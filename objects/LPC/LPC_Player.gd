@@ -19,6 +19,7 @@ var new_direction = ""
 
 
 enum STATES {WALK,IDLE,ATTACK,SKILL,HURT,DEAD}
+enum DIRECTION{RIGHT,LEFT,UP,DOWN}
 var current_state
 var new_state
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/graphics/characters/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/graphics/background/castal.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/graphics/background/gridbackgound32.png" type="Texture" id=3]
+[ext_resource path="res://objects/EnemyBase.tscn" type="PackedScene" id=4]
 
 [node name="TestStage" type="Node2D"]
 
@@ -15,3 +16,8 @@ position = Vector2( -112.297, -26.513 )
 texture = ExtResource( 3 )
 
 [node name="Character" parent="." instance=ExtResource( 1 )]
+collision_mask = 1
+
+[node name="EnemyBase" parent="." instance=ExtResource( 4 )]
+position = Vector2( -357.253, -145.722 )
+collision_layer = 0

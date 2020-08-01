@@ -1,8 +1,15 @@
 extends KinematicBody2D
 
 export(int) var SPEED = 16
- 
+
 onready var tween = $Tween
+
+var directions = {
+	'up':Vector2.UP,
+	'down':Vector2.DOWN,
+	'left':Vector2.LEFT,
+	'right':Vector2.RIGHT
+}
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_down") :
