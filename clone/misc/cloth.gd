@@ -1,4 +1,4 @@
-extends Hands
+extends Armor
 
 func create():
         set_name("布衣","cloth");

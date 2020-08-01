@@ -37,9 +37,9 @@ signal move
 
 
 ########################################## F_ACTION ######################
-#var busy
-#var interrupt
-#var old_busy = 0;
+var busy
+var interrupt
+var old_busy = 0;
 #
 #func start_busy(new_busy, new_interrupt):
 #	if( !new_busy ) :
@@ -64,10 +64,10 @@ signal move
 #func set_heart_beat(i):
 #	pass	
 #
-#func query_busy() :
-#	return busy
-#func is_busy() :
-#	return busy!=0
+func query_busy() :
+	return busy
+func is_busy() :
+	return busy!=0
 
 # This is called by heart_beat() instead of attack() when a ppl is busy
 # doing something else.
@@ -101,10 +101,10 @@ signal move
 #			old_busy = 0;
 #			interrupt = 0;
 #
-#func remove_busy():
-#	old_busy = 0;
-#	busy = 0;
-#	interrupt = 0;
+func remove_busy():
+	old_busy = 0;
+	busy = 0;
+	interrupt = 0;
 
 # This function is for temporary conditions's recovery call_outs, bcz
 # such recovery function call_out might be destroyed if some wizard
@@ -128,6 +128,12 @@ signal move
 #	evaluate(fun,ob)
 
 ########  TODO #######
+var living = true
+func living(obj):
+	return obj.living
+	pass
+
+
 func previous_object():
 	pass
 
@@ -1505,10 +1511,10 @@ func new_ob(path:String):
 
 ######################################### F_SKILL ########################
 
-var skills;
-var learned;
-var skill_map;
-var skill_prepare;
+var skills := {};
+var learned := {};
+var skill_map := {};
+var skill_prepare := {};
 
 func query_skills() :
 	return skills

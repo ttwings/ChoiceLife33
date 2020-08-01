@@ -27,11 +27,12 @@ func return_home(home):
 		return 1;
 
 	# Are we able to leave?
-	if(!living(this_object()) || this_object().query_temp("noliving") || is_fighting() ):
+
+	if(!living(self) || self.query_temp("noliving") || is_fighting() ):
 		return 0;
 		
 	# let me leave ,add by sir
-	if( !mapp(environment().query("exits")) && this_object().query_temp("let_me_leave")<=5 ):
+	if( !mapp(environment().query("exits")) && self.query_temp("let_me_leave")<=5 ):
 		this_object().add_temp("let_me_leave",1);
 		return 0;
 
@@ -112,11 +113,11 @@ func do_vendor_list(arg:String):
 		return 0;
 	name = keys(goods);
 	list = "你可以购买下列这些东西：\n";
-#	for(i=0; i<sizeof(name); i++):
-	for i in range(name.size()):
+
+	for v in range(name.size()):
 		list += sprintf("%-30s：%s\n",
-			goods[name[i]].query("name") + "(" +
-			goods[name[i]].query("id") + ")",
-			price_string(goods[name[i]].query("value")) );
+			goods[name[v]].query("name") + "(" +
+			goods[name[v]].query("id") + ")",
+			price_string(goods[name[v]].query("value")) );
 	write(list);
 	return 1;	

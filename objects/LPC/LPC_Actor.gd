@@ -4,7 +4,6 @@ onready var player = $Sprite
 onready var animation_player = $AnimationPlayer
 onready var camera = $Camera2D
 
-
 signal hit(dmg,obj)
 
 var speed = 200
@@ -25,9 +24,28 @@ var new_state
 
 var  dmg_obj
 
+# grid move 
+
+var tile_size = 32
+var inputs := {
+	"right":Vector2.RIGHT,
+	"left":Vector2.LEFT,
+	"up":Vector2.UP,
+	"down":Vector2.DOWN
+}
+
+
 func _ready():
 	dmg_obj = DmgObj.new()
-	
+	# grid move
+	position = position.snapped(Vector2.ONE * tile_size)
+	position += Vector2.ONE * tile_size/2
+
+func _unhandled_input(event):
+	for dir in inputs.keys():
+		if event.is_action_pressed(dir):
+			move(dir)
+
 	camera.position = player.position
 
 func get_input():

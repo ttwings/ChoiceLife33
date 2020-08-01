@@ -1,5 +1,5 @@
 extends Reference
-class_name Item
+# class_name Item
 signal number_change
 
 var type = 0
