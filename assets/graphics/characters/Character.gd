@@ -12,7 +12,7 @@ onready var tween = $Tween
 onready var label = $Label
 
 var turn :=0
-
+var cname = 'player'
 var next_pos
 var step_size = Vector2(32,32)
 var direction = Vector2(0,1) 
@@ -31,7 +31,9 @@ var input_keys = {
 	'left':Vector2.LEFT,
 	'right':Vector2.RIGHT
 }					
-					
+
+var is_dead = false
+				
 var state = "idle"
 var dir = "up" # down
 var is_idle = true # 空闲时才能接收指令。 与动画播放相对。
@@ -43,6 +45,9 @@ func _ready():
 func _process(delta):
 	key_input()
 	label.text = str(turn)
+	if Input.is_action_just_pressed("space") :
+		is_dead = true
+		print_debug("space" + str(is_dead))
 	pass
 
 

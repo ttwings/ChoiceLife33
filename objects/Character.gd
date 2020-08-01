@@ -4,7 +4,13 @@ export(int) var SPEED = 16
 
 onready var tween = $Tween
 
-# 注意物理的运动和其他的不一致。
+var directions = {
+	'up':Vector2.UP,
+	'down':Vector2.DOWN,
+	'left':Vector2.LEFT,
+	'right':Vector2.RIGHT
+}
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_down") :
 		move_down()

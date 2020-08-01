@@ -49,6 +49,66 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/TriggerSystem/BattleSystem/BattlePlayer.gd"
 }, {
+"base": "Node",
+"class": "BehaviorTree",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTree.gd"
+}, {
+"base": "Node",
+"class": "BehaviorTreeCondition",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTreeCondition.gd"
+}, {
+"base": "",
+"class": "BehaviorTreeConditionDecorator",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTreeConditionDecorator.gd"
+}, {
+"base": "Node",
+"class": "BehaviorTreeNode",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTreeNode.gd"
+}, {
+"base": "",
+"class": "BehaviorTreeNodeAction",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTreeNodeAction.gd"
+}, {
+"base": "",
+"class": "BehaviorTreeNodeConcurrent",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTreeNodeConcurrent.gd"
+}, {
+"base": "",
+"class": "BehaviorTreeNodePrioritySelector",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTreeNodePrioritySelector.gd"
+}, {
+"base": "",
+"class": "BehaviorTreeNodeProxy",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTreeNodeProxy.gd"
+}, {
+"base": "",
+"class": "BehaviorTreeNodeRandomSelector",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTreeNodeRandomSelector.gd"
+}, {
+"base": "",
+"class": "BehaviorTreeNodeSequenceSelector",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree/BehaviorTreeNodeSequenceSelector.gd"
+}, {
+"base": "Resource",
+"class": "BehaviorTreeResource",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree_editor/BehaviorTreeResource.gd"
+}, {
+"base": "Resource",
+"class": "BehaviorTreeScriptDataResource",
+"language": "GDScript",
+"path": "res://addons/behavior_tree_plugin/behavior_tree_editor/BehaviorTreeScriptDataResource.gd"
+}, {
 "base": "EventEmitter",
 "class": "Buff",
 "language": "GDScript",
@@ -223,6 +283,18 @@ _global_script_class_icons={
 "BattleCharacter": "",
 "BattleEnemy": "",
 "BattlePlayer": "",
+"BehaviorTree": "",
+"BehaviorTreeCondition": "",
+"BehaviorTreeConditionDecorator": "",
+"BehaviorTreeNode": "",
+"BehaviorTreeNodeAction": "",
+"BehaviorTreeNodeConcurrent": "",
+"BehaviorTreeNodePrioritySelector": "",
+"BehaviorTreeNodeProxy": "",
+"BehaviorTreeNodeRandomSelector": "",
+"BehaviorTreeNodeSequenceSelector": "",
+"BehaviorTreeResource": "",
+"BehaviorTreeScriptDataResource": "",
 "Buff": "",
 "BuffModule": "",
 "Buffer": "",
@@ -287,7 +359,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "TriggerSystem", "gdutils" )
+enabled=PoolStringArray( "TriggerSystem", "behavior_tree_plugin", "gdutils" )
 
 [importer_defaults]
 
@@ -347,6 +419,11 @@ down={
 inv_grab={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+space={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 }
 

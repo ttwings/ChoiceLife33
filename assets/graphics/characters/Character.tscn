@@ -1,9 +1,14 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://animations/move_down.tres" type="Animation" id=1]
 [ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=2]
 [ext_resource path="res://assets/graphics/characters/Character.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/font_normal.tres" type="DynamicFont" id=4]
+[ext_resource path="res://addons/behavior_tree_plugin/behavior_tree/BehaviorTree.gd" type="Script" id=5]
+[ext_resource path="res://assets/graphics/characters/root.gd" type="Script" id=6]
+[ext_resource path="res://assets/graphics/characters/die.gd" type="Script" id=7]
+[ext_resource path="res://assets/graphics/characters/cnd_die.gd" type="Script" id=8]
+[ext_resource path="res://assets/graphics/characters/move.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle_down"
@@ -190,7 +195,11 @@ transitions = [ "idle_down", "move_down", SubResource( 16 ), "idle_left", "move_
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=25]
 
-[node name="Character" type="Node2D"]
+[sub_resource type="CircleShape2D" id=26]
+radius = 13.0858
+
+[node name="Character" type="Area2D"]
+collision_mask = 2
 script = ExtResource( 3 )
 path = "res://assets/graphics/characters/chara03.png"
 
@@ -230,3 +239,26 @@ text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 28 )
+shape = SubResource( 26 )
+
+[node name="BTree" type="Node" parent="."]
+script = ExtResource( 5 )
+database = {
+
+}
+
+[node name="root" type="Node" parent="BTree"]
+script = ExtResource( 6 )
+
+[node name="die" type="Node" parent="BTree/root"]
+script = ExtResource( 7 )
+condition_path = NodePath("../../../BTree/root/die/cnd_die")
+
+[node name="cnd_die" type="Node" parent="BTree/root/die"]
+script = ExtResource( 8 )
+
+[node name="move" type="Node" parent="BTree/root"]
+script = ExtResource( 9 )
