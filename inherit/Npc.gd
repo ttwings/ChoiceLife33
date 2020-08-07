@@ -28,8 +28,8 @@ func return_home(home):
 
 	# Are we able to leave?
 
-	if(!living(self) || self.query_temp("noliving") || is_fighting() ):
-		return 0;
+	# if(!living(self) || self.query_temp("noliving") || is_fighting() ):
+		# return 0;
 		
 	# let me leave ,add by sir
 	if( !mapp(environment().query("exits")) && self.query_temp("let_me_leave")<=5 ):
