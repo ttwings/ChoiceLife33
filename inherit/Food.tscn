@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://inherit/Food.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/tiles/Outside Objects.png" type="Texture" id=2]
-[ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=3]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -10,13 +9,9 @@
 atlas = ExtResource( 2 )
 region = Rect2( 672, 192, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 2 )
-region = Rect2( 672, 192, 32, 32 )
+[sub_resource type="CircleShape2D" id=3]
 
-[sub_resource type="CircleShape2D" id=4]
-
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "do_eat"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:modulate")
@@ -38,51 +33,10 @@ script = ExtResource( 1 )
 material = SubResource( 1 )
 texture = SubResource( 2 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-texture = SubResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 4 )
-
-[node name="Panel" type="Panel" parent="."]
-visible = false
-margin_left = 16.0
-margin_top = -16.0
-margin_right = 216.0
-margin_bottom = 284.0
-theme = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-text = "apple"
-
-[node name="Label" type="Label" parent="."]
-visible = false
-margin_left = -20.0
-margin_top = -27.0
-margin_right = 20.0
-margin_bottom = -13.0
-theme = ExtResource( 3 )
-text = "Food"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+shape = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/do_eat = SubResource( 5 )
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_Area2D_mouse_exited"]
+anims/do_eat = SubResource( 4 )

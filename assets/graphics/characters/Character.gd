@@ -10,10 +10,12 @@ onready var sprite = $Sprite
 onready var animal = $AnimationPlayer
 onready var tween = $Tween
 onready var label = $Label
+onready var raycast = $RayCast2D
 
 var turn :=0
 var cname = 'player'
 var next_pos
+var tile_size = 32
 var step_size = Vector2(32,32)
 var direction = Vector2(0,1) 
 var directions = {	"down":Vector2.DOWN,
@@ -64,11 +66,15 @@ func get_next_pos(direction:Vector2):
 
 
 func move(dir:String):
-	turn = turn + 1
-	var direction = directions[dir]
-	tween.interpolate_property(self,"position",self.position,get_next_pos(direction),0.3,Tween.TRANS_LINEAR,Tween.EASE_IN)
-	tween.start()
-	animal.play("move_" + dir)
+	raycast.cast_to = input_keys[dir] * tile_size
+	raycast.force_raycast_update()
+	print(raycast.is_colliding())
+	if !raycast.is_colliding() :
+		turn = turn + 1
+		var direction = directions[dir]
+		tween.interpolate_property(self,"position",self.position,get_next_pos(direction),0.3,Tween.TRANS_LINEAR,Tween.EASE_IN)
+		tween.start()
+		animal.play("move_" + dir)
 	
 func attack(dir:String):
 	turn + 2

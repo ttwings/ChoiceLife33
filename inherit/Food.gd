@@ -13,6 +13,7 @@ onready var label = $Label
 onready var animal = $AnimationPlayer
 onready var area = $Area2D
 
+
 func _ready():
 	label.text = "name"
 	$Panel/RichTextLabel.bbcode_text = str(query("long"))
@@ -90,18 +91,3 @@ func decay():
 		_:
 			tell_object(ob,me.name()+"整个腐烂掉了。\n");
 			destruct(this_object());
-			
-#	remove_call_out("decay");
-#	call_out("decay", 150);
-
-
-func _on_Area2D_mouse_entered():
-	$Label.show()
-	print_debug("label show")
-	pass # Replace with function body.
-
-
-
-func _on_Area2D_mouse_exited():
-	$Label.hide()
-	pass # Replace with function body.

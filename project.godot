@@ -107,17 +107,7 @@ _global_script_classes=[ {
 "base": "Item",
 "class": "Combined",
 "language": "GDScript",
-"path": "res://inherit/item/Money.gd"
-}, {
-"base": "EventEmitter",
-"class": "Condition",
-"language": "GDScript",
-"path": "res://addons/simple-game-framework/core/condition/Condition.gd"
-}, {
-"base": "Module",
-"class": "DailyTask",
-"language": "GDScript",
-"path": "res://addons/simple-game-framework/modules/DailyTask.gd"
+"path": "res://inherit/item/Combined.gd"
 }, {
 "base": "Reference",
 "class": "DmgObj",
@@ -149,15 +139,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://inherit/Item.gd"
 }, {
-"base": "EventEmitter",
-"class": "Messenger",
+"base": "Combined_item",
+"class": "Money",
 "language": "GDScript",
-"path": "res://addons/simple-game-framework/core/Messenger.gd"
-}, {
-"base": "EventEmitter",
-"class": "Module",
-"language": "GDScript",
-"path": "res://addons/simple-game-framework/core/Module.gd"
+"path": "res://inherit/item/Money.gd"
 }, {
 "base": "Char",
 "class": "Npc",
@@ -210,16 +195,13 @@ _global_script_class_icons={
 "Buffer": "",
 "Char": "",
 "Combined": "",
-"Condition": "",
-"DailyTask": "",
 "DmgObj": "",
 "Equip": "",
 "Food": "",
 "GameObject": "",
 "HealObj": "",
 "Item": "",
-"Messenger": "",
-"Module": "",
+"Money": "",
 "Npc": "",
 "Room": "",
 "Skill": "",
@@ -227,6 +209,13 @@ _global_script_class_icons={
 "User": "",
 "Weapon": ""
 }
+
+[PluginSettings]
+
+gdinv/ItemJsonPaths={
+
+}
+gdinv/LoadOnReady=true
 
 [application]
 
@@ -244,6 +233,7 @@ HealObjFactory="*res://addons/TriggerSystem/BattleSystem/HealObjFactory.gd"
 BattleProcess="*res://addons/TriggerSystem/BattleSystem/BattleProcess.gd"
 gdutils="*res://addons/gdutils/__init__.gd"
 ItemDB="*res://inventory/ItemDB.tscn"
+GDInv_ItemDB="*res://addons/gdinv/GDInv_ItemDB.gd"
 
 [debug]
 

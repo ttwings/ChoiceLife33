@@ -5,7 +5,6 @@
 [ext_resource path="res://objects/LPC/HP_TextureProgress.tscn" type="PackedScene" id=3]
 [ext_resource path="res://inherit/Char.gd" type="Script" id=4]
 
-
 [sub_resource type="CircleShape2D" id=1]
 radius = 9.73741
 

@@ -1,17 +1,19 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://animations/move_down.tres" type="Animation" id=1]
 [ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=2]
 [ext_resource path="res://assets/graphics/characters/Character.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/font_normal.tres" type="DynamicFont" id=4]
 [ext_resource path="res://addons/behavior_tree_plugin/behavior_tree/BehaviorTree.gd" type="Script" id=5]
-[ext_resource path="res://assets/graphics/characters/root.gd" type="Script" id=6]
+[ext_resource path="res://addons/behavior_tree_plugin/behavior_tree_editor/BehaviorTreeResource.gd" type="Script" id=6]
 [ext_resource path="res://assets/graphics/characters/die.gd" type="Script" id=7]
 [ext_resource path="res://assets/graphics/characters/cnd_die.gd" type="Script" id=8]
 [ext_resource path="res://assets/graphics/characters/move.gd" type="Script" id=9]
+[ext_resource path="res://assets/graphics/characters/root.gd" type="Script" id=10]
 
-[sub_resource type="Animation" id=1]
-resource_name = "idle_down"
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="Animation" id=2]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -27,8 +29,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "idle_left"
+[sub_resource type="Animation" id=3]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -44,8 +45,7 @@ tracks/0/keys = {
 "values": [ 4, 4 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "idle_right"
+[sub_resource type="Animation" id=4]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -60,8 +60,7 @@ tracks/0/keys = {
 "values": [ 7, 7 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "idle_up"
+[sub_resource type="Animation" id=5]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -77,8 +76,7 @@ tracks/0/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "move_left"
+[sub_resource type="Animation" id=6]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -93,8 +91,7 @@ tracks/0/keys = {
 "values": [ 3, 4, 5, 4 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "move_right"
+[sub_resource type="Animation" id=7]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -109,8 +106,7 @@ tracks/0/keys = {
 "values": [ 6, 7, 8, 7 ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "move_up"
+[sub_resource type="Animation" id=8]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -125,32 +121,29 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=8]
+[sub_resource type="AnimationNodeAnimation" id=9]
 animation = "idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id=9]
+[sub_resource type="AnimationNodeAnimation" id=10]
 animation = "idle_left"
 
-[sub_resource type="AnimationNodeAnimation" id=10]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "idle_right"
 
-[sub_resource type="AnimationNodeAnimation" id=11]
+[sub_resource type="AnimationNodeAnimation" id=12]
 animation = "idle_up"
 
-[sub_resource type="AnimationNodeAnimation" id=12]
+[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "move_down"
 
-[sub_resource type="AnimationNodeAnimation" id=13]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "move_left"
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "move_right"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "move_up"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=16]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=17]
 switch_mode = 2
@@ -160,10 +153,10 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=19]
 switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=20]
 switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=21]
 switch_mode = 2
@@ -174,55 +167,122 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=23]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachine" id=24]
-states/idle_down/node = SubResource( 8 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=25]
+states/idle_down/node = SubResource( 9 )
 states/idle_down/position = Vector2( 227, 46 )
-states/idle_left/node = SubResource( 9 )
+states/idle_left/node = SubResource( 10 )
 states/idle_left/position = Vector2( 206, 124 )
-states/idle_right/node = SubResource( 10 )
+states/idle_right/node = SubResource( 11 )
 states/idle_right/position = Vector2( 152, 347 )
-states/idle_up/node = SubResource( 11 )
+states/idle_up/node = SubResource( 12 )
 states/idle_up/position = Vector2( 158, 243 )
-states/move_down/node = SubResource( 12 )
+states/move_down/node = SubResource( 13 )
 states/move_down/position = Vector2( 411, 52 )
-states/move_left/node = SubResource( 13 )
+states/move_left/node = SubResource( 14 )
 states/move_left/position = Vector2( 408, 116 )
-states/move_right/node = SubResource( 14 )
+states/move_right/node = SubResource( 15 )
 states/move_right/position = Vector2( 431, 337 )
-states/move_up/node = SubResource( 15 )
+states/move_up/node = SubResource( 16 )
 states/move_up/position = Vector2( 379, 227 )
-transitions = [ "idle_down", "move_down", SubResource( 16 ), "idle_left", "move_left", SubResource( 17 ), "idle_up", "move_up", SubResource( 18 ), "idle_right", "move_right", SubResource( 19 ), "move_right", "idle_right", SubResource( 20 ), "move_up", "idle_up", SubResource( 21 ), "move_left", "idle_left", SubResource( 22 ), "move_down", "idle_down", SubResource( 23 ) ]
+transitions = [ "idle_down", "move_down", SubResource( 17 ), "idle_left", "move_left", SubResource( 18 ), "idle_up", "move_up", SubResource( 19 ), "idle_right", "move_right", SubResource( 20 ), "move_right", "idle_right", SubResource( 21 ), "move_up", "idle_up", SubResource( 22 ), "move_left", "idle_left", SubResource( 23 ), "move_down", "idle_down", SubResource( 24 ) ]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=25]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=26]
 
-[sub_resource type="CircleShape2D" id=26]
+[sub_resource type="CircleShape2D" id=27]
 radius = 13.0858
+
+[sub_resource type="Resource" id=28]
+script = ExtResource( 6 )
+tree_name = "Behavior Tree"
+nodes = [  ]
+connections = [  ]
+root = ""
+
+[sub_resource type="Resource" id=29]
+script = ExtResource( 6 )
+tree_name = "Behavior Tree"
+nodes = [ {
+"custom_script": null,
+"data": {
+
+},
+"delay_on_start": false,
+"g_name": "BehaviorTreeNode",
+"max_select_delay": 0,
+"min_select_delay": 0,
+"name": "Unkown",
+"position": Vector2( -760, -220 ),
+"type": 6
+}, {
+"custom_script": null,
+"data": {
+
+},
+"g_name": "BehaviorTreeNode2",
+"name": "die",
+"position": Vector2( -424, -226.75 ),
+"type": 1
+}, {
+"custom_script": null,
+"data": {
+
+},
+"g_name": "BehaviorTreeNode3",
+"name": "cnd_die",
+"position": Vector2( -140, -240 ),
+"type": 7
+} ]
+connections = [ {
+"from": "BehaviorTreeNode2",
+"from_port": 0,
+"to": "BehaviorTreeNode3",
+"to_port": 0
+}, {
+"from": "BehaviorTreeNode",
+"from_port": 0,
+"to": "BehaviorTreeNode2",
+"to_port": 0
+} ]
+root = "BehaviorTreeNode"
 
 [node name="Character" type="Area2D"]
 collision_mask = 2
 script = ExtResource( 3 )
 path = "res://assets/graphics/characters/chara03.png"
 
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 0, 28 )
+cast_to = Vector2( 0, 30 )
+
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 3
 
+[node name="Hurt" type="Area2D" parent="."]
+position = Vector2( 0, 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt"]
+shape = SubResource( 1 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/idle_down = SubResource( 1 )
-anims/idle_left = SubResource( 2 )
-anims/idle_right = SubResource( 3 )
-anims/idle_up = SubResource( 4 )
+anims/idle_down = SubResource( 2 )
+anims/idle_left = SubResource( 3 )
+anims/idle_right = SubResource( 4 )
+anims/idle_up = SubResource( 5 )
 anims/move_down = ExtResource( 1 )
-anims/move_left = SubResource( 5 )
-anims/move_right = SubResource( 6 )
-anims/move_up = SubResource( 7 )
+anims/move_left = SubResource( 6 )
+anims/move_right = SubResource( 7 )
+anims/move_up = SubResource( 8 )
 
 [node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
-tree_root = SubResource( 24 )
+tree_root = SubResource( 25 )
 anim_player = NodePath("..")
 active = true
-parameters/playback = SubResource( 25 )
+parameters/playback = SubResource( 26 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -242,16 +302,17 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 28 )
-shape = SubResource( 26 )
+shape = SubResource( 27 )
 
 [node name="BTree" type="Node" parent="."]
 script = ExtResource( 5 )
+behavior_tree_resource = SubResource( 28 )
 database = {
 
 }
 
 [node name="root" type="Node" parent="BTree"]
-script = ExtResource( 6 )
+script = ExtResource( 10 )
 
 [node name="die" type="Node" parent="BTree/root"]
 script = ExtResource( 7 )
@@ -262,3 +323,10 @@ script = ExtResource( 8 )
 
 [node name="move" type="Node" parent="BTree/root"]
 script = ExtResource( 9 )
+
+[node name="BehaviorTree" type="Node" parent="."]
+script = ExtResource( 5 )
+behavior_tree_resource = SubResource( 29 )
+database = {
+
+}
