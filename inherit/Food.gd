@@ -26,7 +26,7 @@ func _input(event):
 	if event.is_action("mouse_left") :
 		emit_signal("do_test",1,2,3)
 #		$Panel.show()
-		animal.play("do_eat")
+		animal.play("do_eat")	
 
 func on_notify_fail(msg):
 	print_debug(msg)
