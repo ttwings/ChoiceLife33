@@ -6,8 +6,8 @@ onready var type = $Type
 onready var desc = $Description 
 
 func get_item_info(item:Item):
-	ob_name.bbcode_text = item.query("name")
-	type.bbcode_text = str(item.query("type"))
+	ob_name.text = item.query("name")
+	type.text = str(item.query("type"))
 	desc.bbcode_text = item.query("long")
 	
 func connet_action(item:Item,actor):

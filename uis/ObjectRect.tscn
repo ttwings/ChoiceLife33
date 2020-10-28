@@ -39,6 +39,9 @@ margin_right = -4.0
 margin_bottom = -301.0
 text = "<降龙十八掌>秘籍"
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Type" type="Label" parent="."]
 anchor_right = 1.0
