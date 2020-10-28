@@ -11,7 +11,7 @@ export(String) var thing_name = "Thing"
 export(String) var desctription = "It's a Thing"
 export(Texture) var default_pawn_texture = preload("res://assets/graphics/ui/pot.png")
 
-export(bool) var blocks_movement = false setget _set_blocks_moment
+export(bool) var blocks_movement = false setget _set_blocks_movement
 export(bool) var blocks_sight = false setget _set_blocks_sight
 export(bool) var stay_visibal = false
 
@@ -48,7 +48,7 @@ func _rpg_process(delta):
 	if ai :
 		ai.act(delta)
 	
-func _set_blocks_moment(what):
+func _set_blocks_movement(what):
 	blocks_movement = what
 	if blocks_movement:
 		if !is_in_group("blockers"):
