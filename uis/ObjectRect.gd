@@ -1,10 +1,14 @@
 extends NinePatchRect
 
 
+onready var ob_name = $Name
+onready var type = $Type
+onready var desc = $Description 
+
 func get_item_info(item:Item):
-	$Name.bbcode_text = item.query("name")
-	$Type.bbcode_text = str(item.query("type"))
-	$Description.bbcode_text = item.query("long")
+	ob_name.text = item.query("name")
+	type.text = str(item.query("type"))
+	desc.bbcode_text = item.query("long")
 	
 func connet_action(item:Item,actor):
 	if item.has_method("do_eat"):
