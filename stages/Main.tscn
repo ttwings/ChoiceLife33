@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://stages/Main.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/tiles/TileTerrain.tres" type="TileSet" id=2]
@@ -23,6 +23,8 @@
 [ext_resource path="res://objects/Cooker.gd" type="Script" id=21]
 [ext_resource path="res://assets/graphics/characters/actor (54).png" type="Texture" id=22]
 [ext_resource path="res://assets/graphics/tiles/window.png" type="Texture" id=23]
+[ext_resource path="res://stages/Checkout.tscn" type="PackedScene" id=24]
+[ext_resource path="res://stages/Cooking.tscn" type="PackedScene" id=25]
 
 [sub_resource type="TileSet" id=1]
 0/name = "map1.png 0"
@@ -244,7 +246,7 @@
 11/shapes = [  ]
 11/z_index = 0
 
-[sub_resource type="TileSet" id=9]
+[sub_resource type="TileSet" id=2]
 0/name = "window.png 0"
 0/texture = ExtResource( 23 )
 0/tex_offset = Vector2( 0, 0 )
@@ -274,27 +276,27 @@
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0, 0.0980392, 0.545098 )
 
-[sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 13 )
-
 [sub_resource type="DynamicFont" id=4]
-outline_size = 1
-outline_color = Color( 0.843137, 0.952941, 0.0627451, 1 )
 font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=5]
+outline_size = 1
+outline_color = Color( 0.843137, 0.952941, 0.0627451, 1 )
 font_data = ExtResource( 13 )
 
 [sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 13 )
 
-[sub_resource type="StreamTexture" id=7]
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 13 )
+
+[sub_resource type="StreamTexture" id=8]
 load_path = "res://.import/actor (36).png-916266fba2f34eccb8fe9a8066471b13.stex"
 
-[sub_resource type="GDScript" id=8]
+[sub_resource type="GDScript" id=9]
 script/source = "extends Node2D
 
 # Declare member variables here. Examples:
@@ -324,6 +326,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+stage_cooking = ExtResource( 25 )
+stage_checkout = ExtResource( 24 )
 
 [node name="Map" type="Node2D" parent="."]
 
@@ -373,7 +377,7 @@ format = 1
 tile_data = PoolIntArray( 327698, 25, 0, 327702, 25, 0, 327706, 25, 0, 393226, 78, 0, 393230, 79, 0, 458763, 80, 0, 458764, 80, 0, 458765, 80, 0, 589835, 25, 0, 589839, 25, 0, 589846, 25, 0, 589850, 25, 0, 786457, 81, 0, 851979, 25, 0, 851983, 25, 0, 917529, 82, 0, 917532, 66, 0, 983065, 82, 0 )
 
 [node name="window" type="TileMap" parent="Map"]
-tile_set = SubResource( 9 )
+tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 1
 format = 1
@@ -412,7 +416,7 @@ margin_left = -641.0
 margin_top = 277.0
 margin_right = 383.0
 margin_bottom = 355.0
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -420,7 +424,7 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="MessageManager/MessageVision"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
 bbcode_text = "测试测试"
 text = "测试测试"
@@ -457,7 +461,7 @@ margin_bottom = 17.0
 [node name="LabelCapital" type="Label" parent="RoomControl/Panel/VBoxContainer/MarginContainer"]
 margin_right = 256.0
 margin_bottom = 17.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 script = ExtResource( 14 )
 
 [node name="Help" type="RichTextLabel" parent="RoomControl/Panel/VBoxContainer"]
@@ -465,7 +469,7 @@ margin_top = 24.0
 margin_right = 256.0
 margin_bottom = 224.0
 rect_min_size = Vector2( 0, 200 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 bbcode_enabled = true
 bbcode_text = "选择一件你能做的事情,努力去做吧.争取提升自己的水平,赚到足够的金钱."
 text = "选择一件你能做的事情,努力去做吧.争取提升自己的水平,赚到足够的金钱."
@@ -474,14 +478,14 @@ text = "选择一件你能做的事情,努力去做吧.争取提升自己的水�
 margin_top = 231.0
 margin_right = 256.0
 margin_bottom = 254.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "去厨房做菜"
 
 [node name="Checkout" type="Button" parent="RoomControl/Panel/VBoxContainer"]
 margin_top = 261.0
 margin_right = 256.0
 margin_bottom = 284.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "去柜台算账"
 
 [node name="Pick" type="Button" parent="RoomControl/Panel/VBoxContainer"]
@@ -489,7 +493,7 @@ visible = false
 margin_top = 84.0
 margin_right = 256.0
 margin_bottom = 107.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "到菜园种菜"
 
 [node name="TimeWeather" type="Control" parent="."]
@@ -592,7 +596,7 @@ position = Vector2( 400, 193 )
 script = ExtResource( 21 )
 
 [node name="Sprite" parent="TablePos/Cooker" index="0"]
-texture = SubResource( 7 )
+texture = SubResource( 8 )
 
 [node name="Say" parent="TablePos/Cooker" index="1"]
 margin_right = 176.0
@@ -604,7 +608,7 @@ text = "麻婆豆腐好咯!"
 
 [node name="Accountant " parent="TablePos" instance=ExtResource( 17 )]
 position = Vector2( 840, 464 )
-script = SubResource( 8 )
+script = SubResource( 9 )
 
 [node name="Sprite" parent="TablePos/Accountant " index="0"]
 texture = ExtResource( 22 )
