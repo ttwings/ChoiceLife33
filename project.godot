@@ -47,7 +47,7 @@ _global_script_classes=[ {
 "base": "Item",
 "class": "Combined",
 "language": "GDScript",
-"path": "res://inherit/item/Money.gd"
+"path": "res://inherit/item/Combined.gd"
 }, {
 "base": "Reference",
 "class": "DmgObj",
@@ -79,6 +79,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://inherit/Item.gd"
 }, {
+"base": "Combined_item",
+"class": "Money",
+"language": "GDScript",
+"path": "res://inherit/item/Money.gd"
+}, {
 "base": "Char",
 "class": "Npc",
 "language": "GDScript",
@@ -93,6 +98,11 @@ _global_script_classes=[ {
 "class": "Skill",
 "language": "GDScript",
 "path": "res://addons/TriggerSystem/BattleSystem/Skill.gd"
+}, {
+"base": "Node",
+"class": "Thing",
+"language": "GDScript",
+"path": "res://components/Thing.gd"
 }, {
 "base": "Reference",
 "class": "Trigger",
@@ -124,9 +134,11 @@ _global_script_class_icons={
 "GameObject": "",
 "HealObj": "",
 "Item": "",
+"Money": "",
 "Npc": "",
 "Room": "",
 "Skill": "",
+"Thing": "",
 "Trigger": "",
 "User": "",
 "Weapon": ""
