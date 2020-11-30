@@ -1,5 +1,7 @@
 extends Node
 
+class_name Thing
+
 signal cell_changed(from,to)
 
 signal about_to_act(delta)

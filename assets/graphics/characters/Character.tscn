@@ -1,15 +1,9 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://animations/move_down.tres" type="Animation" id=1]
 [ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=2]
 [ext_resource path="res://assets/graphics/characters/Character.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/font_normal.tres" type="DynamicFont" id=4]
-[ext_resource path="res://addons/behavior_tree_plugin/behavior_tree/BehaviorTree.gd" type="Script" id=5]
-[ext_resource path="res://addons/behavior_tree_plugin/behavior_tree_editor/BehaviorTreeResource.gd" type="Script" id=6]
-[ext_resource path="res://assets/graphics/characters/die.gd" type="Script" id=7]
-[ext_resource path="res://assets/graphics/characters/cnd_die.gd" type="Script" id=8]
-[ext_resource path="res://assets/graphics/characters/move.gd" type="Script" id=9]
-[ext_resource path="res://assets/graphics/characters/root.gd" type="Script" id=10]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -194,60 +188,6 @@ transitions = [ "idle_down", "move_down", SubResource( 17 ), "idle_left", "move_
 [sub_resource type="CircleShape2D" id=27]
 radius = 13.0858
 
-[sub_resource type="Resource" id=28]
-script = ExtResource( 6 )
-tree_name = "Behavior Tree"
-nodes = [  ]
-connections = [  ]
-root = ""
-
-[sub_resource type="Resource" id=29]
-script = ExtResource( 6 )
-tree_name = "Behavior Tree"
-nodes = [ {
-"custom_script": null,
-"data": {
-
-},
-"delay_on_start": false,
-"g_name": "BehaviorTreeNode",
-"max_select_delay": 0,
-"min_select_delay": 0,
-"name": "Unkown",
-"position": Vector2( -760, -220 ),
-"type": 6
-}, {
-"custom_script": null,
-"data": {
-
-},
-"g_name": "BehaviorTreeNode2",
-"name": "die",
-"position": Vector2( -424, -226.75 ),
-"type": 1
-}, {
-"custom_script": null,
-"data": {
-
-},
-"g_name": "BehaviorTreeNode3",
-"name": "cnd_die",
-"position": Vector2( -140, -240 ),
-"type": 7
-} ]
-connections = [ {
-"from": "BehaviorTreeNode2",
-"from_port": 0,
-"to": "BehaviorTreeNode3",
-"to_port": 0
-}, {
-"from": "BehaviorTreeNode",
-"from_port": 0,
-"to": "BehaviorTreeNode2",
-"to_port": 0
-} ]
-root = "BehaviorTreeNode"
-
 [node name="Character" type="Area2D"]
 collision_mask = 2
 script = ExtResource( 3 )
@@ -303,30 +243,3 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 28 )
 shape = SubResource( 27 )
-
-[node name="BTree" type="Node" parent="."]
-script = ExtResource( 5 )
-behavior_tree_resource = SubResource( 28 )
-database = {
-
-}
-
-[node name="root" type="Node" parent="BTree"]
-script = ExtResource( 10 )
-
-[node name="die" type="Node" parent="BTree/root"]
-script = ExtResource( 7 )
-condition_path = NodePath("../../../BTree/root/die/cnd_die")
-
-[node name="cnd_die" type="Node" parent="BTree/root/die"]
-script = ExtResource( 8 )
-
-[node name="move" type="Node" parent="BTree/root"]
-script = ExtResource( 9 )
-
-[node name="BehaviorTree" type="Node" parent="."]
-script = ExtResource( 5 )
-behavior_tree_resource = SubResource( 29 )
-database = {
-
-}

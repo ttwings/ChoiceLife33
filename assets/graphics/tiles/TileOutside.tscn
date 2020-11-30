@@ -988,4 +988,3 @@ region_rect = Rect2( 768, 576, 96, 32 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 768, 608, 96, 32 )
-
