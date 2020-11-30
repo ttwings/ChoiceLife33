@@ -31,6 +31,7 @@ const HBBLU = "[color=#3b2e7e]"
 const HBMAG = "[color=#815463]"
 const HBCYN = "[color=#00e09e]"
 const HBWHT = "[color=#f0fcff]"
+
 var __DIR__ = dir()
 var __FILE__ = file_name()
 
@@ -52,7 +53,8 @@ func _init():
 
 var dbase = {"objects" : {}}
 var tmp_dbase = {}
-var default_ob;
+var default_ob
+var uid
 
 func getuid(ob=self):
 	return ob.get_instance_id()
@@ -118,8 +120,9 @@ func query_temp(key:String):
 		
 func query(key:String):
 	if	dbase.has(key) :
-		return get_dbase()[key]
+		return dbase[key]
 	else:
+		print_debug("not have this key :%S" % key)
 		return 0		
 	pass
 
@@ -135,7 +138,7 @@ func set_dbase(dbase):
 func get_dbase():
 	return dbase	
 	
-#############################################################		
+#############################################################	setup ##########	
 func setup():
 	setuid(getuid())
 	pass
@@ -159,7 +162,10 @@ func this_object(ob=self):
 
 # todo	
 func environment(ob=self):
-	return ob.query_temp("environment")
+	var env = ob.get_parent()
+	print_debug(env.name)
+	return ob.get_parent()
+	# return ob.query_temp("environment")
 
 func strsrch(string1,string2):
 	var result = string1.find(string2)
@@ -172,7 +178,12 @@ func present(name:String,to=self):
 	to.add("present",name)
 
 func is_character():
-	return false
+	var type = self.query("type")
+	if type == "character":
+		return true
+	else:
+		print_debug(type)
+		return false
 			
 func random(n:int):
 	return randi()%n
@@ -199,7 +210,11 @@ func undefinedp(u):
 	return !u		
 	
 func objectp(ob):
-	return true
+	if ob is Node :
+		return true
+	else:
+		print_debug(ob.type)
+		return false
 	
 # todo	
 func userp(ob):

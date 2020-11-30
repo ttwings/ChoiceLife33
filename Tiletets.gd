@@ -19,5 +19,5 @@ func _ready() -> void:
 
 func _setup_sprite(db:PackedScene,t_name:String):
 	var _db = db.instance()
-	sprite.texture = _db.get_node("船").texture
+	sprite.texture = _db.get_node(t_name).texture
 	
