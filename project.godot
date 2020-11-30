@@ -52,7 +52,7 @@ _global_script_classes=[ {
 "base": "Item",
 "class": "Combined",
 "language": "GDScript",
-"path": "res://inherit/item/Combined.gd"
+"path": "res://inherit/item/Money.gd"
 }, {
 "base": "Reference",
 "class": "DmgObj",
@@ -83,11 +83,6 @@ _global_script_classes=[ {
 "class": "Item",
 "language": "GDScript",
 "path": "res://inherit/Item.gd"
-}, {
-"base": "Combined_item",
-"class": "Money",
-"language": "GDScript",
-"path": "res://inherit/item/Money.gd"
 }, {
 "base": "Char",
 "class": "Npc",
@@ -145,7 +140,6 @@ _global_script_class_icons={
 "GameObject": "",
 "HealObj": "",
 "Item": "",
-"Money": "",
 "Npc": "",
 "ResourceTrees": "",
 "Room": "",
