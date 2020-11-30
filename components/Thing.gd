@@ -11,7 +11,7 @@ signal kill(me)
 
 export(String) var thing_name = "Thing"
 export(String) var desctription = "It's a Thing"
-export(Texture) var default_pawn_texture = preload("res://assets/graphics/ui/pot.png")
+export(Texture) var default_pawn_texture
 
 export(bool) var blocks_movement = false setget _set_blocks_movement
 export(bool) var blocks_sight = false setget _set_blocks_sight
