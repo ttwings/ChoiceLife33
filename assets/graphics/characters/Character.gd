@@ -52,13 +52,16 @@ func _process(delta):
 		print_debug("space" + str(is_dead))
 	pass
 
+signal do_action
 
 func key_input():
 	if tween.is_active() :
 		return
 	for dir in input_keys:
 		if Input.is_action_pressed(dir):
-			move(dir)	
+			move(dir)
+			action = Action.new("move",100)
+			emit_signal("do_action")	
 
 #	pass
 func get_next_pos(direction:Vector2):
@@ -78,4 +81,26 @@ func move(dir:String):
 	
 func attack(dir:String):
 	turn + 2
+
+var move_point = 100
+var next_turn_action
+var action
 		
+func do_action():
+	print_debug("do action")
+	action.process()
+	action = null
+	
+func prepare_action(left_point):
+	next_turn_action = action
+	move_point = move_point + left_point
+		
+class Action:
+	var name = "action"
+	var act_point = 100
+	func _init(name,point) -> void:
+		self.name = name
+		self.act_point = point
+		
+	func process():
+		print_debug("%s use %d points" % [name,act_point])

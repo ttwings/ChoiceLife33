@@ -5,10 +5,20 @@ export(PackedScene) var game_checkout
 
 signal caption_change(value)
 
+<<<<<<< HEAD
+var apple = load("res://clone/food/apple.gd").new()
+var player = Char.new()
+
+#var stage_cooking = preload("res://stages/Cooking.tscn")
+export (PackedScene) var stage_cooking 
+export (PackedScene) var stage_checkout
+#var stage_checkout = preload("res://stages/Checkout.tscn")
+=======
 #var apple = load("res://clone/food/apple.gd").new()
 #var player = Char.new()
 var stage_cooking = preload("res://stages/game_cooking/Cooking.tscn")
 var stage_checkout = preload("res://stages/game_checkout/Checkout.tscn")
+>>>>>>> 433f88d2edcef6ef927dd80192326ba7592fc6c9
 # Called when the node enters the scene tree for the first time.
 func _ready():
 #	emit_signal("capation_change",[12345678])

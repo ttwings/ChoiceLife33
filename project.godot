@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Action",
+"language": "GDScript",
+"path": "res://Action.gd"
+}, {
 "base": "Item",
 "class": "Armor",
 "language": "GDScript",
@@ -84,6 +89,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://inherit/Npc.gd"
 }, {
+"base": "Resource",
+"class": "ResourceTrees",
+"language": "GDScript",
+"path": "res://assets/graphics/tiles/TileSetTrees.gd"
+}, {
 "base": "GameObject",
 "class": "Room",
 "language": "GDScript",
@@ -93,6 +103,11 @@ _global_script_classes=[ {
 "class": "Skill",
 "language": "GDScript",
 "path": "res://addons/TriggerSystem/BattleSystem/Skill.gd"
+}, {
+"base": "Node",
+"class": "Thing",
+"language": "GDScript",
+"path": "res://components/Thing.gd"
 }, {
 "base": "Reference",
 "class": "Trigger",
@@ -110,6 +125,7 @@ _global_script_classes=[ {
 "path": "res://inherit/Weapon.gd"
 } ]
 _global_script_class_icons={
+"Action": "",
 "Armor": "",
 "Battle": "",
 "BattleCharacter": "",
@@ -125,8 +141,10 @@ _global_script_class_icons={
 "HealObj": "",
 "Item": "",
 "Npc": "",
+"ResourceTrees": "",
 "Room": "",
 "Skill": "",
+"Thing": "",
 "Trigger": "",
 "User": "",
 "Weapon": ""
@@ -169,7 +187,11 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
+<<<<<<< HEAD
 enabled=PoolStringArray( "RPG_maker_Autotile2_3x3", "TriggerSystem", "gdutils" )
+=======
+enabled=PoolStringArray( "TriggerSystem", "gdutils" )
+>>>>>>> a78f4e0beca042d8ea7f6a759afbb233c76307aa
 
 [importer_defaults]
 

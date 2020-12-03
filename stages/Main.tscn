@@ -23,8 +23,13 @@
 [ext_resource path="res://objects/Cooker.gd" type="Script" id=21]
 [ext_resource path="res://assets/graphics/characters/actor (54).png" type="Texture" id=22]
 [ext_resource path="res://assets/graphics/tiles/window.png" type="Texture" id=23]
+<<<<<<< HEAD
+[ext_resource path="res://stages/Checkout.tscn" type="PackedScene" id=24]
+[ext_resource path="res://stages/Cooking.tscn" type="PackedScene" id=25]
+=======
 [ext_resource path="res://stages/game_cooking/Cooking.tscn" type="PackedScene" id=24]
 [ext_resource path="res://stages/game_checkout/Checkout.tscn" type="PackedScene" id=25]
+>>>>>>> 433f88d2edcef6ef927dd80192326ba7592fc6c9
 
 [sub_resource type="TileSet" id=1]
 0/name = "map1.png 0"
@@ -326,8 +331,13 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+<<<<<<< HEAD
+stage_cooking = ExtResource( 25 )
+stage_checkout = ExtResource( 24 )
+=======
 game_cooking = ExtResource( 24 )
 game_checkout = ExtResource( 25 )
+>>>>>>> 433f88d2edcef6ef927dd80192326ba7592fc6c9
 
 [node name="Map" type="Node2D" parent="."]
 

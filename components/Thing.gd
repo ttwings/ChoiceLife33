@@ -1,75 +1,81 @@
 extends Node
 
-signal cell_changed(from,to)
+class_name 物体
 
-signal about_to_act(delta)
-signal acted(action)
+signal 单元改变(从,到)
 
-signal kill(me)
+signal 准备行动(延迟)
+signal 完成行动(动作)
 
-export(String) var thing_name = "Thing"
-export(String) var desctription = "It's a Thing"
-export(Texture) var default_pawn_texture = preload("res://assets/graphics/ui/pot.png")
+signal 消灭(对象)
 
-export(bool) var blocks_movement = false setget _set_blocks_movement
-export(bool) var blocks_sight = false setget _set_blocks_sight
+export(String) var 物体名称 = "Thing"
+export(String) var 描述 = "It's a Thing"
+export(Texture) var 默认纹理
+
+export(bool) var 阻挡移动 = false setget _set_阻挡移动
+export(bool) var 阻挡视线 = false setget _set_阻挡视线
 export(bool) var stay_visibal = false
 
-var found = false
+var 发现 = false
 
-var cell = Vector2() setget _set_cell
+
+var 单元 = Vector2() setget _set_单元
+
+# func _set_cell():
+# 	pass
 
 var SID = -1
-var database_path
+var 数据库路径
 
 var pawn = null
 
-var in_inventory = false
+var 在库存中 = false
 
 # Component refs
-var fighter
-var item
-var equipment
-var ai
+var 战士
+var 物品
+var 装备
+var 智能
 
 func setup():
-	connect("about_to_act", self, "_rpg_process")
-	add_to_group("things")
-	if blocks_movement:
-		add_to_group("blockers")
-	if blocks_sight:
-		add_to_group("sightblockers")
+	connect("准备行动", self, "_游戏_执行")
+	add_to_group("物体")
+	if 阻挡移动:
+		add_to_group("阻挡行动物体")
+	if 阻挡视线:
+		add_to_group("阻挡视线物体")
 	
-	for node in get_children():
-		if node.has_method("setup"):
-			node.setup()
+	for 节点 in get_children():
+		if 节点.has_method("安装"):
+			节点.安装()
 
-func _rpg_process(delta):
-	if ai :
-		ai.act(delta)
+func _游戏_执行(delta):
+	if 智能 :
+		智能.执行(delta)
 	
-func _set_blocks_movement(what):
-	blocks_movement = what
-	if blocks_movement:
-		if !is_in_group("blockers"):
-			add_to_group("blockers")
+func _set_阻挡移动(谁):
+	阻挡移动 = 谁
+	if 阻挡移动:
+		if !is_in_group("阻挡行动物体"):
+			add_to_group("阻挡行动物体")
 	else:
-		if is_in_group("blockers"):
-				remove_from_group("blockers")
+		if is_in_group("阻挡行动物体"):
+				remove_from_group("阻挡行动物体")
 
-func _set_blocks_sight( what ):
-	blocks_sight = what
-	if blocks_sight:
-		if !is_in_group("sightblockers"):
-			add_to_group("sightblockers")
+func _set_阻挡视线( 什么 ):
+	阻挡视线 = 什么
+	if 阻挡视线:
+		if !is_in_group("阻挡视线物体"):
+			add_to_group("阻挡视线物体")
 	else:
-		if is_in_group("sightblockers"):
-			remove_from_group("sightblockers")
+		if is_in_group("阻挡视线物体"):
+			remove_from_group("阻挡视线物体")
 
-func _set_cell( what ):
-	emit_signal( "cell_changed",cell,what)
-	cell = what
+func _set_单元( 什么 ):
+	emit_signal( "单元改变",单元,什么)
+	单元 = 什么
 	
-func _on_fighter_died():
-	emit_signal("kill",self)
+func _on_战士死亡():
+	emit_signal("消灭",self)
 			

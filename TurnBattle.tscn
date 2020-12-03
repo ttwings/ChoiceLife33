@@ -1,0 +1,144 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TurnBattle.gd" type="Script" id=1]
+[ext_resource path="res://player.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[node name="TurnBattle" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.840881
+margin_right = 0.84082
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="speed" type="Label" parent="."]
+margin_left = 63.0
+margin_top = 18.0
+margin_right = 115.0
+margin_bottom = 32.0
+text = "speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="Label" parent="speed"]
+margin_left = 45.0422
+margin_top = -0.629959
+margin_right = 97.0422
+margin_bottom = 13.37
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next" type="Label" parent="."]
+margin_left = 232.0
+margin_top = 15.0
+margin_right = 284.0
+margin_bottom = 29.0
+text = "next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="Label" parent="next"]
+margin_left = 45.0422
+margin_top = -0.629959
+margin_right = 97.0422
+margin_bottom = 13.37
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="action" type="Label" parent="."]
+margin_left = 144.265
+margin_top = 15.7951
+margin_right = 196.265
+margin_bottom = 29.7951
+text = "Action"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="Label" parent="action"]
+margin_left = 45.0422
+margin_top = -0.629959
+margin_right = 97.0422
+margin_bottom = 13.37
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="player"]
+position = Vector2( 518, 356 )
+texture = ExtResource( 3 )
+
+[node name="move_point_bar" type="ProgressBar" parent="player"]
+self_modulate = Color( 0.239216, 0.439216, 0.960784, 1 )
+margin_left = 324.0
+margin_top = 14.0
+margin_right = 539.0
+margin_bottom = 28.0
+step = 1.0
+value = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="Label" parent="player/move_point_bar"]
+margin_left = 212.607
+margin_top = 1.0
+margin_right = 252.607
+margin_bottom = 15.0
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="max_value" type="Label" parent="player/move_point_bar"]
+margin_left = 253.352
+margin_top = 0.55455
+margin_right = 293.352
+margin_bottom = 14.5546
+text = "100"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="player/move_point_bar"]
+margin_left = 248.646
+margin_top = 1.35355
+margin_right = 258.646
+margin_bottom = 15.3535
+text = "/"
+align = 1
+valign = 1
+
+[node name="MessageBoard" type="RichTextLabel" parent="."]
+self_modulate = Color( 0.231373, 0.156863, 0.156863, 1 )
+margin_left = 28.0
+margin_top = 598.0
+margin_right = 485.0
+margin_bottom = 695.0
+focus_mode = 2
+custom_colors/default_color = Color( 0.878431, 0.913725, 0.819608, 1 )
+custom_colors/font_color_shadow = Color( 0.941176, 0.956863, 0.968627, 1 )
+scroll_active = false
+scroll_following = true
+selection_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="do_action" from="player" to="." method="_on_player_do_action"]
