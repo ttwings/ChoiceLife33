@@ -59,9 +59,16 @@ func move(direction:Vector2):
 		print("move action point %d and direction %s" % [action_cost,direction])
 	
 var actions = []
+var 动作组 = []
 
 func do_action():
 	var action
 	if actions.size() > 0:
 		action = actions.pop_back()
 		action.do_action()
+
+func 做动作():
+	var 动作
+	if 动作组.size() > 0:
+		动作 = 动作组.pop_back()
+		动作.做动作()
