@@ -1,0 +1,524 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://addons/godot_data_editor/data_editor_gui.gd" type="Script" id=1]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_add.png" type="Texture" id=2]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_save.png" type="Texture" id=3]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_rename.png" type="Texture" id=4]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_duplicate.png" type="Texture" id=5]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_remove.png" type="Texture" id=6]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_reload_small.png" type="Texture" id=7]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_script.png" type="Texture" id=8]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_options.png" type="Texture" id=9]
+[ext_resource path="res://addons/godot_data_editor/item_tree.tscn" type="PackedScene" id=10]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_display-name.png" type="Texture" id=11]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_copy.png" type="Texture" id=12]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_edit.png" type="Texture" id=13]
+[ext_resource path="res://addons/godot_data_editor/fonts/droid_sans_title.tres" type="DynamicFont" id=14]
+[ext_resource path="res://addons/godot_data_editor/class_properties.tscn" type="PackedScene" id=15]
+[ext_resource path="res://addons/godot_data_editor/custom_properties.tscn" type="PackedScene" id=16]
+[ext_resource path="res://addons/godot_data_editor/class_overview.tscn" type="PackedScene" id=17]
+[ext_resource path="res://addons/godot_data_editor/no_classes.tscn" type="PackedScene" id=18]
+[ext_resource path="res://addons/godot_data_editor/warn.gd" type="Script" id=19]
+[ext_resource path="res://addons/godot_data_editor/options.tscn" type="PackedScene" id=20]
+[ext_resource path="res://addons/godot_data_editor/input_dialog.tscn" type="PackedScene" id=21]
+
+[node name="godot_data_editor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 800, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Head" type="HBoxContainer" parent="VBox"]
+margin_right = 1024.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 0, 22 )
+mouse_filter = 0
+size_flags_vertical = 0
+
+[node name="Add" type="ToolButton" parent="VBox/Head"]
+margin_right = 56.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 28, 28 )
+text = "Add"
+icon = ExtResource( 2 )
+align = 0
+
+[node name="VSeparator5" type="VSeparator" parent="VBox/Head"]
+margin_left = 60.0
+margin_right = 64.0
+margin_bottom = 28.0
+
+[node name="Save" type="ToolButton" parent="VBox/Head"]
+margin_left = 68.0
+margin_right = 128.0
+margin_bottom = 28.0
+disabled = true
+text = "Save"
+icon = ExtResource( 3 )
+flat = false
+
+[node name="SaveAll" type="ToolButton" parent="VBox/Head"]
+margin_left = 132.0
+margin_right = 213.0
+margin_bottom = 28.0
+text = "Save All"
+icon = ExtResource( 3 )
+flat = false
+
+[node name="VSeparator" type="VSeparator" parent="VBox/Head"]
+margin_left = 217.0
+margin_right = 221.0
+margin_bottom = 28.0
+
+[node name="Rename" type="ToolButton" parent="VBox/Head"]
+margin_left = 225.0
+margin_right = 308.0
+margin_bottom = 28.0
+text = "Rename"
+icon = ExtResource( 4 )
+flat = false
+
+[node name="Duplicate" type="ToolButton" parent="VBox/Head"]
+margin_left = 312.0
+margin_right = 404.0
+margin_bottom = 28.0
+disabled = true
+text = "Duplicate"
+icon = ExtResource( 5 )
+flat = false
+
+[node name="Delete" type="ToolButton" parent="VBox/Head"]
+margin_left = 408.0
+margin_right = 482.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 28, 28 )
+text = "Delete"
+icon = ExtResource( 6 )
+
+[node name="VSeparator3" type="VSeparator" parent="VBox/Head"]
+margin_left = 486.0
+margin_right = 490.0
+margin_bottom = 28.0
+
+[node name="Refresh2" type="ToolButton" parent="VBox/Head"]
+margin_left = 494.0
+margin_right = 566.0
+margin_bottom = 28.0
+text = "Reload"
+icon = ExtResource( 7 )
+flat = false
+
+[node name="VSeparator2" type="VSeparator" parent="VBox/Head"]
+margin_left = 570.0
+margin_right = 574.0
+margin_bottom = 28.0
+
+[node name="NewClass" type="ToolButton" parent="VBox/Head"]
+margin_left = 578.0
+margin_right = 674.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 28, 28 )
+text = "New Class"
+icon = ExtResource( 8 )
+align = 0
+
+[node name="VSeparator4" type="VSeparator" parent="VBox/Head"]
+margin_left = 678.0
+margin_right = 682.0
+margin_bottom = 28.0
+
+[node name="Options" type="ToolButton" parent="VBox/Head"]
+margin_left = 686.0
+margin_right = 768.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 28, 28 )
+text = "Options"
+icon = ExtResource( 9 )
+align = 0
+
+[node name="HSeparator" type="HSeparator" parent="VBox"]
+margin_top = 32.0
+margin_right = 1024.0
+margin_bottom = 36.0
+
+[node name="Body" type="HSplitContainer" parent="VBox"]
+margin_top = 40.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ItemTree" parent="VBox/Body" instance=ExtResource( 10 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 165.0
+margin_bottom = 560.0
+rect_min_size = Vector2( 165, 0 )
+size_flags_horizontal = 1
+size_flags_stretch_ratio = 0.0
+
+[node name="Content" type="Panel" parent="VBox/Body"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 177.0
+margin_right = 1024.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="VBox/Body/Content"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="Container" type="MarginContainer" parent="VBox/Body/Content/VBox"]
+margin_right = 847.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 0, 25 )
+
+[node name="HBox" type="HBoxContainer" parent="VBox/Body/Content/VBox/Container"]
+margin_right = 847.0
+margin_bottom = 27.0
+mouse_filter = 0
+custom_constants/separation = 15
+alignment = 2
+
+[node name="DisplayName" type="ToolButton" parent="VBox/Body/Content/VBox/Container/HBox"]
+margin_left = 305.0
+margin_right = 475.0
+margin_bottom = 27.0
+size_flags_horizontal = 0
+disabled = true
+action_mode = 0
+text = "Change Display Name"
+icon = ExtResource( 11 )
+align = 0
+
+[node name="CopyGetItem" type="ToolButton" parent="VBox/Body/Content/VBox/Container/HBox"]
+margin_left = 490.0
+margin_right = 644.0
+margin_bottom = 27.0
+size_flags_horizontal = 0
+disabled = true
+action_mode = 0
+text = "Copy \"get_item(...)\""
+icon = ExtResource( 12 )
+align = 0
+
+[node name="CopyId" type="ToolButton" parent="VBox/Body/Content/VBox/Container/HBox"]
+margin_left = 659.0
+margin_right = 740.0
+margin_bottom = 27.0
+size_flags_horizontal = 0
+action_mode = 0
+text = "Copy ID"
+icon = ExtResource( 12 )
+align = 0
+
+[node name="EditClass" type="ToolButton" parent="VBox/Body/Content/VBox/Container/HBox"]
+margin_left = 755.0
+margin_right = 847.0
+margin_bottom = 27.0
+size_flags_horizontal = 0
+action_mode = 0
+text = "Edit Class"
+icon = ExtResource( 13 )
+align = 0
+
+[node name="ItemIdLabel" type="Label" parent="VBox/Body/Content/VBox/Container"]
+margin_right = 82.0
+margin_bottom = 27.0
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 14 )
+custom_colors/font_color_shadow = Color( 0.300781, 0.300781, 0.300781, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+text = "Element"
+
+[node name="GridContainer" type="GridContainer" parent="VBox/Body/Content/VBox/Container"]
+visible = false
+margin_right = 217.0
+margin_bottom = 32.0
+mouse_filter = 0
+size_flags_horizontal = 0
+custom_constants/hseparation = 10
+columns = 2
+
+[node name="Created" type="Label" parent="VBox/Body/Content/VBox/Container/GridContainer"]
+modulate = Color( 1, 1, 1, 0.25 )
+margin_right = 91.0
+margin_bottom = 14.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "Created:"
+
+[node name="CreatedDate" type="Label" parent="VBox/Body/Content/VBox/Container/GridContainer"]
+modulate = Color( 1, 1, 1, 0.25 )
+margin_left = 101.0
+margin_right = 217.0
+margin_bottom = 14.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "01.01.01 01:01:01"
+
+[node name="LastModifiedLabel" type="Label" parent="VBox/Body/Content/VBox/Container/GridContainer"]
+modulate = Color( 1, 1, 1, 0.25 )
+margin_top = 18.0
+margin_right = 91.0
+margin_bottom = 32.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "Last modified:"
+
+[node name="LastModifiedDate" type="Label" parent="VBox/Body/Content/VBox/Container/GridContainer"]
+modulate = Color( 1, 1, 1, 0.25 )
+margin_left = 101.0
+margin_top = 18.0
+margin_right = 217.0
+margin_bottom = 32.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "01.01.01 01:01:01"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBox/Body/Content/VBox/Container"]
+visible = false
+margin_right = 847.0
+margin_bottom = 27.0
+mouse_filter = 0
+
+[node name="HSeparator" type="HSeparator" parent="VBox/Body/Content/VBox"]
+margin_top = 31.0
+margin_right = 847.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+
+[node name="Spacer" type="Control" parent="VBox/Body/Content/VBox"]
+margin_top = 39.0
+margin_right = 847.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 0, 10 )
+size_flags_horizontal = 3
+
+[node name="InstanceDetails" type="PanelContainer" parent="VBox/Body/Content/VBox"]
+visible = false
+margin_top = 53.0
+margin_right = 847.0
+margin_bottom = 304.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBox" type="HBoxContainer" parent="VBox/Body/Content/VBox/InstanceDetails"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 840.0
+margin_bottom = 244.0
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ClassProperties" parent="VBox/Body/Content/VBox/InstanceDetails/HBox" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 414.0
+margin_bottom = 237.0
+
+[node name="CustomProperties" parent="VBox/Body/Content/VBox/InstanceDetails/HBox" instance=ExtResource( 16 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 418.0
+margin_right = 833.0
+margin_bottom = 237.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ClassOverview" parent="VBox/Body/Content/VBox" instance=ExtResource( 17 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 53.0
+margin_right = 847.0
+margin_bottom = 560.0
+
+[node name="NoClasses" parent="VBox/Body/Content/VBox" instance=ExtResource( 18 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 53.0
+margin_right = 847.0
+margin_bottom = 560.0
+
+[node name="WarnDialog" type="AcceptDialog" parent="."]
+margin_right = 350.0
+margin_bottom = 110.0
+popup_exclusive = true
+window_title = ""
+script = ExtResource( 19 )
+
+[node name="NewClassDialog" type="ConfirmationDialog" parent="."]
+margin_left = 400.0
+margin_top = 177.0
+margin_right = 770.0
+margin_bottom = 351.0
+popup_exclusive = true
+window_title = "New Class"
+dialog_text = "Enter the name and the path to an optional icon:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClassIconFileDialog" type="FileDialog" parent="NewClassDialog"]
+margin_left = 8.0
+margin_top = 22.0
+margin_right = 362.0
+margin_bottom = 152.0
+popup_exclusive = true
+window_title = "Apri un file"
+dialog_hide_on_ok = true
+mode = 0
+access = 2
+filters = PoolStringArray( "*.png" )
+current_dir = "/home/marco/Developer/Godot/godot_data_editor/demo"
+current_path = "/home/marco/Developer/Godot/godot_data_editor/demo/"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NewClassDialog"]
+margin_left = 8.0
+margin_top = 22.0
+margin_right = 362.0
+margin_bottom = 138.0
+size_flags_stretch_ratio = 0.0
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="NewClassDialog/VBoxContainer"]
+margin_top = 29.0
+margin_right = 354.0
+margin_bottom = 53.0
+
+[node name="ClassName" type="LineEdit" parent="NewClassDialog/VBoxContainer/HBoxContainer2"]
+margin_right = 354.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 247, 0 )
+focus_neighbour_bottom = NodePath("../ClassIconPath")
+size_flags_horizontal = 3
+placeholder_text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NewClassDialog/VBoxContainer"]
+margin_top = 63.0
+margin_right = 354.0
+margin_bottom = 87.0
+alignment = 1
+
+[node name="ClassIconPath" type="LineEdit" parent="NewClassDialog/VBoxContainer/HBoxContainer"]
+margin_right = 296.0
+margin_bottom = 24.0
+focus_neighbour_top = NodePath("../ClassName")
+focus_neighbour_right = NodePath("../NewClassIconSearchButton")
+size_flags_horizontal = 3
+placeholder_text = "Icon Path (optional)"
+
+[node name="NewClassIconSearchButton" type="Button" parent="NewClassDialog/VBoxContainer/HBoxContainer"]
+margin_left = 300.0
+margin_right = 354.0
+margin_bottom = 24.0
+focus_neighbour_left = NodePath("../ClassIconPath")
+text = "Search"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionsDialog" parent="." instance=ExtResource( 20 )]
+margin_left = 358.0
+margin_top = 59.0
+margin_right = 758.0
+margin_bottom = 557.0
+
+[node name="InputDialog" parent="." instance=ExtResource( 21 )]
+margin_left = 401.0
+margin_top = 5.0
+margin_right = 770.0
+margin_bottom = 155.0
+
+[node name="NewCustomPropertyDialog" type="ConfirmationDialog" parent="."]
+margin_left = 391.0
+margin_top = 192.0
+margin_right = 763.0
+margin_bottom = 335.0
+window_title = "New custom property"
+dialog_text = "Enter the name and type of the property:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="NewCustomPropertyDialog"]
+margin_left = 8.0
+margin_top = 22.0
+margin_right = 364.0
+margin_bottom = 107.0
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="NewCustomPropertyDialog/VBox"]
+margin_top = 15.0
+margin_right = 356.0
+margin_bottom = 39.0
+focus_neighbour_bottom = NodePath("../TypeOptions")
+placeholder_text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TypeOptions" type="OptionButton" parent="NewCustomPropertyDialog/VBox"]
+margin_top = 49.0
+margin_right = 356.0
+margin_bottom = 69.0
+focus_neighbour_top = NodePath("../LineEdit")
+text = "BOOL"
+items = [ "BOOL", null, false, 0, 1, "COLOR", null, false, 1, 14, "INT", null, false, 2, 2, "NODE_PATH", null, false, 3, 15, "OBJECT", null, false, 4, 17, "PLANE", null, false, 5, 9, "QUAT", null, false, 6, 10, "REAL", null, false, 7, 3, "RECT2", null, false, 8, 6, "STRING", null, false, 9, 4, "TRANSFORM", null, false, 10, 13, "VECTOR2", null, false, 11, 5, "VECTOR3", null, false, 12, 7 ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="VBox/Head/Add" to="." method="handle_actions" binds= [ "add" ]]
+[connection signal="button_down" from="VBox/Head/Save" to="." method="handle_actions" binds= [ "save" ]]
+[connection signal="button_down" from="VBox/Head/SaveAll" to="." method="handle_actions" binds= [ "save_all" ]]
+[connection signal="button_down" from="VBox/Head/Rename" to="." method="handle_actions" binds= [ "rename" ]]
+[connection signal="button_down" from="VBox/Head/Duplicate" to="." method="handle_actions" binds= [ "duplicate" ]]
+[connection signal="button_down" from="VBox/Head/Delete" to="." method="handle_actions" binds= [ "delete" ]]
+[connection signal="button_down" from="VBox/Head/Refresh2" to="." method="handle_actions" binds= [ "reload" ]]
+[connection signal="button_down" from="VBox/Head/NewClass" to="." method="handle_actions" binds= [ "new_class" ]]
+[connection signal="button_down" from="VBox/Head/Options" to="." method="handle_actions" binds= [ "options" ]]
+[connection signal="button_down" from="VBox/Body/Content/VBox/Container/HBox/DisplayName" to="." method="handle_actions" binds= [ "change_display_name" ]]
+[connection signal="button_down" from="VBox/Body/Content/VBox/Container/HBox/CopyGetItem" to="." method="handle_actions" binds= [ "copy_get_item" ]]
+[connection signal="button_down" from="VBox/Body/Content/VBox/Container/HBox/CopyId" to="." method="handle_actions" binds= [ "copy_id" ]]
+[connection signal="button_down" from="VBox/Body/Content/VBox/Container/HBox/EditClass" to="." method="handle_actions" binds= [ "edit_class" ]]
+[connection signal="confirmed" from="NewClassDialog" to="." method="_on_NewClassDialog_confirmed"]
+[connection signal="file_selected" from="NewClassDialog/ClassIconFileDialog" to="." method="_on_NewClassIconFileDialog_file_selected"]
+[connection signal="button_down" from="NewClassDialog/VBoxContainer/HBoxContainer/NewClassIconSearchButton" to="." method="_on_NewClassIconSearchButton_button_down"]
+[connection signal="preview_parameters_changed" from="OptionsDialog" to="VBox/Body/Content/VBox/InstanceDetails/HBox/ClassProperties" method="_on_OptionsDialog_preview_parameters_changed"]
+[connection signal="preview_parameters_changed" from="OptionsDialog" to="VBox/Body/Content/VBox/InstanceDetails/HBox/CustomProperties" method="_on_OptionsDialog_preview_parameters_changed"]
+[connection signal="confirmed" from="NewCustomPropertyDialog" to="." method="_on_NewCustomPropertyDialog_confirmed"]

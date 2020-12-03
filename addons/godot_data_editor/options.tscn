@@ -1,0 +1,281 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/godot_data_editor/options.gd" type="Script" id=1]
+[ext_resource path="res://addons/godot_data_editor/style/light_gray_panel.tres" type="StyleBox" id=2]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_load.png" type="Texture" id=3]
+
+[node name="Options" type="AcceptDialog"]
+margin_left = 365.0
+margin_top = 73.0
+margin_right = 765.0
+margin_bottom = 574.0
+rect_min_size = Vector2( 400, 300 )
+size_flags_vertical = 3
+popup_exclusive = true
+window_title = "Options"
+dialog_hide_on_ok = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -36.0
+custom_styles/panel = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 377.0
+margin_bottom = 265.0
+mouse_filter = 0
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SerializerLabel" type="Label" parent="Panel/GridContainer"]
+margin_right = 150.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 150, 0 )
+mouse_filter = 1
+size_flags_vertical = 0
+text = "Serializer"
+
+[node name="SerializerOption" type="OptionButton" parent="Panel/GridContainer"]
+margin_left = 160.0
+margin_right = 370.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "json"
+items = [ "json", null, false, 0, null, "binary", null, false, 1, null ]
+selected = 0
+
+[node name="ExtensionLabel" type="Label" parent="Panel/GridContainer"]
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 44.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "File Extension"
+
+[node name="ExtensionLineEdit" type="LineEdit" parent="Panel/GridContainer"]
+margin_left = 160.0
+margin_top = 30.0
+margin_right = 370.0
+margin_bottom = 54.0
+text = "json"
+
+[node name="EncryptLabel" type="Label" parent="Panel/GridContainer"]
+margin_top = 64.0
+margin_right = 150.0
+margin_bottom = 78.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "Encrypt Files"
+
+[node name="EncryptCheckBox" type="CheckBox" parent="Panel/GridContainer"]
+margin_left = 160.0
+margin_top = 64.0
+margin_right = 370.0
+margin_bottom = 88.0
+disabled = true
+text = "False"
+
+[node name="PasswordLabel" type="Label" parent="Panel/GridContainer"]
+margin_top = 98.0
+margin_right = 150.0
+margin_bottom = 112.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "Password"
+
+[node name="PasswordLineEdit" type="LineEdit" parent="Panel/GridContainer"]
+margin_left = 160.0
+margin_top = 98.0
+margin_right = 370.0
+margin_bottom = 122.0
+editable = false
+
+[node name="ClassDirectoryLabel" type="Label" parent="Panel/GridContainer"]
+margin_top = 132.0
+margin_right = 150.0
+margin_bottom = 146.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "Class Directory"
+
+[node name="ClassDirectoryHBox" type="HBoxContainer" parent="Panel/GridContainer"]
+margin_left = 160.0
+margin_top = 132.0
+margin_right = 370.0
+margin_bottom = 156.0
+mouse_filter = 0
+
+[node name="ClassDirectoryLineEdit" type="LineEdit" parent="Panel/GridContainer/ClassDirectoryHBox"]
+margin_right = 178.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+text = "res://classes"
+
+[node name="ClassDirectoryButton" type="Button" parent="Panel/GridContainer/ClassDirectoryHBox"]
+margin_left = 182.0
+margin_right = 210.0
+margin_bottom = 24.0
+icon = ExtResource( 3 )
+
+[node name="OutputDirectoryLabel" type="Label" parent="Panel/GridContainer"]
+margin_top = 166.0
+margin_right = 150.0
+margin_bottom = 180.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "Output Directory"
+
+[node name="OutputDirectoryHBox" type="HBoxContainer" parent="Panel/GridContainer"]
+margin_left = 160.0
+margin_top = 166.0
+margin_right = 370.0
+margin_bottom = 190.0
+mouse_filter = 0
+
+[node name="OutputDirectoryLineEdit" type="LineEdit" parent="Panel/GridContainer/OutputDirectoryHBox"]
+margin_right = 178.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+text = "res://data"
+
+[node name="OutputDirectoryButton" type="Button" parent="Panel/GridContainer/OutputDirectoryHBox"]
+margin_left = 182.0
+margin_right = 210.0
+margin_bottom = 24.0
+icon = ExtResource( 3 )
+
+[node name="SanitizeIdsLabel" type="Label" parent="Panel/GridContainer"]
+margin_top = 200.0
+margin_right = 150.0
+margin_bottom = 214.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "Sanitize IDs"
+
+[node name="SanitizeIdsCheckBox" type="CheckBox" parent="Panel/GridContainer"]
+margin_left = 160.0
+margin_top = 200.0
+margin_right = 370.0
+margin_bottom = 224.0
+pressed = true
+text = "True"
+
+[node name="FileManagerLabel" type="Label" parent="Panel/GridContainer"]
+margin_top = 234.0
+margin_right = 150.0
+margin_bottom = 248.0
+mouse_filter = 1
+size_flags_vertical = 0
+text = "File Manager"
+
+[node name="FileManagerEdit" type="LineEdit" parent="Panel/GridContainer"]
+margin_left = 160.0
+margin_top = 234.0
+margin_right = 370.0
+margin_bottom = 258.0
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 15.0
+margin_top = 278.0
+margin_right = 367.0
+margin_bottom = 292.0
+text = "Preview Options"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer2" type="GridContainer" parent="Panel"]
+margin_left = 9.0
+margin_top = 307.0
+margin_right = 373.0
+margin_bottom = 377.0
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaxPrevSizeLabel" type="Label" parent="Panel/GridContainer2"]
+margin_top = 19.0
+margin_right = 148.0
+margin_bottom = 33.0
+text = "Maximum preview size"
+
+[node name="SizeVBox" type="VBoxContainer" parent="Panel/GridContainer2"]
+margin_left = 158.0
+margin_right = 364.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+
+[node name="x" type="LineEdit" parent="Panel/GridContainer2/SizeVBox"]
+margin_right = 206.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+text = "64"
+
+[node name="y" type="LineEdit" parent="Panel/GridContainer2/SizeVBox"]
+margin_top = 28.0
+margin_right = 206.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+text = "64"
+
+[node name="TimeoutLabel" type="Label" parent="Panel/GridContainer2"]
+margin_top = 63.0
+margin_right = 148.0
+margin_bottom = 77.0
+text = "Timeout in seconds"
+
+[node name="TimeoutSlider" type="HSlider" parent="Panel/GridContainer2"]
+margin_left = 158.0
+margin_top = 62.0
+margin_right = 364.0
+margin_bottom = 78.0
+max_value = 10.0
+step = 0.25
+value = 10.0
+tick_count = 1
+ticks_on_borders = true
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 15.0
+margin_top = 403.0
+margin_right = 365.0
+margin_bottom = 417.0
+text = "Timeout from 0 to 10 seconds, in 1/4 of seconds. If it is zero, the preview is disabled."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WarnDialog" type="AcceptDialog" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 392.0
+margin_bottom = 465.0
+window_title = "Attenzione!"
+[connection signal="confirmed" from="." to="." method="_on_Options_confirmed"]
+[connection signal="item_selected" from="Panel/GridContainer/SerializerOption" to="." method="_on_SerializerOption_item_selected"]
+[connection signal="button_down" from="Panel/GridContainer/EncryptCheckBox" to="." method="_on_EncryptCheckBox_button_down"]
+[connection signal="button_down" from="Panel/GridContainer/ClassDirectoryHBox/ClassDirectoryButton" to="." method="_on_ClassDirectoryButton_button_down"]
+[connection signal="button_down" from="Panel/GridContainer/OutputDirectoryHBox/OutputDirectoryButton" to="." method="_on_OutputDirectoryButton_button_down"]
+[connection signal="button_down" from="Panel/GridContainer/SanitizeIdsCheckBox" to="." method="_on_SanitizeIdsCheckBox_button_down"]

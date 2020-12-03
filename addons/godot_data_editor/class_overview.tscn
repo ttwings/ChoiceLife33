@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/godot_data_editor/class_overview.gd" type="Script" id=1]
+[ext_resource path="res://addons/godot_data_editor/style/light_gray_panel.tres" type="StyleBox" id=2]
+[ext_resource path="res://addons/godot_data_editor/fonts/droid_serif_bold.tres" type="DynamicFont" id=3]
+
+[node name="ClassOverview" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 593.0
+custom_styles/panel = ExtResource( 2 )
+
+[node name="Body" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ClassPropertiesLabel" type="Label" parent="Panel/Body"]
+visible = false
+margin_right = 1246.0
+margin_bottom = 19.0
+mouse_filter = 1
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 3 )
+text = "Static Class Properties"
+uppercase = true
+
+[node name="HSeparator" type="HSeparator" parent="Panel/Body"]
+visible = false
+margin_right = 1246.0
+margin_bottom = 3.0
+
+[node name="Control" type="Control" parent="Panel/Body"]
+margin_right = 990.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Body"]
+visible = false
+margin_top = 19.0
+margin_right = 1246.0
+margin_bottom = 566.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Statics" type="VBoxContainer" parent="Panel/Body/Scroll"]
+visible = false
+margin_right = 1246.0
+mouse_filter = 0
+size_flags_horizontal = 3
+
+[node name="NoStaticsPropertiesLabel" type="Label" parent="Panel/Body/Scroll/Statics"]
+visible = false
+margin_right = 1246.0
+margin_bottom = 14.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "There are no static properties for this class. Click below to add one."
+
+[node name="AddStaticPropertyButton" type="Button" parent="Panel/Body/Scroll/Statics"]
+visible = false
+margin_top = 18.0
+margin_right = 1246.0
+margin_bottom = 38.0
+text = "Add static property"
+
+[node name="Label" type="Label" parent="Panel/Body"]
+margin_top = 19.0
+margin_right = 990.0
+margin_bottom = 33.0
+mouse_filter = 1
+size_flags_vertical = 0

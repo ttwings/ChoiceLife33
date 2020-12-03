@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/godot_data_editor/style/light_gray_panel.tres" type="StyleBox" id=1]
+[ext_resource path="res://addons/godot_data_editor/class_properties.gd" type="Script" id=2]
+[ext_resource path="res://addons/godot_data_editor/fonts/droid_serif_bold.tres" type="DynamicFont" id=3]
+
+[node name="ClassProperties" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TitleLabel" type="Label" parent="Body"]
+margin_right = 1004.0
+margin_bottom = 19.0
+mouse_filter = 1
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 3 )
+text = "Class Properties"
+uppercase = true
+
+[node name="HSeparator" type="HSeparator" parent="Body"]
+margin_top = 23.0
+margin_right = 1004.0
+margin_bottom = 27.0
+
+[node name="Spacer" type="Control" parent="Body"]
+margin_top = 31.0
+margin_right = 1004.0
+margin_bottom = 46.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="Scroll" type="ScrollContainer" parent="Body"]
+margin_top = 50.0
+margin_right = 1004.0
+margin_bottom = 580.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ClassProperties" type="VBoxContainer" parent="Body/Scroll"]
+margin_right = 454.0
+margin_bottom = 14.0
+mouse_filter = 0
+
+[node name="NoClassPropertiesLabel" type="Label" parent="Body/Scroll/ClassProperties"]
+margin_right = 454.0
+margin_bottom = 14.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "There are currently no class properties. Edit the Class to add new ones."

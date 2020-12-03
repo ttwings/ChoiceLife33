@@ -3,6 +3,7 @@
 [ext_resource path="res://maps/TileRoom.tscn" type="PackedScene" id=3]
 
 [node name="TileRegion" type="TileMap"]
+cell_y_sort = true
 format = 1
 
 [node name="TileRoom" parent="." instance=ExtResource( 3 )]

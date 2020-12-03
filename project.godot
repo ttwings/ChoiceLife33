@@ -169,7 +169,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "TriggerSystem", "behavior_tree_plugin", "gdutils" )
+enabled=PoolStringArray( "RPG_maker_Autotile2_3x3", "TriggerSystem", "gdutils" )
 
 [importer_defaults]
 

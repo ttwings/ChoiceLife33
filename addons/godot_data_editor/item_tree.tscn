@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/godot_data_editor/item_tree.gd" type="Script" id=1]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_add.png" type="Texture" id=2]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_remove.png" type="Texture" id=3]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_rename.png" type="Texture" id=4]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_duplicate.png" type="Texture" id=5]
+[ext_resource path="res://addons/godot_data_editor/icons/icon_load.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+border_blend = true
+
+[node name="Tree" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 50.0
+rect_min_size = Vector2( 150, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 543.0
+mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Margin" type="MarginContainer" parent="Panel/VBox"]
+margin_right = 1010.0
+margin_bottom = 24.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBox/Margin"]
+margin_right = 1010.0
+margin_bottom = 24.0
+mouse_filter = 0
+
+[node name="AddButton" type="ToolButton" parent="Panel/VBox/Margin/HBoxContainer"]
+visible = false
+margin_right = 28.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 28, 28 )
+icon = ExtResource( 2 )
+
+[node name="AddButton2" type="ToolButton" parent="Panel/VBox/Margin/HBoxContainer"]
+visible = false
+margin_right = 28.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 28, 28 )
+icon = ExtResource( 3 )
+
+[node name="Filter" type="LineEdit" parent="Panel/VBox/Margin/HBoxContainer"]
+margin_right = 1010.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+placeholder_text = "Search"
+
+[node name="Tree" type="Tree" parent="Panel/VBox"]
+margin_top = 28.0
+margin_right = 1010.0
+margin_bottom = 536.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/bg = SubResource( 1 )
+custom_colors/guide_color = Color( 0.398438, 0.398438, 0.398438, 1 )
+custom_constants/hseparation = 4
+allow_rmb_select = true
+hide_root = true
+
+[node name="ClassContextMenu" type="PopupMenu" parent="."]
+margin_right = 20.0
+margin_bottom = 20.0
+items = [ "Add Item", ExtResource( 2 ), 0, false, false, 0, 0, null, "", false, "Delete Class", ExtResource( 3 ), 0, false, false, 1, 0, null, "", false, "Rename Class", ExtResource( 4 ), 0, false, false, -1, 0, null, "", false ]
+
+[node name="InstanceContextMenu" type="PopupMenu" parent="."]
+margin_right = 20.0
+margin_bottom = 20.0
+items = [ "Add", ExtResource( 2 ), 0, false, false, 0, 0, null, "", false, "Rename", ExtResource( 4 ), 0, false, false, 1, 0, null, "", false, "Delete", ExtResource( 3 ), 0, false, false, 2, 0, null, "", false, "Duplicate", ExtResource( 5 ), 0, false, false, 3, 0, null, "", false, "Open File", ExtResource( 6 ), 0, false, false, 4, 0, null, "", false ]
+[connection signal="button_down" from="Panel/VBox/Margin/HBoxContainer/AddButton" to="." method="_on_AddButton_button_down"]
+[connection signal="text_changed" from="Panel/VBox/Margin/HBoxContainer/Filter" to="." method="_on_Filter_text_changed"]
+[connection signal="cell_selected" from="Panel/VBox/Tree" to="." method="_on_Tree_cell_selected"]
+[connection signal="item_rmb_selected" from="Panel/VBox/Tree" to="." method="_on_Tree_item_rmb_selected"]
+[connection signal="about_to_show" from="ClassContextMenu" to="." method="_on_ClassContextMenu_about_to_show"]
+[connection signal="id_pressed" from="ClassContextMenu" to="." method="_on_ClassContextMenu_item_pressed"]
+[connection signal="about_to_show" from="InstanceContextMenu" to="." method="_on_InstanceContextMenu_about_to_show"]
+[connection signal="id_pressed" from="InstanceContextMenu" to="." method="_on_InstanceContextMenu_item_pressed"]
