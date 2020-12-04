@@ -1,5 +1,7 @@
 extends Node
 
+
+enum 季节{春}
 enum SEASON{SPRING,SUMMER,AUTUMN,WINTER}
 var turn_number := 0
 var second := 0

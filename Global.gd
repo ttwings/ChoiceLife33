@@ -148,6 +148,17 @@ func dir_files(path,suffix):
 	return files	
 
 # 获取目录path下的suffix后缀图片文件生成anim名称的 sprite frames	
+
+func 从文件目录生成序列图(动画名:String,地址:String,后缀:String):
+	var 序列图文件 = dir_files(地址,后缀)
+	var 序列图 = SpriteFrames.new()
+	var 纹理
+
+	for i in 序列图文件.size():
+		纹理 = load(地址 + "/" + 序列图文件[i])
+		序列图.add_frame(动画名,纹理)
+	return 序列图
+
 func creat_sprite_frames_from_path(anim:String,path:String,suffix:String):
 	var sprite_files = dir_files(path,suffix)
 	var sprite_frames = SpriteFrames.new()
@@ -159,12 +170,30 @@ func creat_sprite_frames_from_path(anim:String,path:String,suffix:String):
 	return sprite_frames
 						
 # 依据数值 改变颜色名称
+
+func 获取数字色彩(数):
+	if 数 < 0:
+		return "红"
+	else:
+		return "绿"
+
+
+
 func get_number_color(number):
 	if number < 0: 
 		return "red" 
 	else:
 		return "green"
 # 将整数数字转为中文文字	
+func 整数转中文(整数:int):
+	var 整数字符串 = str(整数)
+	var 长度 = 整数字符串.length()
+	var 输出 = []
+	for i in range(长度):
+		整数字符串[i] = 数字转汉字(整数字符串[i])
+	return 整数字符串
+
+
 func get_chinese_number(n:int):
 	var number_str = str(n)
 	var l = number_str.length()
@@ -185,6 +214,7 @@ func swap_to_font(number):
 		"8",8:return "八"
 		"9",9:return "九"
 		"0",0:return "〇"
+		"-",0:return "负"
 		_:return "X"	
 		
 func digit_to_char(number):
@@ -200,6 +230,22 @@ func digit_to_char(number):
 		"9",9:return "九"
 		"0",0:return "〇"
 		_:return "X"			
+
+func 数字转汉字(数):
+	match 数:
+		"1",1:return "一"
+		"2",2:return "二"
+		"3",3:return "三"
+		"4",4:return "四"
+		"5",5:return "五"
+		"6",6:return "六"
+		"7",7:return "七"
+		"8",8:return "八"
+		"9",9:return "九"
+		"0",0:return "〇"
+		"-",0:return "负"
+		_:return "X"			
+		
 
 # 返回当前玩家
 func this_player():

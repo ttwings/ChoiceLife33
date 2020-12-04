@@ -1,16 +1,16 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://场景/OpenMessage.gd" type="Script" id=1]
-[ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://stages/OpenMessage.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [node name="OpenMessage" type="Control"]
 anchor_right = 1.0
@@ -19,7 +19,7 @@ margin_left = -1.10803
 margin_top = -3.3241
 margin_right = -1.10803
 margin_bottom = -3.3241
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

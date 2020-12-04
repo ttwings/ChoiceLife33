@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://全局/全局游戏.gd" type="Script" id=1]
+
+[node name="全局游戏" type="Node"]
+script = ExtResource( 1 )

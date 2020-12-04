@@ -154,7 +154,7 @@ gdinv/LoadOnReady=true
 [application]
 
 config/name="ChoiceLife33"
-run/main_scene="res://场景/OpenMessage.tscn"
+run/main_scene="res://stages/OpenMessage.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -168,6 +168,8 @@ BattleProcess="*res://addons/TriggerSystem/BattleSystem/BattleProcess.gd"
 gdutils="*res://addons/gdutils/__init__.gd"
 ItemDB="*res://inventory/ItemDB.tscn"
 GDInv_ItemDB="*res://addons/gdinv/GDInv_ItemDB.gd"
+"全局游戏"="*res://全局/全局游戏.gd"
+RPG="*res://全局/RPG.gd"
 
 [debug]
 
