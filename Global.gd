@@ -92,6 +92,17 @@ func load_data(path:String):
 	castleDB = p
 	return p.result
 
+func 读取JSON格式数据(路径):
+	var 文件 = File.new()
+	if not 文件.file_exists(路径):
+		print_debug("文件不存在")
+		return
+	文件.open(路径,File.READ)
+	var 数据串 = 文件.get_as_text()
+	var JSON结果 = JSON.parse(数据串)
+	return JSON结果.result
+		
+
 func get_sheet(sheet_name:String,dbase):
 	var sheet_json = {}
 	var sheet = dbase["sheets"][sheet_name]

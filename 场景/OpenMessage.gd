@@ -5,7 +5,7 @@ extends Control
 # var b: String = "text"
 
 # Called when the node enters the scene tree for the first time.
-var stage_main = preload("res://stages/Main.tscn")
+var stage_main = preload("res://场景/Main.tscn")
 func _ready() -> void:
 	
 	pass # Replace with function body.

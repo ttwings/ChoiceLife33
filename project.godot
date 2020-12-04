@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "Action",
-"language": "GDScript",
-"path": "res://Action.gd"
-}, {
 "base": "Item",
 "class": "Armor",
 "language": "GDScript",
@@ -104,11 +99,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/TriggerSystem/BattleSystem/Skill.gd"
 }, {
-"base": "Node",
-"class": "Thing",
-"language": "GDScript",
-"path": "res://components/Thing.gd"
-}, {
 "base": "Reference",
 "class": "Trigger",
 "language": "GDScript",
@@ -123,9 +113,13 @@ _global_script_classes=[ {
 "class": "Weapon",
 "language": "GDScript",
 "path": "res://inherit/Weapon.gd"
+}, {
+"base": "Node",
+"class": "物体",
+"language": "GDScript",
+"path": "res://物体/组件/Thing.gd"
 } ]
 _global_script_class_icons={
-"Action": "",
 "Armor": "",
 "Battle": "",
 "BattleCharacter": "",
@@ -144,10 +138,10 @@ _global_script_class_icons={
 "ResourceTrees": "",
 "Room": "",
 "Skill": "",
-"Thing": "",
 "Trigger": "",
 "User": "",
-"Weapon": ""
+"Weapon": "",
+"物体": ""
 }
 
 [PluginSettings]
@@ -160,7 +154,7 @@ gdinv/LoadOnReady=true
 [application]
 
 config/name="ChoiceLife33"
-run/main_scene="res://stages/OpenMessage.tscn"
+run/main_scene="res://场景/OpenMessage.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -187,11 +181,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-<<<<<<< HEAD
-enabled=PoolStringArray( "RPG_maker_Autotile2_3x3", "TriggerSystem", "gdutils" )
-=======
 enabled=PoolStringArray( "TriggerSystem", "gdutils" )
->>>>>>> a78f4e0beca042d8ea7f6a759afbb233c76307aa
 
 [importer_defaults]
 

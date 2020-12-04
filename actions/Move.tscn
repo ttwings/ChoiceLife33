@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Move.gd" type="Script" id=1]
-
-[node name="Move" type="Node"]
-script = ExtResource( 1 )
-act_name = "move"
-action_message = "移动"
