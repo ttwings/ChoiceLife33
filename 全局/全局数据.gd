@@ -10,33 +10,32 @@ const VERSION = {
 		"BABY":		43
 		}
 
+enum 种族 {
+	人类,
+	妖族,
+	灵族,
+	精怪,
+	鬼族,
+	魔族,
+	动物,
+	植物,
+	矿石,
+	流水,
+	气体
+}
 
-enum RACE {
-	HUMAN,
-	ELF,
-	DEEP_ELF,
-	DWARF,
-	DEEP_DWARF,
-	HALFLING,
-	KOBOLD,
-	ORC,
-	OGRE,
-	TROLL,
-	MINOTAUR,
-	MUMMY,
-	SPRIGGAN,
-	VAMPIRE,
-	MERFOLK,
-	GODOT
-	}
-
-
-
-
-const DEFAULT_ACTION_TIME = 5.0	# Fallback delta value for an action
-
+const 默认行动时间 = 5
 
 var _SID = 0
+
+func 生成物体(节点地址):
+	if $物体.has_node(节点地址):
+		var 新物体 = $物体.get_node(节点地址).dublicate()
+		新物体.数据地址 = 节点地址
+		新物体.SID = _SID
+		_SID += 1
+		return 新物体
+
 func make_thing( path ):
 	if $Things.has_node( path ):
 		var obj = $Things.get_node(path).duplicate()

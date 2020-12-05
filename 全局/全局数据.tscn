@@ -43,7 +43,7 @@
 [ext_resource path="res://graphics/mon/hog.png" type="Texture" id=41]
 [ext_resource path="res://components/AI/AI.tscn" type="PackedScene" id=42]
 
-[node name="DATA" type="Node" index="0"]
+[node name="全局数据" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -54,20 +54,20 @@ editor/display_folded = true
 [node name="Human" type="Node" parent="Species" index="0"]
 
 script = ExtResource( 2 )
-description = "Humans have no particular strengths or weaknesses, but learn quicker than most."
-ethnicity = ""
-hp_per_level = 0
-mp_per_level = 0
-xp_rate = 2.0
-hp_regen = 0.05
-mp_regen = 0.02
-move_speed = 1.0
-strength_mod = 0
-dexterity_mod = 0
-intelligence_mod = 0
-resistance = 0
-male_sprite = ExtResource( 3 )
-female_sprite = ExtResource( 4 )
+描述 = "Humans have no particular strengths or weaknesses, but learn quicker than most."
+种族 = ""
+生命提升 = 0
+法力提升 = 0
+历练速率 = 2.0
+生命再生 = 0.05
+法力再生 = 0.02
+移动速度 = 1.0
+力量修正 = 0
+敏捷修正 = 0
+智力修正 = 0
+抗性 = 0
+男性图 = ExtResource( 3 )
+女性图 = ExtResource( 4 )
 
 [node name="Godot" type="Node" parent="Species" index="1"]
 

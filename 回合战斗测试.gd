@@ -1,5 +1,7 @@
 extends Control
 
+var 
+
 onready var speed_label = $speed
 onready var action_label = $action
 onready var next_label = $next
