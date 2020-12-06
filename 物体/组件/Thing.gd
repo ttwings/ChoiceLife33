@@ -21,6 +21,7 @@ export(bool) var 阻挡视线 = false setget _set_阻挡视线
 var 发现 = false
 
 var 格子 = Vector2() setget _set_格子,_get_格子
+var 坐标
 var 组件 = {}
 var 状态效果 = {}
 
@@ -29,7 +30,7 @@ var 数据地址
 var pawn = null
 var 在库存中 = false
 
-func get_要存储数据()
+func get_要存储数据():
 	var 数据 = {
 		"id":self.SID,
 		"地址":self.数据地址,
@@ -41,9 +42,9 @@ func get_要存储数据()
 		"组件":{}
 	}
 	for 某组件 in self.组件:
-		if self.组件[某组件].has_method(get_要存储数据):
+		if self.组件[某组件].has_method("get_要存储数据"):
 			var 组件数据 = self.组件[某组件].get_要存储数据
-		数据.组件[某组件] = 组件数据
+			数据.组件[某组件] = 组件数据
 
 func get_发送信息对象名称():
 	if "player" in self.组件:
@@ -93,7 +94,7 @@ func _游戏_执行(delta=5.0):
 
 func _ready():
 	connect("准备行动",self,"_准备行动")
-	add_to_group("物体"):
+	add_to_group("物体")
 	if self.阻挡移动:
 		add_to_group("阻挡行动物体")
 	if self.阻挡视线:
@@ -123,7 +124,7 @@ func _set_阻挡视线( 什么 ):
 
 func _get_格子():
 	if 持有者 is TileMap:
-		return 持有者.world_to_map(position)
+		return 持有者.world_to_map(坐标)
 	else:
 		return 持有者.持有者._get_格子()
 
@@ -137,7 +138,7 @@ func _set_格子( 新格子 ):
 
 func _set_精灵图路径(新路径):
 	精灵图路径 = 新路径
-	if is_insid_tree():
+	if is_inside_tree():
 		$Sprite.texture = 精灵图路径
 		
 func _准备行动(delta):

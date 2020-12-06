@@ -115,7 +115,12 @@ _global_script_classes=[ {
 "path": "res://inherit/Weapon.gd"
 }, {
 "base": "Node",
-"class": "物体",
+"class": "战士类",
+"language": "GDScript",
+"path": "res://物体/组件/Fighter.gd"
+}, {
+"base": "Node",
+"class": "物体类",
 "language": "GDScript",
 "path": "res://物体/组件/Thing.gd"
 } ]
@@ -141,7 +146,8 @@ _global_script_class_icons={
 "Trigger": "",
 "User": "",
 "Weapon": "",
-"物体": ""
+"战士类": "",
+"物体类": ""
 }
 
 [PluginSettings]
@@ -170,6 +176,7 @@ ItemDB="*res://inventory/ItemDB.tscn"
 GDInv_ItemDB="*res://addons/gdinv/GDInv_ItemDB.gd"
 "全局游戏"="*res://全局/全局游戏.gd"
 RPG="*res://全局/RPG.gd"
+"全局数据"="*res://全局/全局数据.gd"
 
 [debug]
 

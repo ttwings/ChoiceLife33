@@ -1,5 +1,7 @@
 extends Node
 
+class_name 战士类
+
 signal 最大生命改变(为)
 signal 当前生命改变(为)
 
@@ -12,10 +14,10 @@ export(float) var 移动速度 = 1.0
 
 export(int) var 最大生命 = 10 setget _set_最大生命
 export(int) var 当前生命 =  -1 setget _set_当前生命
-export(int) var 最大灵气 = 10 setget _set_最大灵气
-export(int) var 当前灵气 =  -1 setget _set_当前灵气
-export(int) var 最大神念 = 10 setget _set_最大神念
-export(int) var 当前神念 =  -1 setget _set_当前神念
+# export(int) var 最大灵气 = 10 setget _set_最大灵气
+# export(int) var 当前灵气 =  -1 setget _set_当前灵气
+# export(int) var 最大神念 = 10 setget _set_最大神念
+# export(int) var 当前神念 =  -1 setget _set_当前神念
 
 export(bool) var 无敌的 = false
 
@@ -76,12 +78,12 @@ func do_前进或攻击(方向):
 	if 碰撞物 == 全局游戏.地图:
 		行动了 = false
 	elif 碰撞物 != null and 碰撞物 != self:
-		攻击(碰撞物)
+		do_攻击(碰撞物)
 	else:
 		get_parent().格子 = 新格子
 	if 行动了:
 
-		get_parent().emit_signal("行动了",DATA.DEFAULT_ACTION_TIME)
+		get_parent().emit_signal("行动了",全局数据.默认行动时间)
 
 func do_攻击(目标):
 	var 结果 = 全局游戏.执行攻击(get_parent(),目标)
@@ -116,10 +118,10 @@ func setup():
 	get_parent().战士 = self
 	self.当前生命 = self.生命	
 
-func _set_生命(多少):
-	生命 = 多少
-	emit_signal("生命改变",生命)
+func _set_最大生命(生命):
+	最大生命 = 生命
+	emit_signal("最大生命改变",生命)
 	
-func _set_当前生命(多少):
-	当前生命 = 多少
+func _set_当前生命(生命):
+	当前生命 = 生命
 	emit_signal("当前生命改变",生命)

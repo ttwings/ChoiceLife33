@@ -1,21 +1,21 @@
 [gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://stages/Main.gd" type="Script" id=1]
+[ext_resource path="res://场景/Main.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/tiles/TileTerrain.tres" type="TileSet" id=2]
-[ext_resource path="res://stages/floor.gd" type="Script" id=3]
+[ext_resource path="res://场景/floor.gd" type="Script" id=3]
 [ext_resource path="res://assets/graphics/tiles/map1.png" type="Texture" id=4]
-[ext_resource path="res://stages/wall.gd" type="Script" id=5]
+[ext_resource path="res://场景/wall.gd" type="Script" id=5]
 [ext_resource path="res://assets/graphics/tiles/TilesetTrees.tres" type="TileSet" id=6]
 [ext_resource path="res://assets/graphics/tiles/TileOutside.tres" type="TileSet" id=7]
-[ext_resource path="res://stages/outside.gd" type="Script" id=8]
+[ext_resource path="res://场景/outside.gd" type="Script" id=8]
 [ext_resource path="res://assets/graphics/tiles/TilesetFurniture.tres" type="TileSet" id=9]
 [ext_resource path="res://assets/graphics/tiles/TilesetGoods.tres" type="TileSet" id=10]
 [ext_resource path="res://uis/ObjectRect.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/graphics/tiles/TliesetWall.tres" type="TileSet" id=12]
 [ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=13]
-[ext_resource path="res://stages/LabelCapital.gd" type="Script" id=14]
+[ext_resource path="res://场景/LabelCapital.gd" type="Script" id=14]
 [ext_resource path="res://uis/TimeLine.tscn" type="PackedScene" id=15]
-[ext_resource path="res://stages/TablePos.gd" type="Script" id=16]
+[ext_resource path="res://场景/TablePos.gd" type="Script" id=16]
 [ext_resource path="res://objects/Actor.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/graphics/characters/actor (17).png" type="Texture" id=18]
 [ext_resource path="res://assets/graphics/characters/actor (20).png" type="Texture" id=19]
@@ -23,13 +23,8 @@
 [ext_resource path="res://objects/Cooker.gd" type="Script" id=21]
 [ext_resource path="res://assets/graphics/characters/actor (54).png" type="Texture" id=22]
 [ext_resource path="res://assets/graphics/tiles/window.png" type="Texture" id=23]
-<<<<<<< HEAD
-[ext_resource path="res://stages/Checkout.tscn" type="PackedScene" id=24]
-[ext_resource path="res://stages/Cooking.tscn" type="PackedScene" id=25]
-=======
-[ext_resource path="res://stages/game_cooking/Cooking.tscn" type="PackedScene" id=24]
-[ext_resource path="res://stages/game_checkout/Checkout.tscn" type="PackedScene" id=25]
->>>>>>> 433f88d2edcef6ef927dd80192326ba7592fc6c9
+[ext_resource path="res://场景/game_cooking/Cooking.tscn" type="PackedScene" id=24]
+[ext_resource path="res://场景/game_checkout/Checkout.tscn" type="PackedScene" id=25]
 
 [sub_resource type="TileSet" id=1]
 0/name = "map1.png 0"
@@ -331,13 +326,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-<<<<<<< HEAD
-stage_cooking = ExtResource( 25 )
-stage_checkout = ExtResource( 24 )
-=======
 game_cooking = ExtResource( 24 )
 game_checkout = ExtResource( 25 )
->>>>>>> 433f88d2edcef6ef927dd80192326ba7592fc6c9
 
 [node name="Map" type="Node2D" parent="."]
 
