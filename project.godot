@@ -160,7 +160,7 @@ gdinv/LoadOnReady=true
 [application]
 
 config/name="ChoiceLife33"
-run/main_scene="res://stages/OpenMessage.tscn"
+run/main_scene="res://场景/OpenMessage.tscn"
 config/icon="res://icon.png"
 
 [autoload]

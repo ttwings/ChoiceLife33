@@ -125,8 +125,8 @@ func _set_阻挡视线( 什么 ):
 func _get_格子():
 	if 持有者 is TileMap:
 		return 持有者.world_to_map(坐标)
-	else:
-		return 持有者.持有者._get_格子()
+#	else:
+#		return 持有者.持有者._get_格子()
 
 func _set_格子( 新格子 ):
 	var 旧格子 = self.格子
