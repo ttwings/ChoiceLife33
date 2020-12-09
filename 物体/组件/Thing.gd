@@ -2,12 +2,13 @@ extends Node
 
 class_name 物体类
 
-signal set_地图格子改变(从,到)
+signal 地图格子改变(从,到)
 
-signal do_完成行动(延迟)
-signal do_开始行动(延迟)
+signal 完成动作(延迟)
+signal 完成移动
+signal 开始行动(延迟)
 
-signal do_消灭(对象)
+signal 消灭(对象)
 
 onready var 持有者 = get_parent()
 

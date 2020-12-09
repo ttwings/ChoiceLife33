@@ -13,3 +13,6 @@ var year := 0
 
 func increment():
 	turn_number = turn_number + 1
+
+
+func _ready():
