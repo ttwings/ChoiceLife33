@@ -1,6 +1,6 @@
 [gd_scene load_steps=43 format=2]
 
-[ext_resource path="res://global/DATA.gd" type="Script" id=1]
+[ext_resource path="res://全局/DATA.gd" type="Script" id=1]
 [ext_resource path="res://global/SpeciesData.gd" type="Script" id=2]
 [ext_resource path="res://graphics/player/base/human_m.png" type="Texture" id=3]
 [ext_resource path="res://graphics/player/base/human_f.png" type="Texture" id=4]
@@ -41,7 +41,8 @@
 [ext_resource path="res://components/Fighter/Fighter.tscn" type="PackedScene" id=39]
 [ext_resource path="res://components/Player/Player.tscn" type="PackedScene" id=40]
 [ext_resource path="res://graphics/mon/hog.png" type="Texture" id=41]
-[ext_resource path="res://components/AI/AI.tscn" type="PackedScene" id=42]
+[ext_resource path="res://物体/组件/AI.tscn" type="PackedScene" id=42]
+
 
 [node name="DATA" type="Node" index="0"]
 

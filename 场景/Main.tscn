@@ -490,9 +490,9 @@ text = "去柜台算账"
 
 [node name="Pick" type="Button" parent="RoomControl/Panel/VBoxContainer"]
 visible = false
-margin_top = 84.0
+margin_top = 291.0
 margin_right = 256.0
-margin_bottom = 107.0
+margin_bottom = 314.0
 custom_fonts/font = SubResource( 7 )
 text = "到菜园种菜"
 
@@ -501,6 +501,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -272.0
 margin_bottom = -685.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Panel" parent="TimeWeather"]
 anchor_right = 1.0

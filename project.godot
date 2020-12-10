@@ -115,9 +115,14 @@ _global_script_classes=[ {
 "path": "res://inherit/Weapon.gd"
 }, {
 "base": "Node",
-"class": "战士类",
+"class": "战斗",
 "language": "GDScript",
-"path": "res://物体/组件/Fighter.gd"
+"path": "res://物体/组件/战斗.gd"
+}, {
+"base": "Node",
+"class": "物体",
+"language": "GDScript",
+"path": "res://物体/组件/物体.gd"
 }, {
 "base": "Node",
 "class": "物体类",
@@ -146,7 +151,8 @@ _global_script_class_icons={
 "Trigger": "",
 "User": "",
 "Weapon": "",
-"战士类": "",
+"战斗": "",
+"物体": "",
 "物体类": ""
 }
 
@@ -165,15 +171,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Global.gd"
-SimpleFrame="*res://SimpleFrame.gd"
-TriggerSystem="*res://addons/TriggerSystem/TriggerSystem.gd"
-DmgObjFactory="*res://addons/TriggerSystem/BattleSystem/DmgObjFactory.gd"
-HealObjFactory="*res://addons/TriggerSystem/BattleSystem/HealObjFactory.gd"
-BattleProcess="*res://addons/TriggerSystem/BattleSystem/BattleProcess.gd"
 gdutils="*res://addons/gdutils/__init__.gd"
-ItemDB="*res://inventory/ItemDB.tscn"
-GDInv_ItemDB="*res://addons/gdinv/GDInv_ItemDB.gd"
 "全局游戏"="*res://全局/全局游戏.gd"
 RPG="*res://全局/RPG.gd"
 "全局数据"="*res://全局/全局数据.gd"

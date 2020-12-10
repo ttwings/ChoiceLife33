@@ -1,6 +1,6 @@
 extends Node
 
-class_name 战士类
+class_name 战斗
 
 signal 最大生命改变(为)
 signal 当前生命改变(为)

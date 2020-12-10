@@ -1,6 +1,7 @@
 extends Control
 
-var 
+var v_测试
+var nihao 
 
 onready var speed_label = $speed
 onready var action_label = $action

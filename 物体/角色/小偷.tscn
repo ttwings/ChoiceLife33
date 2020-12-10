@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://物体/组件/物体.gd" type="Script" id=1]
+[ext_resource path="res://物体/组件/战斗.tscn" type="PackedScene" id=2]
+[ext_resource path="res://物体/组件/控制.tscn" type="PackedScene" id=3]
+
+[node name="物体" type="Node"]
+script = ExtResource( 1 )
+"描述" = "这是个小偷"
+
+[node name="战斗" parent="." instance=ExtResource( 2 )]
+
+[node name="控制" parent="." instance=ExtResource( 3 )]
+
+[node name="Sprite" type="Sprite" parent="."]

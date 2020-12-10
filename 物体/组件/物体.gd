@@ -1,6 +1,6 @@
 extends Node
 
-class_name 物体类
+class_name 物体
 
 signal 地图格子改变(从,到)
 
@@ -14,7 +14,7 @@ onready var 持有者 = get_parent()
 
 export(String) var 名称 = "物体"
 export(String,MULTILINE) var 描述 = "这是个物体"
-export(Texture) var 精灵图路径 setget _set_精灵图路径
+export(Texture) var 精灵图路径 = preload("res://icon.png") setget _set_精灵图路径
 
 export(bool) var 阻挡移动 = false setget _set_阻挡移动
 export(bool) var 阻挡视线 = false setget _set_阻挡视线
