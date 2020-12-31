@@ -75,7 +75,7 @@ func move(dir:String):
 	if !raycast.is_colliding() :
 		turn = turn + 1
 		var direction = directions[dir]
-		tween.interpolate_property(self,"position",self.position,get_next_pos(direction),0.3,Tween.TRANS_LINEAR,Tween.EASE_IN)
+		tween.interpolate_property(self,"position",self.position,get_next_pos(direction),0.3,Tween.TRANS_LINEAR)
 		tween.start()
 		animal.play("move_" + dir)
 	

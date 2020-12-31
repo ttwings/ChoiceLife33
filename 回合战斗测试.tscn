@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://回合战斗测试.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Character.tscn" type="PackedScene" id=4]
 
 [node name="TurnBattle" type="Control"]
 anchor_right = 1.0
@@ -125,6 +126,9 @@ margin_bottom = 15.3535
 text = "/"
 align = 1
 valign = 1
+
+[node name="Character" parent="player" instance=ExtResource( 4 )]
+path = "res://assets/graphics/characters/chara02.png"
 
 [node name="MessageBoard" type="RichTextLabel" parent="."]
 self_modulate = Color( 0.231373, 0.156863, 0.156863, 1 )

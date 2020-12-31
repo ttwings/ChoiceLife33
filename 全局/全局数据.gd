@@ -43,3 +43,4 @@ func make_thing( path ):
 		obj.SID = _SID
 		_SID += 1
 		return obj
+

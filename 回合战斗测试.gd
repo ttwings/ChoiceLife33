@@ -2,6 +2,10 @@ extends Control
 
 var v_测试
 var nihao 
+var 回合测试
+
+# 将回合融入到基本行动中,按照行动进行判断
+# 深入使用现有结构,
 
 onready var speed_label = $speed
 onready var action_label = $action
