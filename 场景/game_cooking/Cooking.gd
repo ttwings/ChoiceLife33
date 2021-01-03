@@ -115,6 +115,22 @@ func rank(point:int):
 	if point <= 0 :
 		return "[color=red]你这是想谋财害命吧!!!![/color]"
 
+	func 等级(point:int):
+		if point > 1000 :
+			return "[color=gold]完美!!![/color]"
+		if point > 800 :
+			return "[color=cyan]杰作!![/color]"
+		if point > 600 :
+			return "[color=lime]精品![/color]"
+		if point > 400 :
+			return "成品"
+		if point > 200 :
+			return "[color=lightslategray]马马虎虎[/color]"
+		if point > 0 :
+			return "[color=olive]这是人吃的么?!?!"
+		if point <= 0 :
+			return "[color=red]你这是想谋财害命吧!!!![/color]"		
+
 var buttons = []
 	
 func connect_buttons_pressed():
@@ -199,3 +215,4 @@ func _ready() -> void:
 func _on_Button_pressed() -> void:
 	get_tree().change_scene("res://stages/Main.tscn")
 	pass # Replace with function body.
+
