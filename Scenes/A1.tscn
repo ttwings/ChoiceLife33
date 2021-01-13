@@ -173,10 +173,84 @@ func _process(delta: float) -> void:
 
 [node name="TileMap" type="TileMap"]
 tile_set = ExtResource( 1 )
-cell_size = Vector2(48, 48)
-cell_y_sort = true
-cell_tile_origin = 2
+cell_size = Vector2( 48, 48 )
 cell_quadrant_size = 32
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+cell_tile_origin = 2
+cell_y_sort = true
 format = 1
 script = SubResource( 1 )
+animations = {
+"Tile 0": {
+"animation_rects": [ Rect2( 0, 0, 288, 384 ), Rect2( 288, 0, 288, 384 ), Rect2( 576, 0, 288, 384 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 1": {
+"animation_rects": [ Rect2( 864, 0, 288, 384 ), Rect2( 0, 384, 288, 384 ), Rect2( 288, 384, 288, 384 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 12": {
+"animation_rects": [ Rect2( 0, 2688, 288, 192 ), Rect2( 288, 2688, 288, 192 ), Rect2( 576, 2688, 288, 192 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 13": {
+"animation_rects": [ Rect2( 864, 2688, 288, 192 ), Rect2( 0, 2880, 288, 192 ), Rect2( 288, 2880, 288, 192 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 14": {
+"animation_rects": [ Rect2( 576, 2880, 288, 192 ), Rect2( 864, 2880, 288, 192 ), Rect2( 0, 3072, 288, 192 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 15": {
+"animation_rects": [ Rect2( 288, 3072, 288, 192 ), Rect2( 576, 3072, 288, 192 ), Rect2( 864, 3072, 288, 192 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 2": {
+"animation_rects": [ Rect2( 576, 384, 288, 384 ), Rect2( 864, 384, 288, 384 ), Rect2( 0, 768, 288, 384 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 3": {
+"animation_rects": [ Rect2( 288, 768, 288, 384 ), Rect2( 576, 768, 288, 384 ), Rect2( 864, 768, 288, 384 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 4": {
+"animation_rects": [ Rect2( 0, 1152, 288, 384 ), Rect2( 288, 1152, 288, 384 ), Rect2( 576, 1152, 288, 384 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 5": {
+"animation_rects": [ Rect2( 864, 1152, 288, 384 ), Rect2( 0, 1536, 288, 384 ), Rect2( 288, 1536, 288, 384 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 6": {
+"animation_rects": [ Rect2( 576, 1536, 288, 384 ), Rect2( 864, 1536, 288, 384 ), Rect2( 0, 1920, 288, 384 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+},
+"Tile 7": {
+"animation_rects": [ Rect2( 288, 1920, 288, 384 ), Rect2( 576, 1920, 288, 384 ), Rect2( 864, 1920, 288, 384 ) ],
+"delay": 0.18,
+"frame": 0,
+"time": 0.0639731
+}
+}
