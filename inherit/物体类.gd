@@ -50,26 +50,29 @@ func _init():
 	pass
 
 ##################################################  dbase #################################	
+var 数据 = {"存货":{}}
+var 临时数据 = {}
+var uid = -1 setget set_uid,get_uid 
 
-var dbase = {"objects" : {}}
-var tmp_dbase = {}
-var default_ob
-var uid
+func set_uid(ob=self,uid):
+	ob.uid = uid
 
-func getuid(ob=self):
+func get_uid(ob=self):
 	return ob.get_instance_id()
-	
-func setuid(uid):
-	set("uid",uid)		
-	
-func query_default_object():
-	return default_ob
 
-func set_default_object(ob):
-	if( !getuid() ) :
-		setuid(getuid());
-	default_ob = ob;
-	ob.add("no_clean_up", 1);
+
+
+# var default_ob
+
+	
+# func query_default_object():
+# 	return default_ob
+
+# func set_default_object(ob):
+# 	if( !getuid() ) :
+# 		setuid(getuid());
+# 	default_ob = ob;
+# 	ob.add("no_clean_up", 1);
 
 func set(key:String,value):
 	dbase[key] = value
@@ -153,14 +156,14 @@ func destruct(ob=self):
 #	ob = null
 	pass	
 
-
-func sizeof(array):
-	return array.size()	
-
-func this_object(ob=self):
-	return ob	
-
 # todo	
+func get_属于(ob=self):
+	var 持有者 = ob.get_parent()
+	var 持有者文件名 = 持有者.file_name()
+	var 持有者路径 = 持有者.dir()
+	return {file_name = 持有者文件名,dir = 持有者路径}
+
+
 func environment(ob=self):
 	var env = ob.get_parent()
 	print_debug(env.name)

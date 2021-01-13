@@ -2,7 +2,15 @@ extends 物体类
 
 class_name 房间类
 
+var 地板 := 木制地板
+var 墙壁 
+var 地形
+var 拥有者
+var 家具
 var 门 = {}
+
+
+
 func get_名字(ob=self):
 	return ob.do_查找("名字")
 
