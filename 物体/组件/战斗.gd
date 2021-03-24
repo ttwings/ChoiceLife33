@@ -82,7 +82,6 @@ func do_前进或攻击(方向):
 	else:
 		get_parent().格子 = 新格子
 	if 行动了:
-
 		get_parent().emit_signal("行动了",全局数据.默认行动时间)
 
 func do_攻击(目标):

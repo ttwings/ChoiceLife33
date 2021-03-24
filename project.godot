@@ -184,9 +184,9 @@ config/icon="res://icon.png"
 
 [autoload]
 
-gdutils="*res://addons/gdutils/__init__.gd"
 "全局游戏"="*res://全局/全局游戏.gd"
 RPG="*res://全局/RPG.gd"
+"行为事件"="*res://自动加载/行为事件.gd"
 "全局数据"="*res://全局/全局数据.gd"
 
 [debug]

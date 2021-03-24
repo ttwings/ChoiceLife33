@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://物体/组件/物体.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/graphics/tiles/goods.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/font_normal.tres" type="DynamicFont" id=3]
+[ext_resource path="res://物体/组件/物品.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 13.2154
+
+[node name="苹果" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 224, 192, 32, 32 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -20.0226
+margin_top = -30.0339
+margin_right = 19.9774
+margin_bottom = -16.0339
+custom_fonts/font = ExtResource( 3 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="物体" parent="." instance=ExtResource( 1 )]
+"名称" = "苹果"
+"描述" = "这是苹果"
+
+[node name="物品" parent="." instance=ExtResource( 4 )]

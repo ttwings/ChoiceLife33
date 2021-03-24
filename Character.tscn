@@ -201,6 +201,7 @@ cast_to = Vector2( 0, 30 )
 texture = ExtResource( 4 )
 vframes = 4
 hframes = 3
+frame = 1
 
 [node name="Hurt" type="Area2D" parent="."]
 position = Vector2( 0, 28 )

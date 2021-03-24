@@ -18,7 +18,7 @@ func _ready():
 	$Label.text = print_date()
 	
 func date_change():
-	Date.second	= Date.second + 6
+	Date.second	= Date.second + 1
 	Date.minute = Date.second/60
 	Date.hour 	= Date.minute/120
 	Date.day 	= Date.hour/12
