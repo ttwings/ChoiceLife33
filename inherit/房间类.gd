@@ -2,13 +2,25 @@ extends 物体类
 
 class_name 房间类
 
+var 地板 := 木制地板
+var 墙壁 
+var 地形
+var 拥有者
+var 家具
 var 门 = {}
+
+
+
 func get_名字(ob=self):
 	return ob.do_查找("名字")
 
 func get_最大容积():
 	# 最大容积
 	return 100000000
+
+func make_库存(物品地址:String):
+    var ob
+    pass
 
 func make_inventory(file:String):
 	var ob;

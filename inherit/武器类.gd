@@ -45,6 +45,16 @@ const F_SPEAR     =  "/inherit/weapon/_spear"
 const F_THROWING  =  "/inherit/weapon/_throwing"
 const F_WHIP      =  "/inherit/weapon/_whip"
 
+var 材质
+var 类别
+var 伤害类型
+
+
+# 不在武器类别上进行划分，而是在可以造成的伤害上进行划分。 
+
+# 参考CDDA进行设计
+
+
 
 ## weapon.c
 ## Last Modified by winder on Feb. 28 2001

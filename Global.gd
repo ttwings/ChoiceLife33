@@ -9,13 +9,22 @@ var user_class
 var player
 var castleDB
 
-var 食物
-var 药草
+var 食物表
+var 药草表
 var 玩家类
 var 玩家
 var 数据库
 
 # 全局房间字典，key为房间路径，v为实例
+
+var 所有当前房间 = {}
+
+func 载入房间(地址:String):->void
+    if 所有当前房间.has(地址):
+        return 所有当前房间[地址]
+    else:
+        var 房间 = load(地址).new()
+        房间 = fangjian
 
 var all_current_rooms = {}
 
