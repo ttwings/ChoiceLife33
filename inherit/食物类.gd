@@ -4,18 +4,26 @@ class_name Food
 
 
 # 点击, 吃, 变质
-signal hit
-signal do_eat()
-signal decay()
-signal do_test
+signal 点击
+signal 品味中
+signal 变质中
 
-onready var label = $Label
-onready var animal = $AnimationPlayer
-onready var area = $Area2D
+# signal hit
+# signal do_eat()
+# signal decay()
+# signal do_test
+
+# onready var label = $Label
+# onready var animal = $AnimationPlayer
+# onready var area = $Area2D
+
+onready var 标签 = $Label
+onready var 动画 = $AnimationPlayer
+onready var 区域 = $Area2D
 
 
 func _ready():
-	label.text = "name"
+	标签.text = "name"
 	$Panel/RichTextLabel.bbcode_text = str(query("long"))
 	connect("notify_fail",self,"on_notify_fail")
 	connect("do_eat",self,"do_eat")
@@ -23,23 +31,21 @@ func _ready():
 	connect("do_test",self,"_on_do_test")
 
 func _input(event):
-	if event.is_action("mouse_left") :
-		emit_signal("do_test",1,2,3)
+	if event.is_action("左键") :
+		# emit_signal("do_test",1,2,3)
 #		$Panel.show()
-		animal.play("do_eat")	
+		动画.play("do_eat")	
 
-func on_notify_fail(msg):
+func on_提醒错误(msg):
 	print_debug(msg)
 
-func _on_do_test(v1,v2,v3):
-	print_debug("test",v1,v2,v3)
-
-func do_eat(character):
+func do_食用(角色):
 #	if( !living(this_player()) || this_player().query_temp("noliving") )
 #		return 1;
-
-	if character.query("jing")<0 || character.query("qi")<0 :
-		return notify_fail("你太累了，实在没力气吃什么了。\n");
+	if 角色.查询("精力")<0 || 角色.查询("气") < 0 ：
+		return do_失败通知("你太累了,是在没力气吃什么了. \n ")
+	# if character.query("jing")<0 || character.query("qi")<0 :
+	# 	return notify_fail("你太累了，实在没力气吃什么了。\n");
 #	if( !this_object().id(arg) ) return 0;
 #	if( !present(this_object(), this_player()))
 #		return notify_fail("你要吃什么东西？\n");
@@ -73,12 +79,12 @@ func do_eat(character):
 	pass
 
 
-func decay():
-	var me = this_object()
-	var ob = environment();
+func 变质中():
+	var me = self
+	var ob = get_parent()
 	if (!me || !ob) :
 		return;
-	match(add("decay", 1)):
+	match(add("变质", 1)):
 		2:
 			set_temp("apply/long",query("long")+"可是看起来不是很新鲜。\n");
 			tell_object(ob, me.name()+"的颜色有些不对了。\n");

@@ -78,6 +78,18 @@ func move(dir:String):
 		tween.interpolate_property(self,"position",self.position,get_next_pos(direction),0.3,Tween.TRANS_LINEAR)
 		tween.start()
 		animal.play("move_" + dir)
+
+func attack_to(dir:String):
+	raycast.cast_to = input_keys[dir] * tile_size
+	raycast.force_raycast_update()
+	print(raycast.is_colliding())
+	if !raycast.is_colliding() :
+		turn = turn + 1
+		var direction = directions[dir]
+		tween.interpolate_property(self,"position",self.position,get_next_pos(direction),0.3,Tween.TRANS_LINEAR)
+		tween.start()
+		animal.play("move_" + dir)	
+
 	
 func attack(dir:String):
 	turn + 2

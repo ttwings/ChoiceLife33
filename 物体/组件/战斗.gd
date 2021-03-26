@@ -21,7 +21,7 @@ export(int) var 当前生命 =  -1 setget _set_当前生命
 
 export(bool) var 无敌的 = false
 
-export(int,"练气期","筑基期","金丹期","元婴期","化神器") var 境界 = 1
+export(int,"练气期","筑基期","金丹期","元婴期","化神器") var 境界 = 0
 export(int,0,9) var 层次 = 0
 
 export(int,1,255) var 肉体 = 1

@@ -2,8 +2,8 @@ extends 物体类
 
 class_name 房间类
 
-var 地板 := 木制地板
-var 墙壁 
+var 地板 := "木质地板"
+var 墙壁
 var 地形
 var 拥有者
 var 家具
@@ -32,6 +32,12 @@ func make_inventory(file:String):
 	ob.set("startroom", name_cn(this_object()));
 	return ob;
 
+
+func do_重置():
+	var 物体列表
+	var 物体
+	var 列表
+	pass
 
 func reset():
 	var ob_list

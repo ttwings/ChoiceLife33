@@ -19,12 +19,12 @@ var 数据库
 
 var 所有当前房间 = {}
 
-func 载入房间(地址:String):->void
-    if 所有当前房间.has(地址):
-        return 所有当前房间[地址]
-    else:
-        var 房间 = load(地址).new()
-        房间 = fangjian
+func 载入房间(地址:String):
+	if 所有当前房间.has(地址):
+		return 所有当前房间[地址]
+	else:
+		var 房间 = load(地址).new()
+		return 房间
 
 var all_current_rooms = {}
 

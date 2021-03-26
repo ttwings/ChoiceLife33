@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Character.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/font_normal.tres" type="DynamicFont" id=2]
@@ -6,6 +6,118 @@
 [ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="Animation" id=28]
+resource_name = "attack_down"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 16 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "attack_left"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -16, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "attack_right"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 16, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "attack_up"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -16 ), Vector2( 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=2]
 length = 0.3
@@ -201,6 +313,7 @@ cast_to = Vector2( 0, 30 )
 texture = ExtResource( 4 )
 vframes = 4
 hframes = 3
+frame = 7
 
 [node name="Hurt" type="Area2D" parent="."]
 position = Vector2( 0, 28 )
@@ -209,6 +322,10 @@ position = Vector2( 0, 28 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/attack_down = SubResource( 28 )
+anims/attack_left = SubResource( 29 )
+anims/attack_right = SubResource( 30 )
+anims/attack_up = SubResource( 31 )
 anims/idle_down = SubResource( 2 )
 anims/idle_left = SubResource( 3 )
 anims/idle_right = SubResource( 4 )

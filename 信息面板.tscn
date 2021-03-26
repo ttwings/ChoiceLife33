@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://信息面板.gd" type="Script" id=2]
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.172549, 0.172549, 0.172549, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -47,7 +47,7 @@ __meta__ = {
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/panel = SubResource( 8 )
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
