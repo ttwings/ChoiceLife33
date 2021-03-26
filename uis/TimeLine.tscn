@@ -8,14 +8,21 @@ font_data = ExtResource( 2 )
 
 [node name="TimeLine" type="Control"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
-margin_right = 64.0
-margin_bottom = 24.0
+margin_left = 644.293
+margin_top = 5.6123
+margin_right = 708.293
+margin_bottom = 29.6123
 custom_fonts/font = SubResource( 1 )
 text = "测试测试"
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 anchor_bottom = 1.0
-margin_right = 1280.0
-margin_bottom = 14.0
+margin_left = 8.97968
+margin_top = 37.0412
+margin_right = 1288.98
+margin_bottom = 51.0412

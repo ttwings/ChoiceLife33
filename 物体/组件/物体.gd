@@ -14,7 +14,7 @@ onready var 持有者 = get_parent()
 
 export(String) var 名称 = "物体"
 export(String,MULTILINE) var 描述 = "这是个物体"
-export(Texture) var 精灵图路径 = preload("res://icon.png") setget _set_精灵图路径
+#export(Texture) var 精灵图路径 = preload("res://icon.png") setget _set_精灵图路径
 
 export(bool) var 阻挡移动 = false setget _set_阻挡移动
 export(bool) var 阻挡视线 = false setget _set_阻挡视线
@@ -101,8 +101,8 @@ func _ready():
 	if self.阻挡视线:
 		add_to_group("阻挡视线物体")
 
-func _enter_tree():
-	$Sprite.texture = 精灵图路径		
+#func _enter_tree():
+#	$Sprite.texture = 精灵图路径		
 	
 func _set_阻挡移动(谁):
 	阻挡移动 = 谁
@@ -137,10 +137,10 @@ func _set_格子( 新格子 ):
 		self.position = 持有者.持有者.map_to_world(新格子)
 	emit_signal( "地图格子改变",旧格子,新格子)
 
-func _set_精灵图路径(新路径):
-	精灵图路径 = 新路径
-	if is_inside_tree():
-		$Sprite.texture = 精灵图路径
+#func _set_精灵图路径(新路径):
+#	精灵图路径 = 新路径
+#	if is_inside_tree():
+#		$Sprite.texture = 精灵图路径
 		
 func _准备行动(delta):
 	_游戏_执行(delta)		
