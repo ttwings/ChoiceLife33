@@ -103,6 +103,9 @@ func do_扔出():
 func do_等待():
 	持有者.emit_signal("完成动作")
 
+func do_观察():
+	pass
+
 # func _ready():
 # 	GameData.player = owner
 # 	owner.connect("object_moved", GameData.map.get_node('Fogmap'), '_on_player_pos_changed')

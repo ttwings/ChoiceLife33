@@ -7,6 +7,10 @@ extends Node
 export var 价格 : int
 export var 材质 : String
 
+export(int,0,10000) var 体积 = 0
+export(int,0,10000) var 重量 = 0
+
+
 onready var 持有者 = get_parent()
 var 标签 : Label
 var 区域 : Area2D
@@ -19,8 +23,8 @@ func _ready():
 		区域 = 持有者.get_node("Area2D")
 	if 标签 and 持有者.has_node("物体"):
 		标签.text = 持有者.get_node("物体").名称	
-	区域.connect("mouse_entered",self,"do_显示标签")
-	区域.connect("mouse_exited",self,"do_隐藏标签")
+		区域.connect("mouse_entered",self,"do_显示标签")
+		区域.connect("mouse_exited",self,"do_隐藏标签")
 	pass # Replace with function body.
 
 func do_显示标签():

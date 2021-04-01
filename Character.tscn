@@ -7,7 +7,7 @@
 
 [sub_resource type="CircleShape2D" id=1]
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=2]
 resource_name = "attack_down"
 length = 0.3
 tracks/0/type = "value"
@@ -35,7 +35,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 16 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=3]
 resource_name = "attack_left"
 length = 0.3
 tracks/0/type = "value"
@@ -63,7 +63,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( -16, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=30]
+[sub_resource type="Animation" id=4]
 resource_name = "attack_right"
 length = 0.3
 tracks/0/type = "value"
@@ -91,7 +91,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 16, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=5]
 resource_name = "attack_up"
 length = 0.3
 tracks/0/type = "value"
@@ -119,7 +119,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -16 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=6]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -135,7 +135,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=7]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -151,7 +151,7 @@ tracks/0/keys = {
 "values": [ 4, 4 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=8]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -166,7 +166,7 @@ tracks/0/keys = {
 "values": [ 7, 7 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=9]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -182,7 +182,7 @@ tracks/0/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=10]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -197,7 +197,7 @@ tracks/0/keys = {
 "values": [ 3, 4, 5, 4 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=11]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -212,7 +212,7 @@ tracks/0/keys = {
 "values": [ 6, 7, 8, 7 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=12]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -227,42 +227,29 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=9]
+[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id=10]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "idle_left"
 
-[sub_resource type="AnimationNodeAnimation" id=11]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "idle_right"
 
-[sub_resource type="AnimationNodeAnimation" id=12]
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "idle_up"
 
-[sub_resource type="AnimationNodeAnimation" id=13]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "move_down"
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=18]
 animation = "move_left"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=19]
 animation = "move_right"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=20]
 animation = "move_up"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=17]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=18]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=19]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=21]
 switch_mode = 2
@@ -275,29 +262,42 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=24]
 switch_mode = 2
+auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachine" id=25]
-states/idle_down/node = SubResource( 9 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=29]
+states/idle_down/node = SubResource( 13 )
 states/idle_down/position = Vector2( 227, 46 )
-states/idle_left/node = SubResource( 10 )
+states/idle_left/node = SubResource( 14 )
 states/idle_left/position = Vector2( 206, 124 )
-states/idle_right/node = SubResource( 11 )
+states/idle_right/node = SubResource( 15 )
 states/idle_right/position = Vector2( 152, 347 )
-states/idle_up/node = SubResource( 12 )
+states/idle_up/node = SubResource( 16 )
 states/idle_up/position = Vector2( 158, 243 )
-states/move_down/node = SubResource( 13 )
+states/move_down/node = SubResource( 17 )
 states/move_down/position = Vector2( 411, 52 )
-states/move_left/node = SubResource( 14 )
+states/move_left/node = SubResource( 18 )
 states/move_left/position = Vector2( 408, 116 )
-states/move_right/node = SubResource( 15 )
+states/move_right/node = SubResource( 19 )
 states/move_right/position = Vector2( 431, 337 )
-states/move_up/node = SubResource( 16 )
+states/move_up/node = SubResource( 20 )
 states/move_up/position = Vector2( 379, 227 )
-transitions = [ "idle_down", "move_down", SubResource( 17 ), "idle_left", "move_left", SubResource( 18 ), "idle_up", "move_up", SubResource( 19 ), "idle_right", "move_right", SubResource( 20 ), "move_right", "idle_right", SubResource( 21 ), "move_up", "idle_up", SubResource( 22 ), "move_left", "idle_left", SubResource( 23 ), "move_down", "idle_down", SubResource( 24 ) ]
+transitions = [ "idle_down", "move_down", SubResource( 21 ), "idle_left", "move_left", SubResource( 22 ), "idle_up", "move_up", SubResource( 23 ), "idle_right", "move_right", SubResource( 24 ), "move_right", "idle_right", SubResource( 25 ), "move_up", "idle_up", SubResource( 26 ), "move_left", "idle_left", SubResource( 27 ), "move_down", "idle_down", SubResource( 28 ) ]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=26]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=30]
 
-[sub_resource type="CircleShape2D" id=27]
+[sub_resource type="CircleShape2D" id=31]
 radius = 13.0858
 
 [node name="Character" type="Area2D"]
@@ -322,24 +322,24 @@ position = Vector2( 0, 28 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/attack_down = SubResource( 28 )
-anims/attack_left = SubResource( 29 )
-anims/attack_right = SubResource( 30 )
-anims/attack_up = SubResource( 31 )
-anims/idle_down = SubResource( 2 )
-anims/idle_left = SubResource( 3 )
-anims/idle_right = SubResource( 4 )
-anims/idle_up = SubResource( 5 )
+anims/attack_down = SubResource( 2 )
+anims/attack_left = SubResource( 3 )
+anims/attack_right = SubResource( 4 )
+anims/attack_up = SubResource( 5 )
+anims/idle_down = SubResource( 6 )
+anims/idle_left = SubResource( 7 )
+anims/idle_right = SubResource( 8 )
+anims/idle_up = SubResource( 9 )
 anims/move_down = ExtResource( 3 )
-anims/move_left = SubResource( 6 )
-anims/move_right = SubResource( 7 )
-anims/move_up = SubResource( 8 )
+anims/move_left = SubResource( 10 )
+anims/move_right = SubResource( 11 )
+anims/move_up = SubResource( 12 )
 
 [node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
-tree_root = SubResource( 25 )
+tree_root = SubResource( 29 )
 anim_player = NodePath("..")
 active = true
-parameters/playback = SubResource( 26 )
+parameters/playback = SubResource( 30 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -359,4 +359,4 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 28 )
-shape = SubResource( 27 )
+shape = SubResource( 31 )

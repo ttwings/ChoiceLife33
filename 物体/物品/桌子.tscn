@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/graphics/tiles/goods.png" type="Texture" id=1]
+[ext_resource path="res://物体/组件/物体.tscn" type="PackedScene" id=2]
+[ext_resource path="res://物体/组件/物品.tscn" type="PackedScene" id=3]
+[ext_resource path="res://物体/组件/家具.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 47, 14.75 )
+
+[node name="桌子" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 336, 96, 48 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="物体" parent="." instance=ExtResource( 2 )]
+"名称" = "苹果"
+"描述" = "这是苹果"
+
+[node name="物品" parent="." instance=ExtResource( 3 )]
+
+[node name="家具" parent="." instance=ExtResource( 4 )]

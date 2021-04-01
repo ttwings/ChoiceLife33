@@ -19,8 +19,8 @@ func get_最大容积():
 	return 100000000
 
 func make_库存(物品地址:String):
-    var ob
-    pass
+	var ob
+	pass
 
 func make_inventory(file:String):
 	var ob;

@@ -16,6 +16,7 @@ export(String) var 名称 = "物体"
 export(String,MULTILINE) var 描述 = "这是个物体"
 #export(Texture) var 精灵图路径 = preload("res://icon.png") setget _set_精灵图路径
 
+
 export(bool) var 阻挡移动 = false setget _set_阻挡移动
 export(bool) var 阻挡视线 = false setget _set_阻挡视线
 

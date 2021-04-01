@@ -1,43 +1,43 @@
 [gd_scene load_steps=123 format=2]
 
-[ext_resource path="Graphics/center_button_normal.png" type="Texture" id=1]
-[ext_resource path="CreateAutoTile.gd" type="Script" id=2]
-[ext_resource path="custom_scrollbar.tscn" type="PackedScene" id=3]
-[ext_resource path="Graphics/cursors.png" type="Texture" id=4]
-[ext_resource path="theme.tres" type="Theme" id=5]
-[ext_resource path="Graphics/canvas_background.png" type="Texture" id=6]
-[ext_resource path="Graphics/background1.png" type="Texture" id=7]
-[ext_resource path="Graphics/shadow_for_dialogs.png" type="Texture" id=8]
-[ext_resource path="CustomFileDialog.tscn" type="PackedScene" id=9]
-[ext_resource path="Graphics/center_button_over.png" type="Texture" id=10]
-[ext_resource path="Graphics/ok_button_over.png" type="Texture" id=11]
-[ext_resource path="Graphics/arrow_decoration_1.png" type="Texture" id=12]
-[ext_resource path="Graphics/arrow_decoration_2.png" type="Texture" id=13]
-[ext_resource path="Graphics/cancel_button_normal.png" type="Texture" id=14]
-[ext_resource path="Graphics/dialog_selector.png" type="Texture" id=15]
-[ext_resource path="Graphics/ok_button_normal.png" type="Texture" id=16]
-[ext_resource path="Graphics/cancel_button_over.png" type="Texture" id=17]
-[ext_resource path="Graphics/arrow_down_button_over.png" type="Texture" id=18]
-[ext_resource path="Graphics/arrow_down_button_disabled.png" type="Texture" id=19]
-[ext_resource path="Graphics/arrow_down_button_normal.png" type="Texture" id=20]
-[ext_resource path="Graphics/paste_image_button_disabled.png" type="Texture" id=21]
-[ext_resource path="Graphics/paste_image_button_over.png" type="Texture" id=22]
-[ext_resource path="Graphics/paste_image_button_normal.png" type="Texture" id=23]
-[ext_resource path="Graphics/arrow_up_button_disabled.png" type="Texture" id=24]
-[ext_resource path="Graphics/arrow_up_button_over.png" type="Texture" id=25]
-[ext_resource path="Graphics/arrow_up_button_normal.png" type="Texture" id=26]
-[ext_resource path="Fonts/KOMIKAX_.ttf" type="DynamicFontData" id=27]
-[ext_resource path="Graphics/animation_button_disabled.png" type="Texture" id=28]
-[ext_resource path="Graphics/animation_button_over.png" type="Texture" id=29]
-[ext_resource path="Graphics/animation_button_normal.png" type="Texture" id=30]
-[ext_resource path="Graphics/error_icon.png" type="Texture" id=31]
-[ext_resource path="Graphics/loading.png" type="Texture" id=32]
-[ext_resource path="Graphics/edit_button_disabled.png" type="Texture" id=33]
-[ext_resource path="Graphics/edit_button_over.png" type="Texture" id=34]
-[ext_resource path="Graphics/edit_button_normal.png" type="Texture" id=35]
-[ext_resource path="Graphics/icon_collision_complex.png" type="Texture" id=36]
-[ext_resource path="Graphics/icon_collision_simple.png" type="Texture" id=37]
-[ext_resource path="Graphics/icon_no_collision.png" type="Texture" id=38]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/center_button_normal.png" type="Texture" id=1]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/CreateAutoTile.gd" type="Script" id=2]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/custom_scrollbar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/cursors.png" type="Texture" id=4]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/theme.tres" type="Theme" id=5]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/canvas_background.png" type="Texture" id=6]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/background1.png" type="Texture" id=7]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/shadow_for_dialogs.png" type="Texture" id=8]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/CustomFileDialog.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/center_button_over.png" type="Texture" id=10]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/ok_button_over.png" type="Texture" id=11]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/arrow_decoration_1.png" type="Texture" id=12]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/arrow_decoration_2.png" type="Texture" id=13]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/cancel_button_normal.png" type="Texture" id=14]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/dialog_selector.png" type="Texture" id=15]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/ok_button_normal.png" type="Texture" id=16]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/cancel_button_over.png" type="Texture" id=17]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/arrow_down_button_over.png" type="Texture" id=18]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/arrow_down_button_disabled.png" type="Texture" id=19]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/arrow_down_button_normal.png" type="Texture" id=20]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/paste_image_button_disabled.png" type="Texture" id=21]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/paste_image_button_over.png" type="Texture" id=22]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/paste_image_button_normal.png" type="Texture" id=23]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/arrow_up_button_disabled.png" type="Texture" id=24]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/arrow_up_button_over.png" type="Texture" id=25]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/arrow_up_button_normal.png" type="Texture" id=26]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Fonts/KOMIKAX_.ttf" type="DynamicFontData" id=27]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/animation_button_disabled.png" type="Texture" id=28]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/animation_button_over.png" type="Texture" id=29]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/animation_button_normal.png" type="Texture" id=30]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/error_icon.png" type="Texture" id=31]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/loading.png" type="Texture" id=32]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/edit_button_disabled.png" type="Texture" id=33]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/edit_button_over.png" type="Texture" id=34]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/edit_button_normal.png" type="Texture" id=35]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/icon_collision_complex.png" type="Texture" id=36]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/icon_collision_simple.png" type="Texture" id=37]
+[ext_resource path="res://addons/RPG_maker_Autotile2_3x3/Graphics/icon_no_collision.png" type="Texture" id=38]
 
 [sub_resource type="DynamicFont" id=1]
 size = 13
@@ -188,302 +188,242 @@ tracks/2/keys = {
 blend_mode = 1
 
 [sub_resource type="AtlasTexture" id=24]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 0, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=25]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 500, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=26]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1000, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=27]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1500, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=28]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2000, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=29]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2500, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=30]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3000, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=31]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3500, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=32]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4000, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=33]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4500, 0, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=34]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 0, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=35]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 500, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=36]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1000, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=37]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1500, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=38]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2000, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=39]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2500, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=40]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3000, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=41]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3500, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=42]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4000, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=43]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4500, 500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=44]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 0, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=45]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 500, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=46]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1000, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=47]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1500, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=48]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2000, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=49]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2500, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=50]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3000, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=51]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3500, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=52]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4000, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=53]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4500, 1000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=54]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 0, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=55]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 500, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=56]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1000, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=57]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1500, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=58]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2000, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=59]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2500, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=60]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3000, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=61]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3500, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=62]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4000, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=63]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4500, 1500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=64]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 0, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=65]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 500, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=66]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1000, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=67]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1500, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=68]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2000, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=69]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2500, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=70]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3000, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=71]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3500, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=72]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4000, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=73]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4500, 2000, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=74]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 0, 2500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=75]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 500, 2500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=76]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1000, 2500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=77]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 1500, 2500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=78]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2000, 2500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=79]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 2500, 2500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=80]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3000, 2500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=81]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 3500, 2500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=82]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4000, 2500, 500, 500 )
 
 [sub_resource type="AtlasTexture" id=83]
-flags = 4
 atlas = ExtResource( 32 )
 region = Rect2( 4500, 2500, 500, 500 )
 
@@ -1930,7 +1870,7 @@ material = SubResource( 23 )
 position = Vector2( 494, 383 )
 frames = SubResource( 84 )
 animation = "loading"
-frame = 11
+frame = 12
 speed_scale = 10.0
 playing = true
 
