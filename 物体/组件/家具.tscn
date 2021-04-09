@@ -4,3 +4,5 @@
 
 [node name="家具" type="Node"]
 script = ExtResource( 1 )
+"类型" = "家具"
+"色彩" = Color( 0.517647, 0.156863, 0.156863, 1 )

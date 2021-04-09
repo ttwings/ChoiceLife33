@@ -1870,7 +1870,7 @@ material = SubResource( 23 )
 position = Vector2( 494, 383 )
 frames = SubResource( 84 )
 animation = "loading"
-frame = 12
+frame = 55
 speed_scale = 10.0
 playing = true
 
