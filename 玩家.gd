@@ -41,13 +41,12 @@ var dir = "up" # down
 var is_idle = true # 空闲时才能接收指令。 与动画播放相对。
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sprite.texture = load(path)
+#	sprite.texture = load(path)
 	行为事件.connect("on_玩家死亡",self,"do_玩家死亡")
 	pass # Replace with function body.
 
 func _process(delta):
 	key_input()
-	label.text = str(turn)
 	if Input.is_action_just_pressed("space") :
 		is_dead = true
 		print_debug("space" + str(is_dead))

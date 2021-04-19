@@ -342,74 +342,74 @@ animations = {
 "Tile 0": {
 "animation_rects": [ Rect2( 0, 0, 192, 256 ), Rect2( 192, 0, 192, 256 ), Rect2( 384, 0, 192, 256 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 1": {
 "animation_rects": [ Rect2( 0, 0, 192, 256 ), Rect2( 192, 0, 192, 256 ), Rect2( 384, 0, 192, 256 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 12": {
 "animation_rects": [ Rect2( 0, 0, 192, 128 ), Rect2( 192, 0, 192, 128 ), Rect2( 384, 0, 192, 128 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 13": {
 "animation_rects": [ Rect2( 0, 0, 192, 128 ), Rect2( 192, 0, 192, 128 ), Rect2( 384, 0, 192, 128 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 14": {
 "animation_rects": [ Rect2( 0, 0, 192, 128 ), Rect2( 192, 0, 192, 128 ), Rect2( 384, 0, 192, 128 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 15": {
 "animation_rects": [ Rect2( 0, 0, 192, 128 ), Rect2( 192, 0, 192, 128 ), Rect2( 384, 0, 192, 128 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 2": {
 "animation_rects": [ Rect2( 0, 0, 192, 256 ), Rect2( 192, 0, 192, 256 ), Rect2( 384, 0, 192, 256 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 3": {
 "animation_rects": [ Rect2( 0, 0, 192, 256 ), Rect2( 192, 0, 192, 256 ), Rect2( 384, 0, 192, 256 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 4": {
 "animation_rects": [ Rect2( 0, 0, 192, 256 ), Rect2( 192, 0, 192, 256 ), Rect2( 384, 0, 192, 256 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 5": {
 "animation_rects": [ Rect2( 0, 0, 192, 256 ), Rect2( 192, 0, 192, 256 ), Rect2( 384, 0, 192, 256 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 6": {
 "animation_rects": [ Rect2( 0, 0, 192, 256 ), Rect2( 192, 0, 192, 256 ), Rect2( 384, 0, 192, 256 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 },
 "Tile 7": {
 "animation_rects": [ Rect2( 0, 0, 192, 256 ), Rect2( 192, 0, 192, 256 ), Rect2( 384, 0, 192, 256 ) ],
 "delay": 0.18,
-"frame": 0,
-"time": 0
+"frame": 1,
+"time": 0.0541077
 }
 }
 

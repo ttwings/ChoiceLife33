@@ -1,5 +1,7 @@
 extends Node
 
+signal 回合改变
+
 signal on_开始游戏()
 signal on_继续游戏()
 signal on_游戏设置()

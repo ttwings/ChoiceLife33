@@ -6,10 +6,12 @@ extends Node2D
 # var b = "text"
 export(String) var path
 
+export(Texture) var sprite_texture
+
+
 onready var sprite = $Sprite
 onready var animal = $AnimationPlayer
 onready var tween = $Tween
-onready var label = $Label
 onready var raycast = $RayCast2D
 
 var turn :=0
@@ -41,13 +43,12 @@ var dir = "up" # down
 var is_idle = true # 空闲时才能接收指令。 与动画播放相对。
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sprite.texture = load(path)
+	sprite.texture = sprite_texture
 	行为事件.connect("on_玩家死亡",self,"do_玩家死亡")
 	pass # Replace with function body.
 
 func _process(delta):
 	key_input()
-	label.text = str(turn)
 	if Input.is_action_just_pressed("space") :
 		is_dead = true
 		print_debug("space" + str(is_dead))
@@ -62,7 +63,9 @@ func key_input():
 		if Input.is_action_pressed(dir):
 			move(dir)
 			action = Action.new("move",100)
-			emit_signal("do_action")	
+			emit_signal("do_action")
+			行为事件.emit_signal("回合改变")
+				
 
 #	pass
 func get_next_pos(direction:Vector2):
