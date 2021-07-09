@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://玩家.gd" type="Script" id=1]
+[ext_resource path="res://Data.gd" type="Script" id=2]
 [ext_resource path="res://animations/move_down.tres" type="Animation" id=3]
 [ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=4]
 
@@ -239,8 +240,8 @@ cast_to = Vector2( 0, 30 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 4 )
-vframes = 4
 hframes = 3
+vframes = 4
 
 [node name="Hurt" type="Area2D" parent="."]
 position = Vector2( 0, 28 )
@@ -266,3 +267,8 @@ anims/move_up = SubResource( 13 )
 current = true
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Data" type="Node" parent="."]
+script = ExtResource( 2 )
+json_file = "res://data/dishes.json"
+id = "1"

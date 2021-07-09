@@ -1,0 +1,119 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://themes/theme_yellow.tres" type="Theme" id=1]
+[ext_resource path="res://队伍管理.gd" type="Script" id=2]
+
+[node name="队伍管理" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+visible = true
+margin_right = 1064.0
+margin_bottom = 647.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="WindowDialog"]
+margin_right = 914.0
+margin_bottom = 628.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabs" type="Tabs" parent="WindowDialog/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 34.0
+margin_right = -870.0
+margin_bottom = -568.0
+
+[node name="ItemList" type="ItemList" parent="WindowDialog/TabContainer/Tabs"]
+margin_left = 31.6154
+margin_top = 51.0632
+margin_right = 396.615
+margin_bottom = 497.063
+items = [ "张三", null, false, "李四", null, false, "王麻子", null, false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowDialog/TabContainer/Tabs"]
+margin_left = 475.432
+margin_top = 59.0
+margin_right = 857.432
+margin_bottom = 490.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="WindowDialog/TabContainer/Tabs/VBoxContainer"]
+margin_right = 382.0
+margin_bottom = 22.0
+text = "对话"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="WindowDialog/TabContainer/Tabs/VBoxContainer"]
+margin_top = 26.0
+margin_right = 382.0
+margin_bottom = 48.0
+text = "调查"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="WindowDialog/TabContainer/Tabs/VBoxContainer"]
+margin_top = 52.0
+margin_right = 382.0
+margin_bottom = 74.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabs2" type="Tabs" parent="WindowDialog/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 34.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="OptionButton" type="OptionButton" parent="WindowDialog/TabContainer/Tabs2"]
+margin_left = 178.878
+margin_top = 56.8775
+margin_right = 679.878
+margin_bottom = 382.878
+text = "第 0 项"
+items = [ "第 0 项", null, false, 0, null, "第 1 项", null, false, 1, null, "第 2 项", null, false, 2, null, "第 3 项", null, false, 3, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabs3" type="Tabs" parent="WindowDialog/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 34.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Tabs4" type="Tabs" parent="WindowDialog/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 34.0
+margin_right = -4.0
+margin_bottom = -4.0

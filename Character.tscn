@@ -240,8 +240,8 @@ cast_to = Vector2( 0, 30 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 4 )
-vframes = 4
 hframes = 3
+vframes = 4
 
 [node name="Hurt" type="Area2D" parent="."]
 position = Vector2( 0, 10 )
