@@ -8,6 +8,7 @@ var digit1button5 = 0
 var digit1button4 = 0
 func update_label():
 	$Label.text = Global.digit_to_char(digit1button4 + digit1button5)
+	pass
 
 func get_sum():
 	return digit * (digit1button5 + digit1button4)

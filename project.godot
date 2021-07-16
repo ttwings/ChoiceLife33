@@ -187,6 +187,7 @@ config/icon="res://icon.png"
 RPG="*res://全局/RPG.gd"
 "行为事件"="*res://自动加载/行为事件.gd"
 "全局数据"="*res://全局/全局数据.gd"
+Global="*res://Global.gd"
 
 [debug]
 
