@@ -188,6 +188,7 @@ config/icon="res://icon.png"
 RPG="*res://全局/RPG.gd"
 "行为事件"="*res://自动加载/行为事件.gd"
 "全局数据"="*res://全局/全局数据.gd"
+Global="*res://Global.gd"
 
 [debug]
 
@@ -201,7 +202,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "TriggerSystem", "gdutils" )
+enabled=PoolStringArray( "RPG_maker_Autotile2_3x3", "TriggerSystem", "gdutils" )
 
 [importer_defaults]
 
@@ -372,6 +373,7 @@ quality/intended_usage/framebuffer_allocation=1
 quality/intended_usage/framebuffer_allocation.mobile=1
 quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
+2d/snapping/use_gpu_pixel_snap=true
 
 [tiled_importer]
 
