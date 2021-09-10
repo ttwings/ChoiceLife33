@@ -1,7 +1,6 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Character.gd" type="Script" id=1]
-[ext_resource path="res://assets/fonts/font_normal.tres" type="DynamicFont" id=2]
 [ext_resource path="res://animations/move_down.tres" type="Animation" id=3]
 [ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=4]
 
@@ -227,77 +226,7 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=13]
-animation = "idle_down"
-
-[sub_resource type="AnimationNodeAnimation" id=14]
-animation = "idle_left"
-
-[sub_resource type="AnimationNodeAnimation" id=15]
-animation = "idle_right"
-
-[sub_resource type="AnimationNodeAnimation" id=16]
-animation = "idle_up"
-
-[sub_resource type="AnimationNodeAnimation" id=17]
-animation = "move_down"
-
-[sub_resource type="AnimationNodeAnimation" id=18]
-animation = "move_left"
-
-[sub_resource type="AnimationNodeAnimation" id=19]
-animation = "move_right"
-
-[sub_resource type="AnimationNodeAnimation" id=20]
-animation = "move_up"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=23]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=24]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=26]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=27]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
-switch_mode = 2
-
-[sub_resource type="AnimationNodeStateMachine" id=29]
-states/idle_down/node = SubResource( 13 )
-states/idle_down/position = Vector2( 227, 46 )
-states/idle_left/node = SubResource( 14 )
-states/idle_left/position = Vector2( 206, 124 )
-states/idle_right/node = SubResource( 15 )
-states/idle_right/position = Vector2( 152, 347 )
-states/idle_up/node = SubResource( 16 )
-states/idle_up/position = Vector2( 158, 243 )
-states/move_down/node = SubResource( 17 )
-states/move_down/position = Vector2( 411, 52 )
-states/move_left/node = SubResource( 18 )
-states/move_left/position = Vector2( 408, 116 )
-states/move_right/node = SubResource( 19 )
-states/move_right/position = Vector2( 431, 337 )
-states/move_up/node = SubResource( 20 )
-states/move_up/position = Vector2( 379, 227 )
-transitions = [ "idle_down", "move_down", SubResource( 21 ), "idle_left", "move_left", SubResource( 22 ), "idle_up", "move_up", SubResource( 23 ), "idle_right", "move_right", SubResource( 24 ), "move_right", "idle_right", SubResource( 25 ), "move_up", "idle_up", SubResource( 26 ), "move_left", "idle_left", SubResource( 27 ), "move_down", "idle_down", SubResource( 28 ) ]
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=30]
-
-[sub_resource type="CircleShape2D" id=31]
+[sub_resource type="CircleShape2D" id=13]
 radius = 13.0858
 
 [node name="Character" type="Area2D"]
@@ -311,12 +240,11 @@ cast_to = Vector2( 0, 30 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 4 )
-vframes = 4
 hframes = 3
-frame = 1
+vframes = 4
 
 [node name="Hurt" type="Area2D" parent="."]
-position = Vector2( 0, 28 )
+position = Vector2( 0, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt"]
 shape = SubResource( 1 )
@@ -335,28 +263,11 @@ anims/move_left = SubResource( 10 )
 anims/move_right = SubResource( 11 )
 anims/move_up = SubResource( 12 )
 
-[node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
-tree_root = SubResource( 29 )
-anim_player = NodePath("..")
-active = true
-parameters/playback = SubResource( 30 )
-
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
 [node name="Tween" type="Tween" parent="."]
 
-[node name="Label" type="Label" parent="."]
-margin_left = -21.0731
-margin_top = -44.2535
-margin_right = 18.9269
-margin_bottom = -30.2535
-custom_fonts/font = ExtResource( 2 )
-text = "0"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 28 )
-shape = SubResource( 31 )
+shape = SubResource( 13 )

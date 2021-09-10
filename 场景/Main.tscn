@@ -625,24 +625,17 @@ margin_right = 183.0
 bbcode_enabled = true
 bbcode_text = "一共[color=yellow]888文钱[/color]"
 text = "一共888文钱"
+
 [connection signal="caption_change" from="." to="RoomControl/Panel/VBoxContainer/MarginContainer/LabelCapital" method="_on_Main_caption_change"]
 [connection signal="pressed" from="RoomControl/Panel/VBoxContainer/Cooking" to="." method="_on_Cooking_pressed"]
 [connection signal="pressed" from="RoomControl/Panel/VBoxContainer/Checkout" to="." method="_on_Checkout_pressed"]
 
 [editable path="TablePos/Actor2"]
-
 [editable path="TablePos/Actor3"]
-
 [editable path="TablePos/Actor4"]
-
 [editable path="TablePos/Wiater"]
-
 [editable path="TablePos/Wiater/Say"]
-
 [editable path="TablePos/Cooker"]
-
 [editable path="TablePos/Cooker/Say"]
-
 [editable path="TablePos/Accountant "]
-
 [editable path="TablePos/Accountant /Say"]
