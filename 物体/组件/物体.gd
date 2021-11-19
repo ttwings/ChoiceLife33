@@ -14,6 +14,7 @@ onready var 持有者 = get_parent()
 
 export(String) var 名称 = "物体"
 export(String,MULTILINE) var 描述 = "这是个物体"
+export(String,FILE,".json") var json_data_path = ""
 #export(Texture) var 精灵图路径 = preload("res://icon.png") setget _set_精灵图路径
 
 
@@ -31,6 +32,7 @@ var SID = -1
 var 数据地址
 var pawn = null
 var 在库存中 = false
+	
 
 func get_要存储数据():
 	var 数据 = {
