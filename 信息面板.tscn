@@ -91,7 +91,7 @@ alignment = 1
 
 [node name="是" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_right = 103.0
-margin_bottom = 23.0
+margin_bottom = 22.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
 shortcut = SubResource( 3 )
@@ -109,7 +109,7 @@ custom_constants/separation = 0
 [node name="否" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_left = 111.0
 margin_right = 214.0
-margin_bottom = 23.0
+margin_bottom = 22.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
 shortcut = SubResource( 5 )
@@ -127,7 +127,7 @@ custom_constants/separation = 0
 [node name="忽略" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_left = 222.0
 margin_right = 325.0
-margin_bottom = 23.0
+margin_bottom = 22.0
 size_flags_horizontal = 3
 size_flags_vertical = 2
 shortcut = SubResource( 7 )
