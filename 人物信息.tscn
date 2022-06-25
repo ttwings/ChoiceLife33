@@ -16,7 +16,6 @@ atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 64 )
 
 [node name="人物信息" type="WindowDialog"]
-visible = true
 margin_top = -1.0
 margin_right = 316.0
 margin_bottom = 398.0

@@ -8,5 +8,7 @@ export(String) var 描述
 
 export(String,"金,水,木,火,土") var 五行
 export(String,"寒,凉,平,温,热") var 性状
-export(String,"") var 味道
+export(String,"酸,甘,苦,咸,辛") var 味道
 
+func do_服用():
+	pass

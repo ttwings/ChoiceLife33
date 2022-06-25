@@ -114,7 +114,7 @@ func _set_阻挡移动(谁):
 			add_to_group("阻挡行动物体")
 	else:
 		if is_in_group("阻挡行动物体"):
-				remove_from_group("阻挡行动物体")
+			remove_from_group("阻挡行动物体")
 
 func _set_阻挡视线( 什么 ):
 	阻挡视线 = 什么

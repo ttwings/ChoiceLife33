@@ -23,9 +23,6 @@ margin_right = -1.10803
 margin_bottom = -7.62506
 theme = ExtResource( 3 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5

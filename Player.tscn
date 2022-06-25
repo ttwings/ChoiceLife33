@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://玩家.gd" type="Script" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Data.gd" type="Script" id=2]
 [ext_resource path="res://animations/move_down.tres" type="Animation" id=3]
 [ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=4]
@@ -226,7 +226,7 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
-[node name="玩家" type="Area2D"]
+[node name="Player" type="Area2D"]
 collision_mask = 2
 script = ExtResource( 1 )
 
