@@ -1,0 +1,146 @@
+{
+    "sheets": [
+        {
+            "name": "食材",
+            "description": "这是个中文表格测试",
+            "displayColumn": "名称",
+            "guid": "437ee905-72a1-4afe-ae0a-31722f4f8591",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "83e3fc27-e07e-4c12-97f3-8b8274c488ed",
+                    "name": "名称",
+                    "description": "名称",
+                    "defaultValue": "未知物",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "longtext",
+                    "guid": "61cc75e2-57c9-4c5b-bdea-42bf445fb2f1",
+                    "name": "描述",
+                    "description": "描述",
+                    "defaultValue": "这是一份食材",
+                    "iconName": "newLongText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "longtext"
+                    }
+                },
+                {
+                    "typeStr": "image",
+                    "guid": "88c34e8f-acfb-4fb1-b37c-aa9a31abe571",
+                    "name": "图片",
+                    "description": "图片纹理",
+                    "defaultValue": "",
+                    "iconName": "newImage",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "b48dc2b2-4bc4-4a89-84f0-6e4480ce1630",
+                    "id": "0",
+                    "名称": "未知食材",
+                    "描述": "这是一份未知的食材",
+                    "图片": "..\\..\\HelmetOutline 2.png"
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "药材",
+            "description": "基本药材",
+            "displayColumn": "名称",
+            "guid": "74f16e0c-7195-42c6-8685-dd6a3dbf66a9",
+            "columns": [
+                {
+                    "typeStr": "text",
+                    "guid": "c1498dc9-73bb-4275-bdc9-43d539870776",
+                    "name": "名称",
+                    "description": "名称",
+                    "defaultValue": "",
+                    "iconName": "newText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                },
+                {
+                    "typeStr": "longtext",
+                    "guid": "71ab51a4-8bd5-440c-9330-9122a8cef0b3",
+                    "name": "描述",
+                    "description": "药材描述",
+                    "defaultValue": "这是一份未知的药材",
+                    "iconName": "newLongText",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "longtext"
+                    }
+                },
+                {
+                    "typeStr": "image",
+                    "guid": "380ce878-5917-41fb-a50f-d44d5c281f7d",
+                    "name": "图片",
+                    "description": "图片纹理",
+                    "defaultValue": "",
+                    "iconName": "newImage",
+                    "configurable": {
+                        "name": "text",
+                        "description": "text",
+                        "defaultValue": "text"
+                    }
+                }
+            ],
+            "lines": [
+                {
+                    "guid": "ad93dad5-5c62-4daf-896f-662b40d5684b",
+                    "id": "0",
+                    "名称": "未知药材",
+                    "描述": "这是一份未知的药材",
+                    "图片": "..\\..\\TorsoOutline 1.png"
+                }
+            ],
+            "hidden": false,
+            "isProps": false,
+            "configurable": {
+                "name": "text",
+                "description": "text",
+                "displayColumn": "columnSelect@name",
+                "columnSelect@name@displayColumn": {
+                    "allowedTypes": [
+                        "int",
+                        "float",
+                        "text",
+                        "longtext"
+                    ]
+                }
+            }
+        }
+    ]
+}

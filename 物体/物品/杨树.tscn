@@ -5,7 +5,7 @@
 [ext_resource path="res://物体/组件/食物.tscn" type="PackedScene" id=3]
 [ext_resource path="res://物体/组件/物品.tscn" type="PackedScene" id=4]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 radius = 13.2154
 
 [node name="杨树" type="Node2D"]
@@ -19,7 +19,7 @@ region_rect = Rect2( 512, 0, 64, 96 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -35,3 +35,10 @@ current = true
 [node name="食物" parent="." instance=ExtResource( 3 )]
 "解渴" = 5
 "解饿" = 15
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

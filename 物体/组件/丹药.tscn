@@ -5,4 +5,6 @@
 [node name="丹药" type="Node"]
 script = ExtResource( 1 )
 "丹毒" = 5
+"品级" = 1
 "五行" = "金"
+abc = 260.0

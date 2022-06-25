@@ -36,7 +36,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 34.0
+margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
@@ -51,7 +51,7 @@ __meta__ = {
 
 [node name="ItemList" type="ItemList" parent="WindowDialog/TabContainer/大厅/HBoxContainer"]
 margin_right = 455.0
-margin_bottom = 571.0
+margin_bottom = 573.0
 size_flags_horizontal = 3
 items = [ "张三", null, false, "李四", null, false, "王麻子", null, false ]
 __meta__ = {
@@ -61,7 +61,7 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="WindowDialog/TabContainer/大厅/HBoxContainer"]
 margin_left = 459.0
 margin_right = 914.0
-margin_bottom = 571.0
+margin_bottom = 573.0
 size_flags_horizontal = 3
 __meta__ = {
 "_edit_use_anchors_": false
@@ -69,25 +69,25 @@ __meta__ = {
 
 [node name="Button" type="Button" parent="WindowDialog/TabContainer/大厅/HBoxContainer/VBoxContainer"]
 margin_right = 455.0
-margin_bottom = 22.0
+margin_bottom = 20.0
 text = "对话"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button2" type="Button" parent="WindowDialog/TabContainer/大厅/HBoxContainer/VBoxContainer"]
-margin_top = 26.0
+margin_top = 24.0
 margin_right = 455.0
-margin_bottom = 48.0
+margin_bottom = 44.0
 text = "调查"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button3" type="Button" parent="WindowDialog/TabContainer/大厅/HBoxContainer/VBoxContainer"]
-margin_top = 52.0
+margin_top = 48.0
 margin_right = 455.0
-margin_bottom = 74.0
+margin_bottom = 68.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -97,7 +97,7 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 34.0
+margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
@@ -118,7 +118,7 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 34.0
+margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
@@ -127,6 +127,6 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 34.0
+margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0

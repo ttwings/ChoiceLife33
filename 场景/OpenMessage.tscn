@@ -1,15 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://场景/OpenMessage.gd" type="Script" id=2]
 [ext_resource path="res://themes/theme_yellow.tres" type="Theme" id=3]
-[ext_resource path="res://assets/fonts/unifont.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 4 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 1 )
@@ -82,6 +81,9 @@ text = "33岁的你,并不喜欢四书五经那一套,各种本事都学了点,�
 目标:三等.一年之内,稳定下来.并赚取钱财.
 (别看啦,都是设想)
 (选哪个都一样,做不来..)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HSeparator" type="HSeparator" parent="Panel"]
 anchor_top = 1.0
