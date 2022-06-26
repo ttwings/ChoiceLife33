@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://shaders/outline.shader" type="Shader" id=1]
+[ext_resource path="res://data/items/weapons/Item.gd" type="Script" id=2]
+[ext_resource path="res://data/items/weapons/axe_001.tres" type="Resource" id=3]
+[ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=4]
+[ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=5]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 1 )
+shader_param/intensity = 20
+shader_param/precision = 0.02
+shader_param/outline_color = Color( 1, 0.960938, 0, 1 )
+
+[node name="Item" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1216.0
+margin_bottom = -640.0
+rect_min_size = Vector2( 64, 80 )
+script = ExtResource( 2 )
+res = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+material = SubResource( 3 )
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 5 )
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 103.0
+theme = ExtResource( 4 )
+text = "黄金战斧"
+align = 1
+valign = 1
+autowrap = true

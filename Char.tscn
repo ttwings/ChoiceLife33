@@ -484,8 +484,8 @@ position = Vector2( 0.52523, -0.0246048 )
 texture = ExtResource( 2 )
 centered = false
 offset = Vector2( -32, -54 )
-vframes = 21
 hframes = 13
+vframes = 21
 frame = 32
 
 [node name="Camera2D" type="Camera2D" parent="LPC_Player"]
@@ -504,4 +504,5 @@ shape = SubResource( 29 )
 [node name="AttackTimer" type="Timer" parent="LPC_Player"]
 one_shot = true
 autostart = true
+
 [connection signal="body_entered" from="LPC_Player/Attack_Area2D" to="LPC_Player" method="_on_Attack_Area2D_body_entered"]

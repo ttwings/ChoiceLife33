@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/items/ResItem.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=2]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource( 1 )
+type = "weapon"
+name = "血斧"
+price = 5000
+description = "一把滴血的斧头"
+texture = ExtResource( 2 )
+color = Color( 1, 0, 0, 1 )
