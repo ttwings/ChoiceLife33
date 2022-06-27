@@ -90,17 +90,16 @@ text = "X"
 icon_align = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer/Log/VBoxContainer"]
-margin_left = 8.0
-margin_top = 42.0
-margin_right = 391.0
-margin_bottom = 358.0
+margin_top = 34.0
+margin_right = 400.0
+margin_bottom = 366.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/PanelContainer/Log/VBoxContainer/MarginContainer"]
-margin_right = 383.0
-margin_bottom = 316.0
+margin_right = 400.0
+margin_bottom = 332.0
 bbcode_enabled = true
 bbcode_text = "[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
 [color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害

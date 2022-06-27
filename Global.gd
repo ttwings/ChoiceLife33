@@ -14,9 +14,6 @@ var castle_list = []
 
 # 全局房间字典，key为房间路径，v为实例
 var all_current_rooms = {}
-func load_room(path)
-	if all_current_rooms[path] == null
-		all_current_rooms[path] = Room(path)
 
 func load_room(path:String):
 	if all_current_rooms.has(path):

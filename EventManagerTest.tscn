@@ -5,6 +5,5 @@
 
 [node name="EventManager" type="Node"]
 script = ExtResource( 1 )
-timeline = null
 
 [node name="Calculator" parent="." instance=ExtResource( 2 )]

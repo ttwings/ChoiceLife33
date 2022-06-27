@@ -44,7 +44,7 @@ var is_idle = true # 空闲时才能接收指令。 与动画播放相对。
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	sprite.texture = sprite_texture
-	行为事件.connect("on_玩家死亡",self,"do_玩家死亡")
+#	行为事件.connect("on_玩家死亡",self,"do_玩家死亡")
 	pass # Replace with function body.
 
 func _process(delta):
@@ -64,7 +64,7 @@ func key_input():
 			move(dir)
 			action = Action.new("move",100)
 			emit_signal("do_action")
-			行为事件.emit_signal("回合改变")
+#			行为事件.emit_signal("回合改变")
 				
 
 #	pass

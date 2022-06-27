@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=5]
 
 [sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/intensity = 20
 shader_param/precision = 0.02
@@ -27,8 +28,8 @@ anchor_bottom = 1.0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 material = SubResource( 3 )
-margin_right = 64.0
-margin_bottom = 64.0
+margin_right = 704.0
+margin_bottom = 420.0
 rect_min_size = Vector2( 64, 64 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -36,9 +37,9 @@ texture = ExtResource( 5 )
 stretch_mode = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 68.0
-margin_right = 64.0
-margin_bottom = 103.0
+margin_top = 424.0
+margin_right = 704.0
+margin_bottom = 440.0
 theme = ExtResource( 4 )
 text = "黄金战斧"
 align = 1

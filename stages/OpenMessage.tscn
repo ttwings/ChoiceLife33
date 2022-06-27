@@ -1,12 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/fonts/SourceHanSansCN-Normal.otf" type="DynamicFontData" id=1]
-<<<<<<< HEAD:stages/OpenMessage.tscn
-[ext_resource path="res://themes/theme_yellow.tres" type="Theme" id=2]
-[ext_resource path="res://stages/OpenMessage.gd" type="Script" id=3]
-=======
 [ext_resource path="res://stages/OpenMessage.gd" type="Script" id=2]
->>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984:场景/OpenMessage.tscn
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -24,15 +19,7 @@ margin_left = -1.10803
 margin_top = -7.62504
 margin_right = -1.10803
 margin_bottom = -7.62506
-<<<<<<< HEAD:stages/OpenMessage.tscn
-theme = ExtResource( 2 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-=======
 script = ExtResource( 2 )
->>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984:场景/OpenMessage.tscn
 
 [node name="Panel" type="Panel" parent="."]
 anchor_left = 0.5
@@ -65,10 +52,6 @@ margin_left = 24.0
 margin_top = 32.0
 margin_right = -24.0
 margin_bottom = -80.0
-<<<<<<< HEAD:stages/OpenMessage.tscn
-theme = ExtResource( 2 )
-=======
->>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984:场景/OpenMessage.tscn
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "33岁的你,并不喜欢四书五经那一套,各种本事都学了点,就是未考入功名,各种工作都做过,跑堂,帮厨,账房等等,收入刚好养家糊口.
