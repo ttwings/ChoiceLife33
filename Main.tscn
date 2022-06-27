@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=3]
 [ext_resource path="res://stages/bag/Bag.tscn" type="PackedScene" id=4]
-[ext_resource path="res://WindowCanDrag.gd" type="Script" id=5]
+[ext_resource path="res://Log.gd" type="Script" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 corner_radius_top_left = 4
@@ -32,10 +32,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Log" type="Panel" parent="VBoxContainer/PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 407.0
-margin_bottom = 407.0
+margin_left = 1500.0
+margin_top = 20.0
+margin_right = 1900.0
+margin_bottom = 420.0
 rect_min_size = Vector2( 400, 400 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -191,10 +191,10 @@ valign = 1
 [node name="Bag" parent="VBoxContainer/PanelContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 507.0
-margin_bottom = 372.0
+margin_left = 760.0
+margin_top = 380.0
+margin_right = 1260.0
+margin_bottom = 745.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
