@@ -1,9 +1,16 @@
 [gd_scene load_steps=18 format=2]
 
+<<<<<<< HEAD:Player.tscn
 [ext_resource path="res://assets/graphics/ui/att_arrow.png" type="Texture" id=1]
 [ext_resource path="res://玩家.gd" type="Script" id=2]
 [ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=3]
 [ext_resource path="res://animations/move_down.tres" type="Animation" id=4]
+=======
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Data.gd" type="Script" id=2]
+[ext_resource path="res://animations/move_down.tres" type="Animation" id=3]
+[ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=4]
+>>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984:玩家.tscn
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 13.0858

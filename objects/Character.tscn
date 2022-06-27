@@ -115,8 +115,8 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
-vframes = 4
 hframes = 4
+vframes = 4
 region_rect = Rect2( -32, 128, 32, 64 )
 
 [node name="Say" parent="." instance=ExtResource( 3 )]

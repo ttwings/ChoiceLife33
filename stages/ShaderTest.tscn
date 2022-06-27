@@ -31,6 +31,3 @@ margin_bottom = 138.52
 custom_fonts/font = SubResource( 3 )
 text = "两个黄鹂鸣翠柳
 一行白鹭上青天"
-__meta__ = {
-"_edit_use_anchors_": false
-}

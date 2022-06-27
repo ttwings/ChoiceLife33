@@ -161,8 +161,8 @@ func get_number_color(number):
 		return "red" 
 	else:
 		return "green"
+		
 # 将整数数字转为中文文字	
-
 func get_chinese_number(n:int):
 	var number_str = str(n)
 	var l = number_str.length()
@@ -198,7 +198,7 @@ func digit_to_char(number):
 		"8",8:return "八"
 		"9",9:return "九"
 		"0",0:return "〇"
-		_:return "X"				
+		_:return "X"			
 
 # 返回当前玩家
 func this_player():

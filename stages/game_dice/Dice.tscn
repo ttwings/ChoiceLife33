@@ -2,7 +2,10 @@
 
 [ext_resource path="res://assets/graphics/minigame/dice.png" type="Texture" id=1]
 [ext_resource path="res://stages/game_dice/Dice.gd" type="Script" id=2]
+<<<<<<< HEAD:stages/game_dice/Dice.tscn
 
+=======
+>>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984:场景/game_dice/Dice.tscn
 
 
 

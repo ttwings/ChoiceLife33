@@ -229,6 +229,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://inherit/Npc.gd"
 }, {
+<<<<<<< HEAD
 "base": "Chart",
 "class": "PieChart",
 "language": "GDScript",
@@ -243,6 +244,17 @@ _global_script_classes=[ {
 "class": "RadarChart",
 "language": "GDScript",
 "path": "res://addons/easy_charts/control_charts/RadarChart/radar_chart.gd"
+=======
+"base": "Panel",
+"class": "PanelCanDrag",
+"language": "GDScript",
+"path": "res://PanelCanDrag.gd"
+}, {
+"base": "Resource",
+"class": "ResItem",
+"language": "GDScript",
+"path": "res://data/items/ResItem.gd"
+>>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984
 }, {
 "base": "Resource",
 "class": "ResourceTrees",
@@ -329,25 +341,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://inherit/武器类.gd"
 }, {
-"base": "Node",
-"class": "战斗",
+"base": "Panel",
+"class": "WindowCanDrag",
 "language": "GDScript",
-"path": "res://物体/组件/战斗.gd"
+"path": "res://WindowCanDrag.gd"
 }, {
 "base": "物体类",
 "class": "房间类",
 "language": "GDScript",
 "path": "res://inherit/房间类.gd"
 }, {
-"base": "Node",
-"class": "物体",
-"language": "GDScript",
-"path": "res://物体/组件/物体.gd"
-}, {
-"base": "Node",
+"base": "Node2D",
 "class": "物体类",
 "language": "GDScript",
-"path": "res://物体/组件/Thing.gd"
+"path": "res://inherit/物体类.gd"
 }, {
 "base": "GameObject",
 "class": "物品类",
@@ -399,9 +406,14 @@ _global_script_class_icons={
 "Matrix": "",
 "MatrixGenerator": "",
 "Npc": "",
+<<<<<<< HEAD
 "PieChart": "",
 "Point": "",
 "RadarChart": "",
+=======
+"PanelCanDrag": "",
+"ResItem": "",
+>>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984
 "ResourceTrees": "",
 "Room": "",
 "ScatterChart": "",
@@ -419,9 +431,8 @@ _global_script_class_icons={
 "Trigger": "",
 "User": "",
 "Weapon": "",
-"战斗": "",
+"WindowCanDrag": "",
 "房间类": "",
-"物体": "",
 "物体类": "",
 "物品类": ""
 }
@@ -441,10 +452,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-"全局游戏"="*res://全局/全局游戏.gd"
-RPG="*res://全局/RPG.gd"
-"行为事件"="*res://自动加载/行为事件.gd"
-"全局数据"="*res://全局/全局数据.gd"
+RPG="*res://global/RPG.gd"
 Global="*res://Global.gd"
 ECUtilities="*res://addons/easy_charts/utilities/scripts/ec_utilities.gd"
 
@@ -454,13 +462,22 @@ gdscript/warnings/enable=false
 
 [display]
 
-window/size/width=1280
-window/size/height=720
+window/size/width=1920
+window/size/height=1080
 window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [editor_plugins]
 
+<<<<<<< HEAD
 enabled=PoolStringArray( "res://addons/RPG_maker_Autotile2_3x3/plugin.cfg", "res://addons/TriggerSystem/plugin.cfg", "res://addons/easy_charts/plugin.cfg", "res://addons/event_system_plugin/plugin.cfg", "res://addons/gd-sheets/plugin.cfg", "res://addons/gdutils/plugin.cfg", "res://addons/godot_data_editor/plugin.cfg", "res://addons/godot_table/plugin.cfg" )
+=======
+enabled=PoolStringArray( "RPG_maker_Autotile2_3x3", "TriggerSystem", "gdutils" )
+
+[gui]
+
+theme/custom="res://assets/fonts/default_theme.tres"
+>>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984
 
 [importer_defaults]
 
@@ -487,6 +504,20 @@ texture={
 
 [input]
 
+ui_select={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+ui_cancel={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 mouse_left={
 "deadzone": 0.5,
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
@@ -525,6 +556,7 @@ inv_grab={
 space={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+<<<<<<< HEAD
  ]
 }
 "向北"={
@@ -622,6 +654,8 @@ space={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":73,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+=======
+>>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984
  ]
 }
 
@@ -632,7 +666,10 @@ quality/intended_usage/framebuffer_allocation.mobile=1
 2d/snapping/use_gpu_pixel_snap=true
 environment/default_clear_color=Color( 0.12549, 0.113725, 0.113725, 1 )
 environment/default_environment="res://default_env.tres"
+<<<<<<< HEAD
 quality/2d/use_pixel_snap=true
+=======
+>>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984
 
 [tiled_importer]
 

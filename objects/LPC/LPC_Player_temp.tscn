@@ -4,7 +4,6 @@
 [ext_resource path="res://objects/LPC/HP_TextureProgress.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/graphics/characters/character001.png" type="Texture" id=3]
 
-
 [sub_resource type="CircleShape2D" id=1]
 radius = 9.73741
 
@@ -481,8 +480,8 @@ position = Vector2( 0.52523, -0.0246048 )
 texture = ExtResource( 3 )
 centered = false
 offset = Vector2( -32, -54 )
-vframes = 21
 hframes = 13
+vframes = 21
 frame = 261
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -499,4 +498,5 @@ margin_bottom = 14.0
 shape = SubResource( 29 )
 
 [node name="AttackTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Attack_Area2D" to="." method="_on_Attack_Area2D_body_entered"]

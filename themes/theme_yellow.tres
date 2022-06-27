@@ -26,7 +26,11 @@ Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 Button/constants/hseparation = 2
+<<<<<<< HEAD
 Button/fonts/font = ExtResource( 3 )
+=======
+Button/fonts/font = ExtResource( 1 )
+>>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984
 Button/styles/disabled = null
 Button/styles/focus = null
 Button/styles/hover = null
@@ -44,9 +48,15 @@ RichTextLabel/constants/shadow_offset_y = 1
 RichTextLabel/constants/table_hseparation = 3
 RichTextLabel/constants/table_vseparation = 3
 RichTextLabel/fonts/bold_font = SubResource( 2 )
+<<<<<<< HEAD
 RichTextLabel/fonts/bold_italics_font = SubResource( 4 )
 RichTextLabel/fonts/italics_font = SubResource( 4 )
 RichTextLabel/fonts/mono_font = SubResource( 4 )
+=======
+RichTextLabel/fonts/bold_italics_font = ExtResource( 1 )
+RichTextLabel/fonts/italics_font = ExtResource( 1 )
+RichTextLabel/fonts/mono_font = ExtResource( 1 )
+>>>>>>> 1231897b83b2eb9f64e8b80a995b32fefd97d984
 RichTextLabel/fonts/normal_font = SubResource( 3 )
 RichTextLabel/styles/focus = null
 RichTextLabel/styles/normal = null
