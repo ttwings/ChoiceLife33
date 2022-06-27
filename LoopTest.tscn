@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://LoopTest.gd" type="Script" id=1]
+
+[node name="LoopTest" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 379.0
+margin_top = 233.0
+margin_right = 572.0
+margin_bottom = 310.0
+hint_tooltip = "."

@@ -1,0 +1,650 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://themes/theme_yellow.tres" type="Theme" id=1]
+[ext_resource path="res://SwordOutline 1.png" type="Texture" id=2]
+[ext_resource path="res://HelmetOutline 2.png" type="Texture" id=3]
+[ext_resource path="res://FeetOutline 1.png" type="Texture" id=4]
+[ext_resource path="res://ShieldOutline 1.png" type="Texture" id=5]
+[ext_resource path="res://TorsoOutline 1.png" type="Texture" id=6]
+[ext_resource path="res://CastleIcons.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxLine" id=1]
+thickness = 2
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 64, 64 )
+
+[node name="CharacterInformation" type="WindowDialog"]
+visible = true
+margin_top = -1.0
+margin_right = 316.0
+margin_bottom = 398.0
+theme = ExtResource( 1 )
+window_title = "队友信息"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_right = 316.0
+margin_bottom = 4.0
+custom_styles/separator = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Alias" type="Label" parent="VBoxContainer"]
+margin_top = 11.0
+margin_right = 316.0
+margin_bottom = 27.0
+text = "北乔峰 乔峰"
+align = 1
+valign = 3
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+margin_top = 34.0
+margin_right = 316.0
+margin_bottom = 38.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 45.0
+margin_right = 316.0
+margin_bottom = 121.0
+size_flags_horizontal = 3
+
+[node name="HeadImage" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 76.0
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 68.0
+margin_right = 68.0
+margin_bottom = 76.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 72.0
+margin_right = 312.0
+margin_bottom = 76.0
+size_flags_horizontal = 3
+
+[node name="Gender" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 240.0
+margin_bottom = 16.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Gender"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "性别"
+
+[node name="value" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Gender"]
+margin_left = 36.0
+margin_right = 52.0
+margin_bottom = 16.0
+text = "男"
+
+[node name="Age" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 240.0
+margin_bottom = 36.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Age"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "年龄"
+
+[node name="value" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Age"]
+margin_left = 36.0
+margin_right = 52.0
+margin_bottom = 16.0
+text = "25"
+
+[node name="Feature" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 240.0
+margin_bottom = 56.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Feature"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "特征"
+
+[node name="value" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Feature"]
+margin_left = 36.0
+margin_right = 52.0
+margin_bottom = 16.0
+text = "无"
+
+[node name="Condition" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 60.0
+margin_right = 240.0
+margin_bottom = 76.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Condition"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "状态"
+
+[node name="value" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Condition"]
+margin_left = 36.0
+margin_right = 52.0
+margin_bottom = 16.0
+text = "无"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+margin_left = 316.0
+margin_right = 316.0
+margin_bottom = 76.0
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+margin_top = 128.0
+margin_right = 316.0
+margin_bottom = 132.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AP" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 139.0
+margin_right = 316.0
+margin_bottom = 155.0
+
+[node name="Label" type="Label" parent="VBoxContainer/AP"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "体力"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/AP"]
+margin_left = 36.0
+margin_right = 236.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 1
+step = 1.0
+value = 56.0
+percent_visible = false
+
+[node name="value" type="Label" parent="VBoxContainer/AP"]
+margin_left = 240.0
+margin_right = 256.0
+margin_bottom = 16.0
+text = "56"
+
+[node name="Slash" type="Label" parent="VBoxContainer/AP"]
+margin_left = 260.0
+margin_right = 268.0
+margin_bottom = 16.0
+text = "/"
+
+[node name="value_max" type="Label" parent="VBoxContainer/AP"]
+margin_left = 272.0
+margin_right = 288.0
+margin_bottom = 16.0
+text = "56"
+
+[node name="HP" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 162.0
+margin_right = 316.0
+margin_bottom = 178.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HP"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "生命"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/HP"]
+margin_left = 36.0
+margin_right = 236.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 1
+step = 1.0
+value = 56.0
+percent_visible = false
+
+[node name="value" type="Label" parent="VBoxContainer/HP"]
+margin_left = 240.0
+margin_right = 256.0
+margin_bottom = 16.0
+text = "56"
+
+[node name="Slash" type="Label" parent="VBoxContainer/HP"]
+margin_left = 260.0
+margin_right = 268.0
+margin_bottom = 16.0
+text = "/"
+
+[node name="value_max" type="Label" parent="VBoxContainer/HP"]
+margin_left = 272.0
+margin_right = 288.0
+margin_bottom = 16.0
+text = "56"
+
+[node name="SP" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 185.0
+margin_right = 316.0
+margin_bottom = 201.0
+
+[node name="Label" type="Label" parent="VBoxContainer/SP"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "内力"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/SP"]
+margin_left = 36.0
+margin_right = 236.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 1
+step = 1.0
+value = 56.0
+percent_visible = false
+
+[node name="value" type="Label" parent="VBoxContainer/SP"]
+margin_left = 240.0
+margin_right = 256.0
+margin_bottom = 16.0
+text = "56"
+
+[node name="Slash" type="Label" parent="VBoxContainer/SP"]
+margin_left = 260.0
+margin_right = 268.0
+margin_bottom = 16.0
+text = "/"
+
+[node name="value_max" type="Label" parent="VBoxContainer/SP"]
+margin_left = 272.0
+margin_right = 288.0
+margin_bottom = 16.0
+text = "56"
+
+[node name="HSeparator4" type="HSeparator" parent="VBoxContainer"]
+margin_top = 208.0
+margin_right = 316.0
+margin_bottom = 212.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="STR" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 219.0
+margin_right = 316.0
+margin_bottom = 235.0
+
+[node name="Label" type="Label" parent="VBoxContainer/STR"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "臂力"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/STR"]
+margin_left = 36.0
+margin_right = 236.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 1
+step = 1.0
+value = 8.0
+percent_visible = false
+
+[node name="value" type="Label" parent="VBoxContainer/STR"]
+margin_left = 240.0
+margin_right = 248.0
+margin_bottom = 16.0
+text = "8"
+
+[node name="Slash" type="Label" parent="VBoxContainer/STR"]
+margin_left = 252.0
+margin_right = 260.0
+margin_bottom = 16.0
+text = "/"
+
+[node name="value_max" type="Label" parent="VBoxContainer/STR"]
+margin_left = 264.0
+margin_right = 288.0
+margin_bottom = 16.0
+text = "100"
+
+[node name="DEX" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 242.0
+margin_right = 316.0
+margin_bottom = 258.0
+
+[node name="Label" type="Label" parent="VBoxContainer/DEX"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "身法"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/DEX"]
+margin_left = 36.0
+margin_right = 236.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 1
+step = 1.0
+value = 8.0
+percent_visible = false
+
+[node name="value" type="Label" parent="VBoxContainer/DEX"]
+margin_left = 240.0
+margin_right = 248.0
+margin_bottom = 16.0
+text = "8"
+
+[node name="Slash" type="Label" parent="VBoxContainer/DEX"]
+margin_left = 252.0
+margin_right = 260.0
+margin_bottom = 16.0
+text = "/"
+
+[node name="value_max" type="Label" parent="VBoxContainer/DEX"]
+margin_left = 264.0
+margin_right = 288.0
+margin_bottom = 16.0
+text = "100"
+
+[node name="CON" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 265.0
+margin_right = 316.0
+margin_bottom = 281.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CON"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "根骨"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/CON"]
+margin_left = 36.0
+margin_right = 236.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 1
+step = 1.0
+value = 8.0
+percent_visible = false
+
+[node name="value" type="Label" parent="VBoxContainer/CON"]
+margin_left = 240.0
+margin_right = 248.0
+margin_bottom = 16.0
+text = "8"
+
+[node name="Slash" type="Label" parent="VBoxContainer/CON"]
+margin_left = 252.0
+margin_right = 260.0
+margin_bottom = 16.0
+text = "/"
+
+[node name="value_max" type="Label" parent="VBoxContainer/CON"]
+margin_left = 264.0
+margin_right = 288.0
+margin_bottom = 16.0
+text = "100"
+
+[node name="INT" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 288.0
+margin_right = 316.0
+margin_bottom = 304.0
+
+[node name="Label" type="Label" parent="VBoxContainer/INT"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "悟性"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/INT"]
+margin_left = 36.0
+margin_right = 236.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 1
+step = 1.0
+value = 8.0
+percent_visible = false
+
+[node name="value" type="Label" parent="VBoxContainer/INT"]
+margin_left = 240.0
+margin_right = 248.0
+margin_bottom = 16.0
+text = "8"
+
+[node name="Slash" type="Label" parent="VBoxContainer/INT"]
+margin_left = 252.0
+margin_right = 260.0
+margin_bottom = 16.0
+text = "/"
+
+[node name="value_max" type="Label" parent="VBoxContainer/INT"]
+margin_left = 264.0
+margin_right = 288.0
+margin_bottom = 16.0
+text = "100"
+
+[node name="INT2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 311.0
+margin_right = 316.0
+margin_bottom = 327.0
+
+[node name="Label" type="Label" parent="VBoxContainer/INT2"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "悟性"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/INT2"]
+margin_left = 36.0
+margin_right = 236.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 1
+step = 1.0
+value = 8.0
+percent_visible = false
+
+[node name="value" type="Label" parent="VBoxContainer/INT2"]
+margin_left = 240.0
+margin_right = 248.0
+margin_bottom = 16.0
+text = "8"
+
+[node name="Slash" type="Label" parent="VBoxContainer/INT2"]
+margin_left = 252.0
+margin_right = 260.0
+margin_bottom = 16.0
+text = "/"
+
+[node name="value_max" type="Label" parent="VBoxContainer/INT2"]
+margin_left = 264.0
+margin_right = 288.0
+margin_bottom = 16.0
+text = "100"
+
+[node name="INT3" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 334.0
+margin_right = 316.0
+margin_bottom = 350.0
+
+[node name="Label" type="Label" parent="VBoxContainer/INT3"]
+margin_right = 32.0
+margin_bottom = 16.0
+text = "悟性"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/INT3"]
+margin_left = 36.0
+margin_right = 236.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_vertical = 1
+step = 1.0
+value = 8.0
+percent_visible = false
+
+[node name="value" type="Label" parent="VBoxContainer/INT3"]
+margin_left = 240.0
+margin_right = 248.0
+margin_bottom = 16.0
+text = "8"
+
+[node name="Slash" type="Label" parent="VBoxContainer/INT3"]
+margin_left = 252.0
+margin_right = 260.0
+margin_bottom = 16.0
+text = "/"
+
+[node name="value_max" type="Label" parent="VBoxContainer/INT3"]
+margin_left = 264.0
+margin_right = 288.0
+margin_bottom = 16.0
+text = "100"
+
+[node name="HSeparator5" type="HSeparator" parent="VBoxContainer"]
+margin_top = 357.0
+margin_right = 316.0
+margin_bottom = 361.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Equipment" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 368.0
+margin_right = 316.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+
+[node name="主手" type="HBoxContainer" parent="VBoxContainer/Equipment"]
+margin_right = 52.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Equipment/主手"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Equipment/主手"]
+margin_left = 36.0
+margin_top = 8.0
+margin_right = 52.0
+margin_bottom = 24.0
+text = "主"
+
+[node name="副手" type="HBoxContainer" parent="VBoxContainer/Equipment"]
+margin_left = 56.0
+margin_right = 108.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Equipment/副手"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Equipment/副手"]
+margin_left = 36.0
+margin_top = 8.0
+margin_right = 52.0
+margin_bottom = 24.0
+text = "副"
+
+[node name="帽子" type="HBoxContainer" parent="VBoxContainer/Equipment"]
+margin_left = 112.0
+margin_right = 164.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Equipment/帽子"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Equipment/帽子"]
+margin_left = 36.0
+margin_top = 8.0
+margin_right = 52.0
+margin_bottom = 24.0
+text = "帽"
+
+[node name="衣物" type="HBoxContainer" parent="VBoxContainer/Equipment"]
+margin_left = 168.0
+margin_right = 220.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Equipment/衣物"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Equipment/衣物"]
+margin_left = 36.0
+margin_top = 8.0
+margin_right = 52.0
+margin_bottom = 24.0
+text = "衣"
+
+[node name="靴子" type="HBoxContainer" parent="VBoxContainer/Equipment"]
+margin_left = 224.0
+margin_right = 276.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Equipment/靴子"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Equipment/靴子"]
+margin_left = 36.0
+margin_top = 8.0
+margin_right = 52.0
+margin_bottom = 24.0
+text = "靴"
+
+[node name="HSeparator6" type="HSeparator" parent="VBoxContainer"]
+margin_top = 407.0
+margin_right = 316.0
+margin_bottom = 411.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 418.0
+margin_right = 316.0
+margin_bottom = 440.0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 76.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+text = "能力"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 80.0
+margin_right = 156.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 160.0
+margin_right = 236.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 240.0
+margin_right = 316.0
+margin_bottom = 22.0
+size_flags_horizontal = 3

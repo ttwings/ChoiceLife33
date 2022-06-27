@@ -106,6 +106,7 @@ func _ready():
 
 #func _enter_tree():
 #	$Sprite.texture = 精灵图路径		
+
 	
 func _set_阻挡移动(谁):
 	阻挡移动 = 谁

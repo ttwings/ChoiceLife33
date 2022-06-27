@@ -1,25 +1,26 @@
 extends Node
+class_name Thing
+signal cell_changed
+signal action_completed
+signal action_failed
+signal action_started
+signal action_cancelled
+signal action_progress
+signal move_started
+signal move_completed
 
-class_name 物体类
+signal delete(object)
+onready var owner = get_parent()
 
-signal 地图格子改变(从,到)
-
-signal 完成动作(延迟)
-signal 完成移动
-signal 开始行动(延迟)
-
-signal 消灭(对象)
-
-onready var 持有者 = get_parent()
-
-export(String) var 名称 = "物体"
-export(String,MULTILINE) var 描述 = "这是个物体"
-export(Texture) var 精灵图路径 setget _set_精灵图路径
+export(String) var name = "物体"
+export(String,MULTILINE) var discription = "这是个物体"
+export(Texture) var sprite_path setget _set_sprite_path
 
 export(bool) var 阻挡移动 = false setget _set_阻挡移动
+export(bool) var dis
 export(bool) var 阻挡视线 = false setget _set_阻挡视线
 
-var 发现 = false
+var  = false
 
 var 格子 = Vector2() setget _set_格子,_get_格子
 var 坐标

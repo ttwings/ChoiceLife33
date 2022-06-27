@@ -1,0 +1,54 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/gd-sheets/data_document.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+data = [ [ "", "ID", "ID 2", "ID 3", "ID 4", "ID 5", "" ], [ "", "", "", "", "", "", "" ], [ "", "", "", "", "", "", "" ], [ "Header", "序号", "1", "2", "3", "4", "" ], [ "Header 2", "姓名", "李大", "王二", "赵三", "张四", "" ], [ "Header 3", "性别", "男", "男", "男", "男", "" ], [ "Header 4", "年龄", "30", "50", "54", "71", "" ], [ "Header 5", "身份证号", "123131231313131313", "54545", "45454", "45454", "" ] ]
+hash_map = {
+"ID": {
+"": "",
+"Header": "序号",
+"Header 2": "姓名",
+"Header 3": "性别",
+"Header 4": "年龄",
+"Header 5": "身份证号"
+},
+"ID 2": {
+"": "",
+"Header": 1.0,
+"Header 2": "李大",
+"Header 3": "男",
+"Header 4": 30.0,
+"Header 5": 1.23131e+17
+},
+"ID 3": {
+"": "",
+"Header": 2.0,
+"Header 2": "王二",
+"Header 3": "男",
+"Header 4": 50.0,
+"Header 5": 54545.0
+},
+"ID 4": {
+"": "",
+"Header": 3.0,
+"Header 2": "赵三",
+"Header 3": "男",
+"Header 4": 54.0,
+"Header 5": 45454.0
+},
+"ID 5": {
+"": "",
+"Header": 4.0,
+"Header 2": "张四",
+"Header 3": "男",
+"Header 4": 71.0,
+"Header 5": 45454.0
+}
+}
+header_sizes = [ null, null, null, null, null, null, null, 211.0, null, null, null ]
+id_sizes = [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ]
+columns = 11
+rows = 21
+is_dirty = false

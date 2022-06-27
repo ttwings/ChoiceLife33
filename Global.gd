@@ -1,7 +1,4 @@
 extends Node
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 var foods
 var herbs
@@ -9,24 +6,17 @@ var user_class
 var player
 var castleDB
 
-var 食物表
-var 药草表
-var 玩家类
-var 玩家
-var 数据库
+var herbs_list = []
+var foods_list = []
+var user_class_list = []
+var player_list = []
+var castle_list = []
 
 # 全局房间字典，key为房间路径，v为实例
-
-var 所有当前房间 = {}
-
-func 载入房间(地址:String):
-	if 所有当前房间.has(地址):
-		return 所有当前房间[地址]
-	else:
-		var 房间 = load(地址).new()
-		return 房间
-
 var all_current_rooms = {}
+func load_room(path)
+	if all_current_rooms[path] == null
+		all_current_rooms[path] = Room(path)
 
 func load_room(path:String):
 	if all_current_rooms.has(path):
@@ -108,17 +98,6 @@ func load_data(path:String):
 	castleDB = p
 	return p.result
 
-func 读取JSON格式数据(路径):
-	var 文件 = File.new()
-	if not 文件.file_exists(路径):
-		print_debug("文件不存在")
-		return
-	文件.open(路径,File.READ)
-	var 数据串 = 文件.get_as_text()
-	var JSON结果 = JSON.parse(数据串)
-	return JSON结果.result
-		
-
 func get_sheet(sheet_name:String,dbase):
 	var sheet_json = {}
 	var sheet = dbase["sheets"][sheet_name]
@@ -165,16 +144,6 @@ func dir_files(path,suffix):
 
 # 获取目录path下的suffix后缀图片文件生成anim名称的 sprite frames	
 
-func 从文件目录生成序列图(动画名:String,地址:String,后缀:String):
-	var 序列图文件 = dir_files(地址,后缀)
-	var 序列图 = SpriteFrames.new()
-	var 纹理
-
-	for i in 序列图文件.size():
-		纹理 = load(地址 + "/" + 序列图文件[i])
-		序列图.add_frame(动画名,纹理)
-	return 序列图
-
 func creat_sprite_frames_from_path(anim:String,path:String,suffix:String):
 	var sprite_files = dir_files(path,suffix)
 	var sprite_frames = SpriteFrames.new()
@@ -187,28 +156,12 @@ func creat_sprite_frames_from_path(anim:String,path:String,suffix:String):
 						
 # 依据数值 改变颜色名称
 
-func 获取数字色彩(数):
-	if 数 < 0:
-		return "红"
-	else:
-		return "绿"
-
-
-
 func get_number_color(number):
 	if number < 0: 
 		return "red" 
 	else:
 		return "green"
 # 将整数数字转为中文文字	
-func 整数转中文(整数:int):
-	var 整数字符串 = str(整数)
-	var 长度 = 整数字符串.length()
-	var 输出 = []
-	for i in range(长度):
-		整数字符串[i] = 数字转汉字(整数字符串[i])
-	return 整数字符串
-
 
 func get_chinese_number(n:int):
 	var number_str = str(n)
@@ -245,31 +198,16 @@ func digit_to_char(number):
 		"8",8:return "八"
 		"9",9:return "九"
 		"0",0:return "〇"
-		_:return "X"			
-
-func 数字转汉字(数):
-	match 数:
-		"1",1:return "一"
-		"2",2:return "二"
-		"3",3:return "三"
-		"4",4:return "四"
-		"5",5:return "五"
-		"6",6:return "六"
-		"7",7:return "七"
-		"8",8:return "八"
-		"9",9:return "九"
-		"0",0:return "〇"
-		"-",0:return "负"
-		_:return "X"			
-		
+		_:return "X"				
 
 # 返回当前玩家
 func this_player():
 	return player
 
 #################################  延迟调用  ##############################
-# call out
-
+# update call
+func update_call(dell):
+	pass
 
 	
 #func update_call(delta):
