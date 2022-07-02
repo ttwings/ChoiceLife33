@@ -1,9 +1,6 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Data.gd" type="Script" id=2]
-[ext_resource path="res://animations/move_down.tres" type="Animation" id=3]
-[ext_resource path="res://assets/graphics/characters/chara02.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 13.0858
@@ -240,11 +237,9 @@ cast_to = Vector2( 0, 30 )
 
 [node name="AttArrow" type="Sprite" parent="."]
 position = Vector2( 0, 28 )
-texture = ExtResource( 1 )
 offset = Vector2( 49.2953, -0.251457 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 3 )
 hframes = 3
 vframes = 4
 
@@ -263,7 +258,6 @@ anims/idle_down = SubResource( 7 )
 anims/idle_left = SubResource( 8 )
 anims/idle_right = SubResource( 9 )
 anims/idle_up = SubResource( 10 )
-anims/move_down = ExtResource( 4 )
 anims/move_left = SubResource( 11 )
 anims/move_right = SubResource( 12 )
 anims/move_up = SubResource( 13 )

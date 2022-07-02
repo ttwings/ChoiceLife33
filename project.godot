@@ -232,7 +232,7 @@ _global_script_classes=[ {
 "base": "Panel",
 "class": "PanelCanDrag",
 "language": "GDScript",
-"path": "res://PanelCanDrag.gd"
+"path": "res://uis/PanelCanDrag.gd"
 }, {
 "base": "Chart",
 "class": "PieChart",
@@ -342,7 +342,7 @@ _global_script_classes=[ {
 "base": "Panel",
 "class": "WindowCanDrag",
 "language": "GDScript",
-"path": "res://WindowCanDrag.gd"
+"path": "res://uis/WindowCanDrag.gd"
 } ]
 _global_script_class_icons={
 "Armor": "",

@@ -2,8 +2,6 @@
 
 [ext_resource path="res://objects/LPC/LPC_Actor.tscn" type="PackedScene" id=1]
 
-
-
 [node name="LPC_Character" type="Node2D"]
 
 [node name="LPC_Player" parent="." instance=ExtResource( 1 )]

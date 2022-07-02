@@ -1,20 +1,15 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=3]
-[ext_resource path="res://stages/bag/Bag.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Log.gd" type="Script" id=5]
+[ext_resource path="res://uis/bag/Bag.tscn" type="PackedScene" id=4]
+[ext_resource path="res://uis/log/Log.tscn" type="PackedScene" id=5]
+[ext_resource path="res://uis/status/Status.tscn" type="PackedScene" id=6]
+[ext_resource path="res://data/items/weapons/axe_001.tres" type="Resource" id=7]
+[ext_resource path="res://uis/item/Item.tscn" type="PackedScene" id=8]
 
-[sub_resource type="StyleBoxFlat" id=1]
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-
-[sub_resource type="StyleBoxFlat" id=3]
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=8]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -25,185 +20,47 @@ script = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+[node name="PanelContainer" type="Control" parent="VBoxContainer"]
 margin_right = 1920.0
 margin_bottom = 1046.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Log" type="Panel" parent="VBoxContainer/PanelContainer"]
-margin_left = 1500.0
-margin_top = 20.0
-margin_right = 1900.0
-margin_bottom = 420.0
-rect_min_size = Vector2( 400, 400 )
-size_flags_horizontal = 0
-size_flags_vertical = 0
-script = ExtResource( 5 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/Log"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="PanelTitle" type="Panel" parent="VBoxContainer/PanelContainer/Log/VBoxContainer"]
-margin_right = 400.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 0, 30 )
-mouse_filter = 1
-custom_styles/panel = SubResource( 1 )
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelTitle"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="Icon" type="TextureRect" parent="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelTitle/HBoxContainer"]
-margin_right = 30.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 30, 30 )
-texture = ExtResource( 2 )
-stretch_mode = 1
-
-[node name="Title" type="Label" parent="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelTitle/HBoxContainer"]
-margin_left = 34.0
-margin_top = 7.0
-margin_right = 332.0
-margin_bottom = 23.0
-size_flags_horizontal = 3
-size_flags_vertical = 6
-theme = ExtResource( 3 )
-text = "信息"
-
-[node name="ButtonMini" type="Button" parent="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelTitle/HBoxContainer"]
-margin_left = 336.0
-margin_right = 366.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 30, 30 )
-text = "_"
-icon_align = 1
-
-[node name="ButtonClose" type="Button" parent="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelTitle/HBoxContainer"]
-margin_left = 370.0
-margin_right = 400.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 30, 30 )
-text = "X"
-icon_align = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer/Log/VBoxContainer"]
-margin_top = 34.0
-margin_right = 400.0
-margin_bottom = 366.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource( 3 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/PanelContainer/Log/VBoxContainer/MarginContainer"]
-margin_right = 400.0
-margin_bottom = 332.0
-bbcode_enabled = true
-bbcode_text = "[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
-[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
-[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害"
-text = "玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害
-玩家 攻击 野兽 造成 8 点 物理 伤害
-野兽 攻击 玩家 造成 4 点 穿刺 伤害"
-scroll_following = true
-
-[node name="PanelStatus" type="Panel" parent="VBoxContainer/PanelContainer/Log/VBoxContainer"]
-margin_top = 370.0
-margin_right = 400.0
-margin_bottom = 400.0
-rect_min_size = Vector2( 0, 30 )
-mouse_filter = 1
-custom_styles/panel = SubResource( 3 )
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelStatus"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="Status" type="Label" parent="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelStatus/HBoxContainer"]
-margin_top = 7.0
-margin_right = 400.0
-margin_bottom = 23.0
-size_flags_horizontal = 3
-size_flags_vertical = 6
-theme = ExtResource( 3 )
-valign = 1
+[node name="Log" parent="VBoxContainer/PanelContainer" instance=ExtResource( 5 )]
+margin_left = 1512.0
+margin_top = 8.0
+margin_right = 1912.0
+margin_bottom = 408.0
 
 [node name="Bag" parent="VBoxContainer/PanelContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 760.0
-margin_top = 380.0
-margin_right = 1260.0
-margin_bottom = 745.0
+margin_left = 1408.0
+margin_top = 416.0
+margin_right = 1908.0
+margin_bottom = 781.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
+
+[node name="Status" parent="VBoxContainer/PanelContainer" instance=ExtResource( 6 )]
+margin_left = 456.0
+margin_top = 261.0
+margin_right = 956.0
+margin_bottom = 517.0
+
+[node name="Item" parent="VBoxContainer/PanelContainer" instance=ExtResource( 8 )]
+margin_left = -312.0
+margin_top = -219.0
+margin_right = -12.0
+margin_bottom = 29.0
+res = ExtResource( 7 )
 
 [node name="PanelStatus" type="Panel" parent="VBoxContainer"]
 margin_top = 1050.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 rect_min_size = Vector2( 0, 30 )
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 8 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelStatus"]
 anchor_right = 1.0
@@ -225,6 +82,3 @@ margin_left = 94.0
 margin_right = 200.0
 margin_bottom = 30.0
 align = 2
-
-[connection signal="pressed" from="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelTitle/HBoxContainer/ButtonMini" to="VBoxContainer/PanelContainer/Log" method="_on_ButtonMini_pressed"]
-[connection signal="pressed" from="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelTitle/HBoxContainer/ButtonClose" to="VBoxContainer/PanelContainer/Log" method="_on_ButtonClose_pressed"]

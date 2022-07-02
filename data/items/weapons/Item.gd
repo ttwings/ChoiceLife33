@@ -6,7 +6,7 @@ onready var texture_rect = $VBoxContainer/TextureRect
 onready var alias = $VBoxContainer/Label
 onready var icon = texture_rect.texture
 
-func setup():
+func load_res():
 	if res and res is ResItem:
 		alias.text = res.name
 		texture_rect.texture = res.texture
@@ -17,7 +17,7 @@ func setup():
 #
 #
 func _ready():
-	setup()
+	load_res()
 #
 #func _init():
 #	if res and res is ResItem:

@@ -121,5 +121,5 @@ position = Vector2( 0.52523, -0.0246048 )
 texture = ExtResource( 2 )
 centered = false
 offset = Vector2( -32, -54 )
-vframes = 21
 hframes = 13
+vframes = 21

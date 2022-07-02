@@ -1,7 +1,6 @@
-extends PanelCanDrag
+extends WindowCanDrag
 
 export var title_name : String
-onready var title = $VBoxContainer/Panel/HBoxContainer/Label
 onready var slot1 = $VBoxContainer/ScrollContainer/GridContainer/Slot1
 onready var slot2 = $VBoxContainer/ScrollContainer/GridContainer/Slot2 
 onready var container = $VBoxContainer
@@ -17,12 +16,3 @@ func _ready():
 	slot2.add_child(item2)
 	pass # Replace with function body.
 
-
-func _on_Button_pressed():
-	hide()
-	pass # Replace with function body.
-
-
-func _on_MiniButton_pressed():
-	hide()
-	pass # Replace with function body.

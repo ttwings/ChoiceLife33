@@ -41,6 +41,18 @@ func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size/2
 
+func move(dir:String):
+#	raycast.cast_to = input_keys[dir] * tile_size
+#	raycast.force_raycast_update()
+#	print(raycast.is_colliding())
+#	if !raycast.is_colliding() :
+#		turn = turn + 1
+#		var direction = directions[dir]
+#		tween.interpolate_property(self,"position",self.position,get_next_pos(direction),0.3,Tween.TRANS_LINEAR)
+#		tween.start()
+#		animal.play("move_" + dir)
+	pass
+
 func _unhandled_input(event):
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):

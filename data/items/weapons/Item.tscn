@@ -19,6 +19,7 @@ anchor_bottom = 1.0
 margin_right = -1216.0
 margin_bottom = -640.0
 rect_min_size = Vector2( 64, 80 )
+mouse_filter = 1
 script = ExtResource( 2 )
 res = ExtResource( 3 )
 

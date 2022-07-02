@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://WindowCanDrag.gd" type="Script" id=1]
+[ext_resource path="res://uis/WindowCanDrag.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=3]
 
@@ -100,6 +100,3 @@ size_flags_vertical = 6
 theme = ExtResource( 3 )
 text = "  容积：18.2/30"
 valign = 1
-
-[connection signal="pressed" from="VBoxContainer/PanelTitle/HBoxContainer/ButtonMini" to="." method="_on_ButtonMini_pressed"]
-[connection signal="pressed" from="VBoxContainer/PanelTitle/HBoxContainer/ButtonClose" to="." method="_on_ButtonClose_pressed"]

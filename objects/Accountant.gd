@@ -13,7 +13,3 @@ func check_out(value:int):
 #	$Say/RichTextLabel.rect_size = Vector2(v.length()*32,24)
 	$Say/RichTextLabel.bbcode_text = "您好,一共[color=yellow]" + v + "[/color]文钱"
 	pass
-
-
-func 算账(价钱:int):
-	var v = String(价钱)

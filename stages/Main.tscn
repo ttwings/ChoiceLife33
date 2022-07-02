@@ -23,7 +23,7 @@
 [ext_resource path="res://stages/game_checkout/Checkout.tscn" type="PackedScene" id=21]
 [ext_resource path="res://objects/Actor.tscn" type="PackedScene" id=22]
 [ext_resource path="res://stages/game_cooking/Cooking.tscn" type="PackedScene" id=23]
-[ext_resource path="res://uis/ObjectRect.tscn" type="PackedScene" id=24]
+[ext_resource path="res://uis/item/ObjectRect.tscn" type="PackedScene" id=24]
 
 [sub_resource type="TileSet" id=1]
 0/name = "map1.png 0"

@@ -1,0 +1,320 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=1]
+[ext_resource path="res://uis/status/MP_styleboxflat.tres" type="StyleBox" id=2]
+[ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=3]
+[ext_resource path="res://uis/status/StatusBackground.tres" type="StyleBox" id=4]
+[ext_resource path="res://uis/status/HP_styleboxflat.tres" type="StyleBox" id=5]
+[ext_resource path="res://uis/status/Status.gd" type="Script" id=6]
+
+[sub_resource type="StyleBoxFlat" id=3]
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0, 0.9375, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 0.960938, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.188235, 0.176471, 0.176471, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=8]
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Status" type="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -240.0
+margin_right = 250.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 500, 256 )
+focus_mode = 2
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 6 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PanelTitle" type="Panel" parent="VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelTitle"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 1 )
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+margin_left = 34.0
+margin_top = 7.0
+margin_right = 452.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 3 )
+text = "状态"
+
+[node name="ButtonMini" type="Button" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+margin_left = 456.0
+margin_right = 476.0
+margin_bottom = 30.0
+text = "_"
+align = 2
+icon_align = 1
+
+[node name="ButtonClose" type="Button" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+margin_left = 480.0
+margin_right = 500.0
+margin_bottom = 30.0
+text = "X"
+align = 2
+icon_align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+margin_top = 34.0
+margin_right = 500.0
+margin_bottom = 222.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/bg = SubResource( 2 )
+follow_focus = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+margin_right = 500.0
+margin_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HP" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/VBoxContainer/HP"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/HP"]
+margin_left = 36.0
+margin_top = 8.0
+margin_right = 84.0
+margin_bottom = 24.0
+text = "肉身："
+valign = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/ScrollContainer/VBoxContainer/HP"]
+margin_left = 88.0
+margin_right = 396.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/fg = ExtResource( 5 )
+custom_styles/bg = ExtResource( 4 )
+step = 1.0
+value = 50.0
+
+[node name="Value" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/HP"]
+margin_left = 400.0
+margin_top = 8.0
+margin_right = 500.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "100/200"
+
+[node name="MP" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 36.0
+margin_right = 500.0
+margin_bottom = 68.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/VBoxContainer/MP"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MP"]
+margin_left = 36.0
+margin_top = 8.0
+margin_right = 84.0
+margin_bottom = 24.0
+text = "灵力："
+valign = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/ScrollContainer/VBoxContainer/MP"]
+margin_left = 88.0
+margin_right = 396.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/fg = ExtResource( 2 )
+custom_styles/bg = ExtResource( 4 )
+step = 1.0
+value = 50.0
+
+[node name="Value" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MP"]
+margin_left = 400.0
+margin_top = 8.0
+margin_right = 500.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+text = "150/300"
+
+[node name="AP" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 500.0
+margin_bottom = 104.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/VBoxContainer/AP"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/AP"]
+margin_left = 36.0
+margin_top = 8.0
+margin_right = 84.0
+margin_bottom = 24.0
+text = "神识："
+valign = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/ScrollContainer/VBoxContainer/AP"]
+margin_left = 88.0
+margin_right = 396.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = ExtResource( 4 )
+step = 1.0
+value = 50.0
+
+[node name="Value" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/AP"]
+margin_left = 400.0
+margin_top = 8.0
+margin_right = 500.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 1, 0, 0.9375, 1 )
+text = "48/96"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 108.0
+margin_right = 500.0
+margin_bottom = 112.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 116.0
+margin_right = 500.0
+margin_bottom = 140.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 16.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 122.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0, 1, 0.015625, 1 )
+text = "炼气期"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 126.0
+margin_right = 248.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0, 1, 0.015625, 1 )
+text = "前期"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 252.0
+margin_right = 374.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "历练"
+align = 1
+valign = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 378.0
+margin_right = 500.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "445"
+align = 1
+valign = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/ScrollContainer/VBoxContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 500.0
+margin_bottom = 24.0
+custom_styles/fg = SubResource( 6 )
+custom_styles/bg = SubResource( 7 )
+step = 1.0
+value = 45.0
+percent_visible = false
+
+[node name="PanelStatus" type="Panel" parent="VBoxContainer"]
+margin_top = 226.0
+margin_right = 500.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 0, 30 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 8 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelStatus"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Status" type="Label" parent="VBoxContainer/PanelStatus/HBoxContainer"]
+margin_top = 7.0
+margin_right = 500.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 3 )
+valign = 1

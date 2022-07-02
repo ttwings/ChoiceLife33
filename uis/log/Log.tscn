@@ -1,0 +1,170 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=1]
+[ext_resource path="res://uis/log/Log.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+
+[sub_resource type="StyleBoxFlat" id=3]
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Log" type="Panel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 407.0
+margin_bottom = 407.0
+rect_min_size = Vector2( 400, 400 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PanelTitle" type="Panel" parent="VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelTitle"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+margin_right = 30.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 1 )
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+margin_left = 34.0
+margin_top = 7.0
+margin_right = 332.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 3 )
+text = "信息"
+
+[node name="ButtonMini" type="Button" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+margin_left = 336.0
+margin_right = 366.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+text = "_"
+icon_align = 1
+
+[node name="ButtonClose" type="Button" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+margin_left = 370.0
+margin_right = 400.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+text = "X"
+icon_align = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 34.0
+margin_right = 400.0
+margin_bottom = 366.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer"]
+margin_right = 400.0
+margin_bottom = 332.0
+bbcode_enabled = true
+bbcode_text = "[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害
+[color=yellow]玩家[/color] [color=red]攻击[/color] [color=green]野兽[/color] 造成 8 点 [color=white]物理[/color] 伤害
+[color=green]野兽[/color] [color=red]攻击[/color] [color=yellow]玩家[/color] 造成 4 点 [color=red]穿刺[/color] 伤害"
+text = "玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害
+玩家 攻击 野兽 造成 8 点 物理 伤害
+野兽 攻击 玩家 造成 4 点 穿刺 伤害"
+scroll_following = true
+
+[node name="PanelStatus" type="Panel" parent="VBoxContainer"]
+margin_top = 370.0
+margin_right = 400.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 0, 30 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelStatus"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Status" type="Label" parent="VBoxContainer/PanelStatus/HBoxContainer"]
+margin_top = 7.0
+margin_right = 400.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 3 )
+valign = 1
