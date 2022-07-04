@@ -1,10 +1,17 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=3]
 [ext_resource path="res://stages/bag/Bag.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Log.gd" type="Script" id=5]
+[ext_resource path="res://WorldNavigator.gd" type="Script" id=6]
+[ext_resource path="res://assets/graphics/items/SwordOutline 1.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/towns/Tower.png" type="Texture" id=8]
+[ext_resource path="res://assets/graphics/towns/Inferno.png" type="Texture" id=9]
+[ext_resource path="res://data/worlds/world_001.jpg" type="Texture" id=10]
+[ext_resource path="res://assets/graphics/towns/Rampart.png" type="Texture" id=11]
+[ext_resource path="res://assets/graphics/background/weather_sun.png" type="Texture" id=12]
 
 [sub_resource type="StyleBoxFlat" id=1]
 corner_radius_top_left = 4
@@ -32,10 +39,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Log" type="Panel" parent="VBoxContainer/PanelContainer"]
-margin_left = 1500.0
-margin_top = 20.0
-margin_right = 1900.0
-margin_bottom = 420.0
+visible = false
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 407.0
+margin_bottom = 407.0
 rect_min_size = Vector2( 400, 400 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -188,13 +196,171 @@ size_flags_vertical = 6
 theme = ExtResource( 3 )
 valign = 1
 
+[node name="WorldNavigator" type="Panel" parent="VBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 407.0
+margin_bottom = 407.0
+rect_min_size = Vector2( 400, 400 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 6 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/WorldNavigator"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PanelTitle" type="Panel" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer"]
+margin_right = 1021.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle/HBoxContainer"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 7 )
+stretch_mode = 1
+
+[node name="Title" type="Label" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle/HBoxContainer"]
+margin_left = 36.0
+margin_top = 8.0
+margin_right = 953.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 3 )
+text = "世界导航"
+
+[node name="ButtonMini" type="Button" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle/HBoxContainer"]
+margin_left = 957.0
+margin_right = 987.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 30, 30 )
+text = "_"
+icon_align = 1
+
+[node name="ButtonClose" type="Button" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle/HBoxContainer"]
+margin_left = 991.0
+margin_right = 1021.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 30, 30 )
+text = "X"
+icon_align = 1
+
+[node name="PanelTitle2" type="Panel" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer"]
+margin_top = 34.0
+margin_right = 1021.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 30 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle2/HBoxContainer"]
+margin_top = 8.0
+margin_right = 48.0
+margin_bottom = 24.0
+text = "位置："
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle2/HBoxContainer"]
+margin_left = 52.0
+margin_right = 985.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "世界/荒野"
+editable = false
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle2/HBoxContainer"]
+margin_left = 989.0
+margin_right = 1021.0
+margin_bottom = 32.0
+texture = ExtResource( 12 )
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer"]
+margin_top = 68.0
+margin_right = 1021.0
+margin_bottom = 623.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+
+[node name="Worldmap" type="TextureRect" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/MarginContainer"]
+margin_right = 1021.0
+margin_bottom = 555.0
+texture = ExtResource( 10 )
+
+[node name="Point" type="TextureRect" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/MarginContainer/Worldmap"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Town" type="TextureRect" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/MarginContainer/Worldmap"]
+margin_left = 321.28
+margin_top = 291.042
+margin_right = 385.28
+margin_bottom = 355.042
+texture = ExtResource( 9 )
+
+[node name="Town2" type="TextureRect" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/MarginContainer/Worldmap"]
+margin_left = 699.256
+margin_top = 107.093
+margin_right = 763.256
+margin_bottom = 171.093
+texture = ExtResource( 8 )
+
+[node name="Town3" type="TextureRect" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/MarginContainer/Worldmap"]
+margin_left = 167.569
+margin_top = 131.032
+margin_right = 231.569
+margin_bottom = 195.032
+texture = ExtResource( 11 )
+
+[node name="Town4" type="TextureRect" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/MarginContainer/Worldmap"]
+margin_left = 321.28
+margin_top = 291.042
+margin_right = 385.28
+margin_bottom = 355.042
+texture = ExtResource( 9 )
+
+[node name="PanelStatus" type="Panel" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer"]
+margin_top = 627.0
+margin_right = 1021.0
+margin_bottom = 657.0
+rect_min_size = Vector2( 0, 30 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelStatus"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Status" type="Label" parent="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelStatus/HBoxContainer"]
+margin_top = 7.0
+margin_right = 1021.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 3 )
+valign = 1
+
 [node name="Bag" parent="VBoxContainer/PanelContainer" instance=ExtResource( 4 )]
+visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 760.0
-margin_top = 380.0
-margin_right = 1260.0
-margin_bottom = 745.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 507.0
+margin_bottom = 372.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
@@ -228,3 +394,5 @@ align = 2
 
 [connection signal="pressed" from="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelTitle/HBoxContainer/ButtonMini" to="VBoxContainer/PanelContainer/Log" method="_on_ButtonMini_pressed"]
 [connection signal="pressed" from="VBoxContainer/PanelContainer/Log/VBoxContainer/PanelTitle/HBoxContainer/ButtonClose" to="VBoxContainer/PanelContainer/Log" method="_on_ButtonClose_pressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle/HBoxContainer/ButtonMini" to="VBoxContainer/PanelContainer/WorldNavigator" method="_on_ButtonMini_pressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/WorldNavigator/VBoxContainer/PanelTitle/HBoxContainer/ButtonClose" to="VBoxContainer/PanelContainer/WorldNavigator" method="_on_ButtonClose_pressed"]

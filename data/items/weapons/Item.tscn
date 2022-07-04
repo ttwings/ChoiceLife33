@@ -1,10 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://shaders/outline.shader" type="Shader" id=1]
 [ext_resource path="res://data/items/weapons/Item.gd" type="Script" id=2]
 [ext_resource path="res://data/items/weapons/axe_001.tres" type="Resource" id=3]
 [ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=4]
 [ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/ui/windows/sheet_window__1.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0.029953, 0.0263319, 48.7673, 49.0405 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -16,9 +25,11 @@ shader_param/outline_color = Color( 1, 0.960938, 0, 1 )
 [node name="Item" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -1216.0
-margin_bottom = -640.0
+margin_right = -1856.0
+margin_bottom = -977.0
 rect_min_size = Vector2( 64, 80 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 4 )
 script = ExtResource( 2 )
 res = ExtResource( 3 )
 
@@ -28,8 +39,8 @@ anchor_bottom = 1.0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 material = SubResource( 3 )
-margin_right = 704.0
-margin_bottom = 420.0
+margin_right = 64.0
+margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -37,9 +48,9 @@ texture = ExtResource( 5 )
 stretch_mode = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 424.0
-margin_right = 704.0
-margin_bottom = 440.0
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 103.0
 theme = ExtResource( 4 )
 text = "黄金战斧"
 align = 1

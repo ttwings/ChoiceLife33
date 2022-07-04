@@ -9,7 +9,6 @@ signal do_eat()
 signal decay()
 signal do_test
 
-onready var label = $Label
 onready var animal = $AnimationPlayer
 onready var area = $Area2D
 
