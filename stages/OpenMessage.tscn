@@ -101,14 +101,14 @@ alignment = 1
 [node name="select_tiny" type="Button" parent="Panel/HBoxContainer"]
 margin_left = 60.0
 margin_right = 182.0
-margin_bottom = 23.0
+margin_bottom = 25.0
 custom_fonts/font = SubResource( 3 )
 text = "小郡县( 富昌县)"
 
 [node name="select_huge" type="Button" parent="Panel/HBoxContainer"]
 margin_left = 222.0
 margin_right = 340.0
-margin_bottom = 23.0
+margin_bottom = 25.0
 custom_fonts/font = SubResource( 3 )
 text = "大都市(长安城)"
 

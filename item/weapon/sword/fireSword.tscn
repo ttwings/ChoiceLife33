@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://item/weapon/sword/fireSword.gd" type="Script" id=1]
+[ext_resource path="res://item/Attack.tscn" type="PackedScene" id=2]
+[ext_resource path="res://item/uses/FrieBallUse.tscn" type="PackedScene" id=3]
+[ext_resource path="res://item/texture/weapon/long_sword_1_new.png" type="Texture" id=4]
+
+[node name="fireSword" type="Node"]
+script = ExtResource( 1 )
+_icon = NodePath("Sprite")
+_melee = NodePath("Attack")
+activate = NodePath("FrieBallUse")
+
+[node name="Attack" parent="." instance=ExtResource( 2 )]
+min_damage = 30
+max_damage = 40
+
+[node name="FrieBallUse" parent="." instance=ExtResource( 3 )]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 4 )

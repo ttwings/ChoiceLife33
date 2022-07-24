@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://actors/Monster.gd" type="Script" id=1]
+[ext_resource path="res://actors/Breed.tscn" type="PackedScene" id=2]
+
+[node name="Monster" type="Node"]
+script = ExtResource( 1 )
+breed = NodePath("Breed")
+
+[node name="Breed" parent="." instance=ExtResource( 2 )]

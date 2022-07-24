@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://actors/Breed.gd" type="Script" id=1]
+[ext_resource path="res://actors/Drop.tscn" type="PackedScene" id=2]
+[ext_resource path="res://item/Defense.tscn" type="PackedScene" id=3]
+[ext_resource path="res://item/Attack.tscn" type="PackedScene" id=4]
+
+[node name="Breed" type="Node"]
+script = ExtResource( 1 )
+attack = NodePath("Attack")
+deffense = NodePath("Defense")
+moves = [ null ]
+loot = NodePath("Drop")
+
+[node name="Drop" parent="." instance=ExtResource( 2 )]
+drop_item = {
+}
+
+[node name="Attack" parent="." instance=ExtResource( 4 )]
+
+[node name="Defense" parent="." instance=ExtResource( 3 )]

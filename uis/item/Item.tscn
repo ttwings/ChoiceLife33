@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
+[ext_resource path="res://shaders/outline.shader" type="Shader" id=1]
 [ext_resource path="res://assets/graphics/items/weapons/AxeOriginal 1.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/default_theme.tres" type="Theme" id=5]
 [ext_resource path="res://uis/item/Item.gd" type="Script" id=6]
@@ -9,6 +10,13 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 
 [sub_resource type="StyleBoxFlat" id=2]
+
+[sub_resource type="ShaderMaterial" id=6]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/intensity = 20
+shader_param/precision = 0.02
+shader_param/outline_color = null
 
 [sub_resource type="StyleBoxLine" id=4]
 color = Color( 1, 1, 1, 1 )
@@ -61,6 +69,7 @@ texture = ExtResource( 2 )
 stretch_mode = 1
 
 [node name="Title" type="Label" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+unique_name_in_owner = true
 margin_left = 34.0
 margin_top = 7.0
 margin_right = 252.0
@@ -113,6 +122,8 @@ margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
 
 [node name="Icon" type="TextureRect" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer/CenterContainer"]
+unique_name_in_owner = true
+material = SubResource( 6 )
 margin_left = 4.0
 margin_right = 132.0
 margin_bottom = 128.0
@@ -137,6 +148,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ButtonUse" type="Button" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer"]
+unique_name_in_owner = true
 margin_right = 44.0
 margin_bottom = 22.0
 size_flags_horizontal = 0
@@ -144,6 +156,7 @@ size_flags_vertical = 0
 text = "使用"
 
 [node name="ButtonEquip" type="Button" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer/CenterContainer2/HBoxContainer"]
+unique_name_in_owner = true
 margin_left = 48.0
 margin_right = 92.0
 margin_bottom = 22.0
@@ -164,6 +177,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Name" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 margin_right = 152.0
 margin_bottom = 16.0
 
@@ -182,6 +196,7 @@ custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "血斧"
 
 [node name="Type" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 margin_top = 20.0
 margin_right = 152.0
 margin_bottom = 36.0
@@ -207,6 +222,7 @@ margin_bottom = 44.0
 custom_styles/separator = SubResource( 4 )
 
 [node name="Attack" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 margin_top = 48.0
 margin_right = 152.0
 margin_bottom = 64.0
@@ -222,10 +238,10 @@ margin_left = 52.0
 margin_right = 152.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 100, 0 )
-custom_colors/font_color = Color( 1, 0, 0.9375, 1 )
 text = "1"
 
 [node name="Defence" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 margin_top = 68.0
 margin_right = 152.0
 margin_bottom = 84.0
@@ -241,7 +257,6 @@ margin_left = 52.0
 margin_right = 152.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 100, 0 )
-custom_colors/font_color = Color( 1, 0, 0.9375, 1 )
 text = "1"
 
 [node name="HSeparator2" type="HSeparator" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2"]
@@ -251,6 +266,7 @@ margin_bottom = 92.0
 custom_styles/separator = SubResource( 4 )
 
 [node name="Special" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 margin_top = 96.0
 margin_right = 152.0
 margin_bottom = 112.0
@@ -267,7 +283,6 @@ margin_left = 52.0
 margin_right = 152.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 100, 0 )
-custom_colors/font_color = Color( 1, 0, 0.9375, 1 )
 text = "1"
 
 [node name="HSeparator3" type="HSeparator" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2"]
@@ -277,6 +292,7 @@ margin_bottom = 120.0
 custom_styles/separator = SubResource( 4 )
 
 [node name="Weight" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 margin_top = 124.0
 margin_right = 152.0
 margin_bottom = 140.0
@@ -292,27 +308,7 @@ margin_left = 52.0
 margin_right = 152.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 100, 0 )
-custom_colors/font_color = Color( 1, 0, 0.9375, 1 )
 text = "1"
-
-[node name="Location" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 144.0
-margin_right = 152.0
-margin_bottom = 160.0
-
-[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2/Location"]
-margin_right = 48.0
-margin_bottom = 16.0
-text = "位置："
-valign = 1
-
-[node name="Value" type="Label" parent="VBoxContainer/ScrollContainer/HBoxContainer/VBoxContainer2/Location"]
-margin_left = 52.0
-margin_right = 152.0
-margin_bottom = 16.0
-rect_min_size = Vector2( 100, 0 )
-custom_colors/font_color = Color( 1, 0, 0.9375, 1 )
-text = "背包"
 
 [node name="PanelStatus" type="Panel" parent="VBoxContainer"]
 margin_top = 210.0
@@ -328,9 +324,26 @@ anchor_bottom = 1.0
 
 [node name="Status" type="Label" parent="VBoxContainer/PanelStatus/HBoxContainer"]
 margin_top = 7.0
-margin_right = 300.0
+margin_right = 144.0
 margin_bottom = 23.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = ExtResource( 5 )
 valign = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelStatus/HBoxContainer"]
+margin_left = 148.0
+margin_top = 7.0
+margin_right = 196.0
+margin_bottom = 23.0
+text = "位置："
+valign = 1
+
+[node name="Location" type="Label" parent="VBoxContainer/PanelStatus/HBoxContainer"]
+unique_name_in_owner = true
+margin_left = 200.0
+margin_top = 7.0
+margin_right = 300.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 100, 0 )
+text = "背包"

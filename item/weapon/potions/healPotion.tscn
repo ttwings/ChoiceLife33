@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://item/weapon/potions/healPotion.gd" type="Script" id=1]
+[ext_resource path="res://item/uses/HealUse.tscn" type="PackedScene" id=2]
+
+[node name="healPotion" type="Node"]
+script = ExtResource( 1 )
+quaff = NodePath("HealUse")
+
+[node name="HealUse" parent="." instance=ExtResource( 2 )]
+heal_amount = 20

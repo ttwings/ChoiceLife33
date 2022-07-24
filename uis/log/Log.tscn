@@ -38,6 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Icon" type="TextureRect" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+unique_name_in_owner = true
 margin_right = 30.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
@@ -45,16 +46,18 @@ texture = ExtResource( 1 )
 stretch_mode = 1
 
 [node name="Title" type="Label" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+unique_name_in_owner = true
 margin_left = 34.0
-margin_top = 7.0
+margin_top = 3.0
 margin_right = 332.0
-margin_bottom = 23.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = ExtResource( 3 )
 text = "信息"
 
 [node name="ButtonMini" type="Button" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+unique_name_in_owner = true
 margin_left = 336.0
 margin_right = 366.0
 margin_bottom = 30.0
@@ -63,6 +66,7 @@ text = "_"
 icon_align = 1
 
 [node name="ButtonClose" type="Button" parent="VBoxContainer/PanelTitle/HBoxContainer"]
+unique_name_in_owner = true
 margin_left = 370.0
 margin_right = 400.0
 margin_bottom = 30.0
@@ -161,9 +165,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Status" type="Label" parent="VBoxContainer/PanelStatus/HBoxContainer"]
-margin_top = 7.0
+margin_top = 3.0
 margin_right = 400.0
-margin_bottom = 23.0
+margin_bottom = 27.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = ExtResource( 3 )

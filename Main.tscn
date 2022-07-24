@@ -6,7 +6,7 @@
 [ext_resource path="res://uis/bag/Bag.tscn" type="PackedScene" id=4]
 [ext_resource path="res://uis/log/Log.tscn" type="PackedScene" id=5]
 [ext_resource path="res://uis/status/Status.tscn" type="PackedScene" id=6]
-[ext_resource path="res://data/items/weapons/axe_001.tres" type="Resource" id=7]
+[ext_resource path="res://data/items/weapons/axe_002.tres" type="Resource" id=7]
 [ext_resource path="res://uis/item/Item.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StyleBoxFlat" id=8]
@@ -79,6 +79,6 @@ expand_icon = true
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/PanelStatus/HBoxContainer"]
 margin_left = 94.0
-margin_right = 200.0
+margin_right = 202.0
 margin_bottom = 30.0
 align = 2
